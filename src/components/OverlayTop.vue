@@ -11,10 +11,7 @@ bannière full white ?? (même les deux côtés ?)
 
     defineProps<{ nick: string }>()
 
-    const timerWidthShrinked = ref(true)
-    function toggleTimerWidthShrinked() {
-        timerWidthShrinked.value = !timerWidthShrinked.value
-    }
+    const debugText = ref("")
 
     const sidePanelsVisibility = ref(true)
     function toggleSidePanelsVisibility() {
@@ -81,22 +78,25 @@ bannière full white ?? (même les deux côtés ?)
                     </svg>
                 </div>
 
-                <div id="bar-bottom-info-text">
-                    NuSan
-                </div>
+                <Transition name="slide-right">
+                    <div id="bar-bottom-info-text" :key="bar-bottom-info-text-content">
+                        {{ debugText }}
+                    </div>
+                </Transition>
             </div>
 
             <div id="timer-text">00:00</div>
         </div>
     </div>
 
-    <button type="button" @click="toggleTimerWidthShrinked" style="position: absolute; bottom: 0px; left: 0%;">
-        Toggle timer: {{ timerWidthShrinked }}
-    </button>
+    <input type="text" id="bar-bottom-info-debug" v-model="debugText" style="position: absolute; bottom: 0px; left: 0%;"/>
     <button type="button" @click="toggleSidePanelsVisibility" style="position: absolute; bottom: 0px; left: 20%;">
+        Toggle bottom info: {{ sidePanelsVisibility }}
+    </button>
+    <button type="button" @click="toggleSidePanelsVisibility" style="position: absolute; bottom: 0px; left: 40%;">
         Toggle edge: {{ sidePanelsVisibility }}
     </button>
-    <button type="button" @click="toggleTimerSize" style="position: absolute; bottom: 0px; left: 40%;">
+    <button type="button" @click="toggleTimerSize" style="position: absolute; bottom: 0px; left: 60%;">
         Toggle timer: {{ timerIsBig }}
     </button>
 </template>
@@ -267,5 +267,32 @@ bannière full white ?? (même les deux côtés ?)
         font-size: 30px;
         width: 300px;
         height: 100px;
+    }
+
+    input {
+        font-size: 30px;
+        width: 300px;
+        height: 100px;
+    }
+
+    .slide-right-enter-active,
+    .slide-right-leave-active {
+        transition: all 0.5s ease;
+        position: absolute;
+        width: 100%;
+    }
+
+    .slide-right-enter-from {
+        opacity: 0;
+        margin-left: -100px;
+    }
+    .slide-right-enter-to,
+    .slide-right-leave-from {
+        opacity: 1;
+        margin-left: 0px;
+    }
+    .slide-right-leave-to {
+        opacity: 0;
+        margin-left: 100px;
     }
 </style>
