@@ -44,29 +44,31 @@ bannière full white ?? (même les deux côtés ?)
         </div>
     </div>
 
-    <div id="parent">
-        <div id="container">
+    <div id="container">
+        <!-- :class="{
+            make_grow_topbar: !timerWidthShrinked,
+            make_shrink_topbar: timerWidthShrinked,
+            make_timer_small: !timerIsBig,
+            make_timer_big: timerIsBig,
+        }"> -->
+
+        <div id="bar-center" :class="{
+            make_timer_small: !timerIsBig,
+            make_timer_big: timerIsBig }">
+
             <div id="bar-left-edge">
-                <svg viewBox="0 0 100 100" preserveAspectRatio="none" style="width: 100%; height: 100%;">
+                <svg viewBox="0 0 100 100" preserveAspectRatio="none" style="width: 100%; height: 100%; position: absolute; bottom: 0; right: 0;">
                     <polygon points="0,0 100,0 100,100" style="fill: white;"></polygon>
                 </svg>
             </div>
-            
-            <div id="bar-center" :class="{
-                    make_grow_topbar: !timerWidthShrinked,
-                    make_shrink_topbar: timerWidthShrinked,
-                    make_timer_small: !timerIsBig,
-                    make_timer_big: timerIsBig,
-                }">
-
-                <span>00:00</span>
-            </div>
 
             <div id="bar-right-edge">
-                <svg viewBox="0 0 100 100" preserveAspectRatio="none" style="width: 100%; height: 100%;">
+                <svg viewBox="0 0 100 100" preserveAspectRatio="none" style="width: 100%; height: 100%; position: absolute; bottom: 0; left: 0;">
                     <polygon points="0,0 100,0 0,100" style="fill: white;"></polygon>
                 </svg>
             </div>
+
+            <div id="timer-text">00:00</div>
         </div>
     </div>
 
@@ -85,12 +87,6 @@ bannière full white ?? (même les deux côtés ?)
     @font-face {
         font-family: "Tungsten-Bold-TD";
         src: url("../assets/fonts/Tungsten-Bold-TD.woff") format("woff");
-    }
-
-    #parent {
-        position: fixed;
-        left: -100px;
-        right: -100px;
     }
 
     .side-panel {
@@ -136,23 +132,34 @@ bannière full white ?? (même les deux côtés ?)
 
     #container {
         display: flex;
-        overflow: hidden;
+        /*overflow: hidden;*/
         white-space: nowrap;
         align-items: center;
         justify-content: center;
-        height: 250px;
     }
 
     #bar-left-edge {
-        flex: 0 0 auto;
+        position: absolute;
         width: 50px;
         height: 100%;
+        top: 0;
+        left: 0;
+        margin-left: -50px;
+    }
+
+    #bar-right-edge {
+        position: absolute;
+        width: 50px;
+        height: 100%;
+        top: 0;
+        right: 0;
+        margin-right: -50px;
     }
 
     #bar-center {
+        position: relative;
         font-family: 'Tungsten-Bold-TD';
         line-height: 100%;
-        height: 100%;
         background-color: white;
         /*-webkit-text-stroke: 1px;
         -webkit-text-stroke-color: black;*/
@@ -160,10 +167,9 @@ bannière full white ?? (même les deux côtés ?)
         text-align: center;
     }
 
-    #bar-right-edge {
-        flex: 0 0 auto;
-        width: 50px;
-        height: 100%;
+    #timer-text {
+        position: absolute;
+        width: 100%;
     }
 
     .make_grow_topbar {
@@ -184,15 +190,17 @@ bannière full white ?? (même les deux côtés ?)
     .make_timer_small {
         transition: all 0.50s;
         font-size: 8em;
-        width: 15%;
-        height: 10%;
+        height: 100px;
+        width: 200px;
+        font-size: 6em;
     }
 
     .make_timer_big {
         transition: all 0.50s;
         font-size: 15em;
-        width: 25%;
-        height: 100px;
+        height: 250px;
+        width: 500px;
+        font-size: 15em;
     }
 
     .make_shrink_side_panel {
