@@ -57,15 +57,33 @@ bannière full white ?? (même les deux côtés ?)
             make_timer_big: timerIsBig }">
 
             <div id="bar-left-edge">
-                <svg viewBox="0 0 100 100" preserveAspectRatio="none" style="width: 100%; height: 100%; position: absolute; bottom: 0; right: 0;">
+                <svg viewBox="0 0 100 100" preserveAspectRatio="none" style="right: 0;">
                     <polygon points="0,0 100,0 100,100" style="fill: white;"></polygon>
                 </svg>
             </div>
 
             <div id="bar-right-edge">
-                <svg viewBox="0 0 100 100" preserveAspectRatio="none" style="width: 100%; height: 100%; position: absolute; bottom: 0; left: 0;">
+                <svg viewBox="0 0 100 100" preserveAspectRatio="none" style="left: 0;">
                     <polygon points="0,0 100,0 0,100" style="fill: white;"></polygon>
                 </svg>
+            </div>
+
+            <div id="bar-bottom-info">
+                <div id="bar-bottom-info-left-edge">
+                    <svg viewBox="0 0 100 100" preserveAspectRatio="none" style="right: 0;">
+                        <polygon points="0,0 100,0 100,100" style="fill: black;"></polygon>
+                    </svg>
+                </div>
+
+                <div id="bar-bottom-info-right-edge">
+                    <svg viewBox="0 0 100 100" preserveAspectRatio="none" style="left: 0;">
+                        <polygon points="0,0 100,0 0,100" style="fill: black;"></polygon>
+                    </svg>
+                </div>
+
+                <div id="bar-bottom-info-text">
+                    NuSan
+                </div>
             </div>
 
             <div id="timer-text">00:00</div>
@@ -138,22 +156,29 @@ bannière full white ?? (même les deux côtés ?)
         justify-content: center;
     }
 
-    #bar-left-edge {
+    svg {
+        width: 100%;
+        height: 100%;
         position: absolute;
-        width: 50px;
+        bottom: 0;
+    }
+    
+    #bar-left-edge, #bar-bottom-info-left-edge {
+        position: absolute;
+        width: 0.3em;
         height: 100%;
         top: 0;
         left: 0;
-        margin-left: -50px;
+        margin-left: -0.3em;
     }
 
-    #bar-right-edge {
+    #bar-right-edge, #bar-bottom-info-right-edge {
         position: absolute;
-        width: 50px;
+        width: 0.3em;
         height: 100%;
         top: 0;
         right: 0;
-        margin-right: -50px;
+        margin-right: -0.3em;
     }
 
     #bar-center {
@@ -165,6 +190,25 @@ bannière full white ?? (même les deux côtés ?)
         -webkit-text-stroke-color: black;*/
         color: black;
         text-align: center;
+    }
+
+    #bar-bottom-info {
+        position: absolute;
+        background-color: black;
+        left: 0.3em;
+        right: 0.3em;
+        height: 0.35em;
+        margin-bottom: -0.35em;
+        bottom: 0;
+    }
+
+    #bar-bottom-info-text {
+        color: white;
+        font-size: 0.35em;
+        line-height: 100%;
+        height: 100%;
+        text-align: center;
+        
     }
 
     #timer-text {
