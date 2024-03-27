@@ -87,7 +87,7 @@ bannière full white ?? (même les deux côtés ?)
     }
     const obs = new OBSWebSocket();
 
-    await obs.connect("ws://192.168.1.47:4455", "vWbRjK35sRMOZPAy");
+    await obs.connect("ws://localhost:4455", "vWbRjK35sRMOZPAy");
 
     obs.on("SceneTransitionStarted", async function (evt: object) {
         const nextSceneInfo = await obs.call("GetCurrentProgramScene");
