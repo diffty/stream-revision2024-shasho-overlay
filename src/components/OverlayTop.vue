@@ -12,55 +12,119 @@ bannière full white ?? (même les deux côtés ?)
 
     // defineProps<{ nick: string }>()
 
-    const debugText = ref("")
+    type Config = {
+        currRoundId: number;
+        rounds: Array<Array<string>>;
+        roundName: string;
+        djName: string;
+        commentatorName: string;
+        hostName: string;
+    };
 
+    const infoStripText = ref("")
     const sidePanelsVisibility = ref(true)
-    function toggleSidePanelsVisibility() {
-        sidePanelsVisibility.value = !sidePanelsVisibility.value
-    }
-
     const timerIsBig = ref(true)
-    function toggleTimerSize() {
-        timerIsBig.value = !timerIsBig.value
-    }
-
     const isBottomInfoStripVisible = ref(false)
-    function toggleBottomInfoStripVisibility() {
-        isBottomInfoStripVisible.value = !isBottomInfoStripVisible.value
+    const isBottomInfoStripTransitionActive = ref(false)
+    const coderName1 = ref("");
+    const coderName2 = ref("");
+    const coderName3 = ref("");
+    const currCoderName = ref("");
+    const roundName = ref("");
+    const djName = ref("");
+    const commentatorName = ref("");
+    const hostName = ref("");
+
+    var config: Config;
+
+    const configFile = await fetch("./config.json")
+    if (configFile.status == 200) {
+        console.log("Config loaded!")
+        config = await configFile.json();
+
+        const currRoundId = config.currRoundId;
+        coderName1.value = config.rounds[currRoundId][0];
+        coderName2.value = config.rounds[currRoundId][1];
+        coderName3.value = config.rounds[currRoundId][2];
+        roundName.value = config.roundName;
+        djName.value = config.djName;
+        commentatorName.value = config.commentatorName;
+        hostName.value = config.hostName;
     }
 
+    function toggleSidePanelsVisibility() {
+        sidePanelsVisibility.value = !sidePanelsVisibility.value;
+    }
+
+    function toggleTimerSize() {
+        timerIsBig.value = !timerIsBig.value;
+    }
+
+    function toggleBottomInfoStripVisibility() {
+        isBottomInfoStripVisible.value = !isBottomInfoStripVisible.value;
+        isBottomInfoStripTransitionActive.value = true;
+    }
+
+    function updateValuesUsingSceneName(sceneName: string) {
+        if (sceneName == "MAIN_COMPETITION") {
+            timerIsBig.value = true;
+            sidePanelsVisibility.value = true;
+            isBottomInfoStripVisible.value = false;
+        }
+        else {
+            timerIsBig.value = false;
+            sidePanelsVisibility.value = false;
+            isBottomInfoStripVisible.value = true;
+            
+            const r = /CODER(\d+)/;
+            var r_res = r.exec(sceneName);
+            if (r_res != null) {
+                const coderId = Number(r_res[1]) - 1;
+                currCoderName.value = config.rounds[config.currRoundId][coderId];
+                infoStripText.value = config.rounds[config.currRoundId][coderId];
+            }
+        }
+    }
     const obs = new OBSWebSocket();
 
     await obs.connect("ws://192.168.1.47:4455", "vWbRjK35sRMOZPAy");
 
     obs.on("SceneTransitionStarted", async function (evt: object) {
         const nextSceneInfo = await obs.call("GetCurrentProgramScene");
-        
-        if (nextSceneInfo.currentProgramSceneName == "MAIN_COMPETITION") {
-            timerIsBig.value = true;
-            sidePanelsVisibility.value = true;
-        }
-        else {
-            timerIsBig.value = false;
-            sidePanelsVisibility.value = false;
-        }
+        updateValuesUsingSceneName(nextSceneInfo.currentProgramSceneName);
     });
+
+    const currObsSceneInfo = await obs.call("GetCurrentProgramScene");
+    updateValuesUsingSceneName(currObsSceneInfo.sceneName);
+
 </script>
 
 <template>
-    <div class="side-panel" id="side-left-title" :class="{ make_grow_side_panel: sidePanelsVisibility, make_shrink_side_panel: !sidePanelsVisibility }">
+    <div class="side-panel" id="side-left-title" :class="{
+        make_grow_side_panel: sidePanelsVisibility,
+        make_shrink_side_panel: !sidePanelsVisibility }">
+
         <div style="margin: 20px; margin-top: 10px;">ROUND</div>
 
-        <div class="side-panel-content" id="side-left-content" :class="{ make_grow_side_panel_content: sidePanelsVisibility, make_shrink_side_panel_content: !sidePanelsVisibility }">
-            <div style="margin: 20px; margin-top: 10px; color: black;">QUARTERS</div>
+        <div class="side-panel-content" id="side-left-content" :class="{
+            make_grow_side_panel_content: sidePanelsVisibility,
+            make_shrink_side_panel_content: !sidePanelsVisibility }">
+
+            <div style="margin: 20px; margin-top: 10px; color: black;">{{ roundName.toUpperCase() }}</div>
         </div>
     </div>
     
-    <div class="side-panel" id="side-right-title" :class="{ make_grow_side_panel: sidePanelsVisibility, make_shrink_side_panel: !sidePanelsVisibility }">
+    <div class="side-panel" id="side-right-title" :class="{
+        make_grow_side_panel: sidePanelsVisibility,
+        make_shrink_side_panel: !sidePanelsVisibility }">
+
         <div style="margin: 20px; margin-top: 10px;">MUSIC</div>
 
-        <div class="side-panel-content" id="side-right-content" :class="{ make_grow_side_panel_content: sidePanelsVisibility, make_shrink_side_panel_content: !sidePanelsVisibility }">
-            <div style="margin: 20px; margin-top: 10px; color: black;">ALKAMA</div>
+        <div class="side-panel-content" id="side-right-content" :class="{
+            make_grow_side_panel_content: sidePanelsVisibility,
+            make_shrink_side_panel_content: !sidePanelsVisibility }">
+
+            <div style="margin: 20px; margin-top: 10px; color: black;">{{ djName.toUpperCase() }}</div>
         </div>
     </div>
 
@@ -86,8 +150,8 @@ bannière full white ?? (même les deux côtés ?)
                 </div>
 
                 <Transition name="slide-right">
-                    <div id="bar-bottom-info-text" :key="bar-bottom-info-text-content">
-                        {{ debugText }}
+                    <div id="bar-bottom-info-text" :key="bar_bottom_info_text_content">
+                        {{ infoStripText }}
                     </div>
                 </Transition>
             </div>
@@ -108,7 +172,7 @@ bannière full white ?? (même les deux côtés ?)
         </div>
     </div>
 
-    <input type="text" id="bar-bottom-info-debug" v-model="debugText" style="position: absolute; bottom: 0px; left: 0%;"/>
+    <input type="text" id="bar-bottom-info-debug" v-model="infoStripText" style="position: absolute; bottom: 0px; left: 0%;"/>
     <button type="button" @click="toggleBottomInfoStripVisibility" style="position: absolute; bottom: 0px; left: 20%;">
         Toggle bottom info: {{ isBottomInfoStripVisible }}
     </button>
@@ -193,7 +257,7 @@ bannière full white ?? (même les deux côtés ?)
         align-items: center;
         justify-content: center;
     }
-
+    
     #bar-left-edge, #bar-bottom-info-left-edge {
         position: absolute;
         width: 0.3em;
@@ -217,19 +281,19 @@ bannière full white ?? (même les deux côtés ?)
         background-color: black;
         left: 0.3em;
         right: 0.3em;
-        height: 0.35em;
+        height: 40px;
         /* margin-bottom: -0.35em; */
         bottom: 0em;
-        /* z-index: -10; */
+        z-index: -10;
     }
 
     #bar-bottom-info-text {
         color: white;
-        font-size: 0.35em;
+        font-size: 36px;
         line-height: 100%;
         height: 100%;
         text-align: center;
-        
+        overflow: hidden;
     }
 
     #bar-center {
@@ -266,7 +330,7 @@ bannière full white ?? (même les deux côtés ?)
     .make_timer_small {
         transition: all 0.50s;
         height: 100px;
-        width: 200px;
+        width: 250px;
         font-size: 6em;
     }
 
@@ -295,12 +359,12 @@ bannière full white ?? (même les deux côtés ?)
 
     .make_appear_bottom_infostrip {
         transition: margin-bottom 0.50s;
-        margin-bottom: -0.35em;
+        margin-bottom: -40px;
     }
 
     .make_disappear_bottom_infostrip {
         transition: margin-bottom 0.50s;
-        margin-bottom: 0em;
+        margin-bottom: 0px;
     }
 
     .slide-right-enter-active,
@@ -324,3 +388,4 @@ bannière full white ?? (même les deux côtés ?)
         margin-left: 100px;
     }
 </style>
+
