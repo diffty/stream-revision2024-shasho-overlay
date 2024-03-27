@@ -3,7 +3,9 @@
 </script>
 
 <template>
-  <OverlayTop nick="DiFFtY" />
+  <Suspense>
+    <OverlayTop />
+  </Suspense>
 </template>
 
 <style scoped>

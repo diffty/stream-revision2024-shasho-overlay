@@ -7,9 +7,10 @@ bannière full white ?? (même les deux côtés ?)
 -->
 
 <script setup lang="ts">
-    import { ref } from 'vue'
+    import { ref } from 'vue';
+    import OBSWebSocket from 'obs-websocket-js';
 
-    defineProps<{ nick: string }>()
+    // defineProps<{ nick: string }>()
 
     const debugText = ref("")
 
@@ -22,50 +23,56 @@ bannière full white ?? (même les deux côtés ?)
     function toggleTimerSize() {
         timerIsBig.value = !timerIsBig.value
     }
+
+    const isBottomInfoStripVisible = ref(false)
+    function toggleBottomInfoStripVisibility() {
+        isBottomInfoStripVisible.value = !isBottomInfoStripVisible.value
+    }
+
+    const obs = new OBSWebSocket();
+
+    await obs.connect("ws://192.168.1.47:4455", "vWbRjK35sRMOZPAy");
+
+    obs.on("SceneTransitionStarted", async function (evt: object) {
+        const nextSceneInfo = await obs.call("GetCurrentProgramScene");
+        
+        if (nextSceneInfo.currentProgramSceneName == "MAIN_COMPETITION") {
+            timerIsBig.value = true;
+            sidePanelsVisibility.value = true;
+        }
+        else {
+            timerIsBig.value = false;
+            sidePanelsVisibility.value = false;
+        }
+    });
 </script>
 
 <template>
-    <div class="side-panel" id="side-left-title" :class="{ make_grow_side_panel: !sidePanelsVisibility, make_shrink_side_panel: sidePanelsVisibility }">
+    <div class="side-panel" id="side-left-title" :class="{ make_grow_side_panel: sidePanelsVisibility, make_shrink_side_panel: !sidePanelsVisibility }">
         <div style="margin: 20px; margin-top: 10px;">ROUND</div>
 
-        <div class="side-panel-content" id="side-left-content" :class="{ make_grow_side_panel_content: !sidePanelsVisibility, make_shrink_side_panel_content: sidePanelsVisibility }">
+        <div class="side-panel-content" id="side-left-content" :class="{ make_grow_side_panel_content: sidePanelsVisibility, make_shrink_side_panel_content: !sidePanelsVisibility }">
             <div style="margin: 20px; margin-top: 10px; color: black;">QUARTERS</div>
         </div>
     </div>
     
-    <div class="side-panel" id="side-right-title" :class="{ make_grow_side_panel: !sidePanelsVisibility, make_shrink_side_panel: sidePanelsVisibility }">
+    <div class="side-panel" id="side-right-title" :class="{ make_grow_side_panel: sidePanelsVisibility, make_shrink_side_panel: !sidePanelsVisibility }">
         <div style="margin: 20px; margin-top: 10px;">MUSIC</div>
 
-        <div class="side-panel-content" id="side-right-content" :class="{ make_grow_side_panel_content: !sidePanelsVisibility, make_shrink_side_panel_content: sidePanelsVisibility }">
+        <div class="side-panel-content" id="side-right-content" :class="{ make_grow_side_panel_content: sidePanelsVisibility, make_shrink_side_panel_content: !sidePanelsVisibility }">
             <div style="margin: 20px; margin-top: 10px; color: black;">ALKAMA</div>
         </div>
     </div>
 
     <div id="container">
-        <!-- :class="{
-            make_grow_topbar: !timerWidthShrinked,
-            make_shrink_topbar: timerWidthShrinked,
-            make_timer_small: !timerIsBig,
-            make_timer_big: timerIsBig,
-        }"> -->
-
         <div id="bar-center" :class="{
             make_timer_small: !timerIsBig,
             make_timer_big: timerIsBig }">
 
-            <div id="bar-left-edge">
-                <svg viewBox="0 0 100 100" preserveAspectRatio="none" style="right: 0;">
-                    <polygon points="0,0 100,0 100,100" style="fill: white;"></polygon>
-                </svg>
-            </div>
+            <div id="bar-bottom-info" :class="{
+                    make_appear_bottom_infostrip: isBottomInfoStripVisible,
+                    make_disappear_bottom_infostrip: !isBottomInfoStripVisible }">
 
-            <div id="bar-right-edge">
-                <svg viewBox="0 0 100 100" preserveAspectRatio="none" style="left: 0;">
-                    <polygon points="0,0 100,0 0,100" style="fill: white;"></polygon>
-                </svg>
-            </div>
-
-            <div id="bar-bottom-info">
                 <div id="bar-bottom-info-left-edge">
                     <svg viewBox="0 0 100 100" preserveAspectRatio="none" style="right: 0;">
                         <polygon points="0,0 100,0 100,100" style="fill: black;"></polygon>
@@ -85,13 +92,25 @@ bannière full white ?? (même les deux côtés ?)
                 </Transition>
             </div>
 
+            <div id="bar-left-edge">
+                <svg viewBox="0 0 100 100" preserveAspectRatio="none" style="right: 0;">
+                    <polygon points="0,0 100,0 100,100" style="fill: white;"></polygon>
+                </svg>
+            </div>
+
+            <div id="bar-right-edge">
+                <svg viewBox="0 0 100 100" preserveAspectRatio="none" style="left: 0;">
+                    <polygon points="0,0 100,0 0,100" style="fill: white;"></polygon>
+                </svg>
+            </div>
+
             <div id="timer-text">00:00</div>
         </div>
     </div>
 
     <input type="text" id="bar-bottom-info-debug" v-model="debugText" style="position: absolute; bottom: 0px; left: 0%;"/>
-    <button type="button" @click="toggleSidePanelsVisibility" style="position: absolute; bottom: 0px; left: 20%;">
-        Toggle bottom info: {{ sidePanelsVisibility }}
+    <button type="button" @click="toggleBottomInfoStripVisibility" style="position: absolute; bottom: 0px; left: 20%;">
+        Toggle bottom info: {{ isBottomInfoStripVisible }}
     </button>
     <button type="button" @click="toggleSidePanelsVisibility" style="position: absolute; bottom: 0px; left: 40%;">
         Toggle edge: {{ sidePanelsVisibility }}
@@ -105,6 +124,25 @@ bannière full white ?? (même les deux côtés ?)
     @font-face {
         font-family: "Tungsten-Bold-TD";
         src: url("../assets/fonts/Tungsten-Bold-TD.woff") format("woff");
+    }
+
+    svg {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        bottom: 0;
+    }
+    
+    button {
+        font-size: 30px;
+        width: 300px;
+        height: 100px;
+    }
+
+    input {
+        font-size: 30px;
+        width: 300px;
+        height: 100px;
     }
 
     .side-panel {
@@ -156,13 +194,6 @@ bannière full white ?? (même les deux côtés ?)
         justify-content: center;
     }
 
-    svg {
-        width: 100%;
-        height: 100%;
-        position: absolute;
-        bottom: 0;
-    }
-    
     #bar-left-edge, #bar-bottom-info-left-edge {
         position: absolute;
         width: 0.3em;
@@ -181,25 +212,15 @@ bannière full white ?? (même les deux côtés ?)
         margin-right: -0.3em;
     }
 
-    #bar-center {
-        position: relative;
-        font-family: 'Tungsten-Bold-TD';
-        line-height: 100%;
-        background-color: white;
-        /*-webkit-text-stroke: 1px;
-        -webkit-text-stroke-color: black;*/
-        color: black;
-        text-align: center;
-    }
-
     #bar-bottom-info {
         position: absolute;
         background-color: black;
         left: 0.3em;
         right: 0.3em;
         height: 0.35em;
-        margin-bottom: -0.35em;
-        bottom: 0;
+        /* margin-bottom: -0.35em; */
+        bottom: 0em;
+        /* z-index: -10; */
     }
 
     #bar-bottom-info-text {
@@ -209,6 +230,17 @@ bannière full white ?? (même les deux côtés ?)
         height: 100%;
         text-align: center;
         
+    }
+
+    #bar-center {
+        position: relative;
+        font-family: 'Tungsten-Bold-TD';
+        line-height: 100%;
+        background-color: white;
+        /*-webkit-text-stroke: 1px;
+        -webkit-text-stroke-color: black;*/
+        color: black;
+        text-align: center;
     }
 
     #timer-text {
@@ -233,7 +265,6 @@ bannière full white ?? (même les deux côtés ?)
 
     .make_timer_small {
         transition: all 0.50s;
-        font-size: 8em;
         height: 100px;
         width: 200px;
         font-size: 6em;
@@ -244,7 +275,6 @@ bannière full white ?? (même les deux côtés ?)
         font-size: 15em;
         height: 250px;
         width: 500px;
-        font-size: 15em;
     }
 
     .make_shrink_side_panel {
@@ -263,16 +293,14 @@ bannière full white ?? (même les deux côtés ?)
         width: 0%;
     }
 
-    button {
-        font-size: 30px;
-        width: 300px;
-        height: 100px;
+    .make_appear_bottom_infostrip {
+        transition: margin-bottom 0.50s;
+        margin-bottom: -0.35em;
     }
 
-    input {
-        font-size: 30px;
-        width: 300px;
-        height: 100px;
+    .make_disappear_bottom_infostrip {
+        transition: margin-bottom 0.50s;
+        margin-bottom: 0em;
     }
 
     .slide-right-enter-active,
