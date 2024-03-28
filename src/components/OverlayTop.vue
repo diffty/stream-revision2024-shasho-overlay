@@ -34,10 +34,21 @@ bannière full white ?? (même les deux côtés ?)
     const djName = ref("");
     const commentatorName = ref("");
     const hostName = ref("");
+    const timer = ref(0);
+
+    var timerState = {
+        isRunning: false,
+        startTime: -1,
+        startState: 0
+    }
 
     var config: Config;
 
-    const configFile = await fetch("./config.json")
+    const facts = await fetch("https://cat-fact.herokuapp.com/facts");
+    console.log(await facts.json());
+
+    const configFile = await fetch("http://localhost:8080/config");
+
     if (configFile.status == 200) {
         console.log("Config loaded!")
         config = await configFile.json();
@@ -85,8 +96,67 @@ bannière full white ?? (même les deux côtés ?)
             }
         }
     }
-    const obs = new OBSWebSocket();
 
+    // Dashboard connection
+    const dashWs = new WebSocket("ws://localhost:6969");
+
+    // Timer callback
+    var timerInterval: Timer | null = null;
+
+    function updateTimerFromState() {
+        if (timerState.isRunning) {
+            const newTimerValue = (timerState.startState - (Date.now() - timerState.startTime) / 1000);
+            timer.value = newTimerValue;
+        }
+        else {
+            timer.value = timerState.startState;
+        }
+        
+        // dashWs.send("test");
+    }
+
+    function timerCallback() {
+        if (!timerState.isRunning && timerInterval != null) {
+            clearInterval(timerInterval);
+        }
+
+        updateTimerFromState();
+    }
+
+    // Dashboard event handling
+    dashWs.addEventListener("message", (e: MessageEvent) => {
+        const eventMsg = JSON.parse(e.data);
+
+        switch (eventMsg.type) {
+            case "TimerSetEvent":
+                console.log(eventMsg);
+
+                if (eventMsg.payload.time != null) {
+                    //timer.value = eventMsg.payload.time;
+                    timerState.startState = eventMsg.payload.time;
+                }
+                else {
+                    timerState.startState = timer.value;
+                }
+                
+                if (eventMsg.payload.isRunning == true && timerState.isRunning != true) {
+                    timerState.isRunning = true;
+                    timerState.startTime = Date.now();
+                    window.setInterval(timerCallback, 200);
+                }
+                else {
+                    timerState.isRunning = false;
+                }
+
+                updateTimerFromState();
+                break
+        }
+    })
+
+
+
+    // OBS connection
+    const obs = new OBSWebSocket();
     await obs.connect("ws://localhost:4455", "vWbRjK35sRMOZPAy");
 
     obs.on("SceneTransitionStarted", async function (evt: object) {
@@ -96,7 +166,6 @@ bannière full white ?? (même les deux côtés ?)
 
     const currObsSceneInfo = await obs.call("GetCurrentProgramScene");
     updateValuesUsingSceneName(currObsSceneInfo.sceneName);
-
 </script>
 
 <template>
@@ -168,7 +237,7 @@ bannière full white ?? (même les deux côtés ?)
                 </svg>
             </div>
 
-            <div id="timer-text">00:00</div>
+            <div id="timer-text">{{ Math.floor(timer / 60).toString().padStart(2, '0') }}:{{ Math.floor(timer % 60).toString().padStart(2, '0') }}</div>
         </div>
     </div>
 
