@@ -13,6 +13,7 @@ from nicegui import app, ui
 from fastapi.middleware.cors import CORSMiddleware
 
 
+# CORS shit
 app.add_middleware(
     CORSMiddleware,
     allow_origins=["*"],
@@ -21,8 +22,10 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
+
 CONNECTIONS: Set[WebSocketServerProtocol] = set()
-CONFIG = {}
+CONFIG = None
+
 
 @dataclass(kw_only=True)
 class Event:
@@ -33,6 +36,22 @@ class Event:
 class TimerSetEvent(Event):
     isRunning: bool = None
     time: int = None
+
+
+@dataclass
+class Round:
+    coders: list[str]
+    djName: str
+    commentsName: str
+
+
+@dataclass()
+class Config:
+    roundName: str
+    currRoundId: int
+    rounds: list[Round]
+    hostName: str
+    roundDuration: int
 
 
 def broadcast_event(e: Event):
@@ -48,8 +67,9 @@ def get_config_path():
 def load_config():
     global CONFIG
     with open(get_config_path()) as fp:
-        CONFIG = json.load(fp)
-
+        config_json = json.load(fp)
+        CONFIG = Config(**config_json)
+        
 
 def reset_timer():
     broadcast_event(TimerSetEvent(isRunning=False,
@@ -79,22 +99,29 @@ def set_timer(new_time: Union[str, int]):
 
 
 # REST API
-@app.get('/config')
-def get_config():
-    return CONFIG
+@app.get('/current_round')
+def get_current_round():
+    curr_round_infos = CONFIG.rounds[CONFIG.currRoundId]
+
+    return {
+        "roundName": CONFIG.roundName,
+        "hostName": CONFIG.hostName,
+        "round": curr_round_infos,
+    }
 
 
 # UI DEFINITION
 ui.label('REVISION 2024 - SHADER SHOWDOWN OVERLAY DASHBOARD')
-ui.button('Reload config', on_click=lambda: ui.notify('Configuration reloaded'))
+ui.button('Load config', on_click=lambda: ui.notify('Configuration reloaded'))
 
-ui.button('Start timer', on_click=start_timer).props('flat')
-ui.button('Stop timer', on_click=stop_timer).props('flat')
-ui.button('Reset timer', on_click=reset_timer).props('flat')
+ui.button('Start timer', on_click=start_timer)
+ui.button('Stop timer', on_click=stop_timer)
+ui.button('Reset timer', on_click=reset_timer)
 
-timer_field = ui.input(label="Timer")
+timer_field = ui.input(label="Timer", value="25:00")
 
-ui.button('Set timer', on_click=lambda: set_timer(timer_field.value)).props('flat')
+ui.button('Set timer', on_click=lambda: set_timer(timer_field.value))
+
 
 with ui.row().classes('items-center'):
     connections_label = ui.label('0')

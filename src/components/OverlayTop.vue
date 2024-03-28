@@ -12,13 +12,16 @@ bannière full white ?? (même les deux côtés ?)
 
     // defineProps<{ nick: string }>()
 
-    type Config = {
-        currRoundId: number;
-        rounds: Array<Array<string>>;
-        roundName: string;
+    type Round = {
+        coders: Array[string];
         djName: string;
-        commentatorName: string;
+        commentsName: string;
+    }
+
+    type Config = {
+        roundName: string;
         hostName: string;
+        round: Round;
     };
 
     const infoStripText = ref("")
@@ -32,7 +35,7 @@ bannière full white ?? (même les deux côtés ?)
     const currCoderName = ref("");
     const roundName = ref("");
     const djName = ref("");
-    const commentatorName = ref("");
+    const commentsName = ref("");
     const hostName = ref("");
     const timer = ref(0);
 
@@ -44,22 +47,18 @@ bannière full white ?? (même les deux côtés ?)
 
     var config: Config;
 
-    const facts = await fetch("https://cat-fact.herokuapp.com/facts");
-    console.log(await facts.json());
-
-    const configFile = await fetch("http://localhost:8080/config");
+    const configFile = await fetch("http://localhost:8080/current_round");
 
     if (configFile.status == 200) {
         console.log("Config loaded!")
         config = await configFile.json();
 
-        const currRoundId = config.currRoundId;
-        coderName1.value = config.rounds[currRoundId][0];
-        coderName2.value = config.rounds[currRoundId][1];
-        coderName3.value = config.rounds[currRoundId][2];
+        coderName1.value = config.round.coders[0];
+        coderName2.value = config.round.coders[1];
+        coderName3.value = config.round.coders[2];
         roundName.value = config.roundName;
-        djName.value = config.djName;
-        commentatorName.value = config.commentatorName;
+        djName.value = config.round.djName;
+        commentsName.value = config.round.commentsName;
         hostName.value = config.hostName;
     }
 
@@ -91,8 +90,8 @@ bannière full white ?? (même les deux côtés ?)
             var r_res = r.exec(sceneName);
             if (r_res != null) {
                 const coderId = Number(r_res[1]) - 1;
-                currCoderName.value = config.rounds[config.currRoundId][coderId];
-                infoStripText.value = config.rounds[config.currRoundId][coderId];
+                currCoderName.value = config.round.coders[coderId];
+                infoStripText.value = config.round.coders[coderId];
             }
         }
     }
@@ -219,7 +218,7 @@ bannière full white ?? (même les deux côtés ?)
                 </div>
 
                 <Transition name="slide-right">
-                    <div id="bar-bottom-info-text" :key="bar_bottom_info_text_content">
+                    <div id="bar-bottom-info-text" :key="bar-bottom-info-text-content">
                         {{ infoStripText }}
                     </div>
                 </Transition>

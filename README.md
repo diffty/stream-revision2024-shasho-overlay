@@ -4,6 +4,8 @@
 
 * Environment
     * Python 3.11
+        * NiceGUI
+        * Websockets
     * bun
 
 * OBS plugins:
