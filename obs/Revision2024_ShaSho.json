@@ -1,5 +1,5 @@
 {
-    "current_scene": "INTRO_VS",
+    "current_scene": "CODER1_ONLY",
     "current_program_scene": "MAIN_COMPETITION",
     "scene_order": [
         {
@@ -2727,8 +2727,8 @@
             "versioned_id": "ndi_source",
             "settings": {
                 "ndi_fix_alpha_blending": false,
-                "ndi_source_name": "",
-                "ndi_audio": false
+                "ndi_audio": false,
+                "ndi_source_name": "DESKTOP-220DR1F (DeckLink Quad (4) 4)"
             },
             "mixers": 255,
             "sync": 0,
@@ -2760,7 +2760,7 @@
             "versioned_id": "ndi_source",
             "settings": {
                 "ndi_fix_alpha_blending": false,
-                "ndi_source_name": ""
+                "ndi_source_name": "DESKTOP-220DR1F (DeckLink Quad (3) 3)"
             },
             "mixers": 255,
             "sync": 0,
@@ -2792,7 +2792,7 @@
             "versioned_id": "ndi_source",
             "settings": {
                 "ndi_fix_alpha_blending": false,
-                "ndi_source_name": ""
+                "ndi_source_name": "DESKTOP-220DR1F (DeckLink Quad (5) 5)"
             },
             "mixers": 255,
             "sync": 0,
