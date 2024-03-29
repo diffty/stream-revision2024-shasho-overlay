@@ -116,6 +116,8 @@
         isObsConnected = false;
     });
 
+    await updateConfig();
+
     if (isObsConnected) {
         const currObsSceneInfo = await obs.call("GetCurrentProgramScene");
         updateValuesUsingSceneName(currObsSceneInfo.sceneName);
@@ -126,19 +128,22 @@
     <div id="title" class="slight-tilting">
         <div id="title-line1" class="slight-moving">
             <Transition name="slide-down-up">
-                <span id="title-line1-stage2" v-if="currObsSceneName === 'INTRO_ROUND'">{{ roundName }}</span>
-                <span id="title-line1-stage3" v-else-if="currObsSceneName === 'INTRO_VS'">{{ roundName }}</span>
-                <span id="title-line1-stage1" v-else>SHADER</span>
+                <span id="title-line1-stage2" class="title-stage-line" v-if="currObsSceneName === 'INTRO_ROUND'">{{ roundName }}</span>
+                <span id="title-line1-stage3" class="title-stage-line" v-else-if="currObsSceneName === 'INTRO_VS'">{{ roundName }}</span>
+                <span id="title-line1-stage1" class="title-stage-line" v-else>SHADER</span>
             </Transition>
         </div>
         <div id="title-line2" class="slight-moving-reverse">
             <Transition name="slide-up-down">
-                <span id="title-line2-stage2" v-if="currObsSceneName === 'INTRO_ROUND'">
+                <span id="title-line2-stage2" class="title-stage-line" v-if="currObsSceneName === 'INTRO_ROUND'">
                     COMMENTARIES <br />{{ commentsName }}<br />
                     DJ SET <br />{{ djName }}<br />
                 </span>
-                <span id="title-line2-stage3" v-else-if="currObsSceneName === 'INTRO_VS'">{{ coderName1 }} VS {{ coderName2 }} VS {{ coderName3 }}</span>
-                <span id="title-line2-stage1" v-else>SHOWDOWN</span>
+                <span id="title-line2-stage3" class="title-stage-line" v-else-if="currObsSceneName === 'INTRO_VS'">
+                    {{ coderName1 }}<br />
+                    <span class="small-versus">VS</span> {{ coderName2 }}<br />
+                    <span class="small-versus">VS</span> {{ coderName3 }}</span>
+                <span id="title-line2-stage1" class="title-stage-line" v-else>SHOWDOWN</span>
             </Transition>
         </div>
     </div>
@@ -178,7 +183,7 @@
         overflow: hidden;
     }
 
-    #title-line1 span {
+    #title-line1 .title-stage-line {
         position: absolute;
         bottom: 0;
         left: 0;
@@ -199,7 +204,7 @@
         overflow: hidden;
     }
 
-    #title-line2 span {
+    #title-line2 .title-stage-line {
         position: absolute;
         top: 0;
         left: 0;
@@ -224,11 +229,17 @@
     }
 
     #title-line2-stage2 {
-        font-size: 0.60em;
+        font-size: 0.55em;
     }
 
     #title-line2-stage3 {
-        font-size: 0.8em;
+        font-size: 0.7em;
+    }
+
+    .small-versus {
+        position: relative;
+        font-size: 0.5em;
+        line-height: 0;
     }
 
     /* Transitions */
@@ -242,7 +253,7 @@
 
     .slide-down-up-enter-from,
     .slide-down-up-leave-to {
-        margin-bottom: -500px;
+        margin-bottom: -650px;
     }
 
     .slide-up-down-enter-active {
@@ -255,7 +266,7 @@
 
     .slide-up-down-enter-from,
     .slide-up-down-leave-to {
-        margin-top: -500px;
+        margin-top: -650px;
     }
 
     /* Animations */
