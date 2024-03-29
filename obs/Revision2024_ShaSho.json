@@ -88,10 +88,10 @@
     "current_transition": "Move",
     "transition_duration": 300,
     "preview_locked": false,
-    "scaling_enabled": false,
-    "scaling_level": 0,
-    "scaling_off_x": 0.0,
-    "scaling_off_y": 0.0,
+    "scaling_enabled": true,
+    "scaling_level": -8,
+    "scaling_off_x": -0.0,
+    "scaling_off_y": -0.0,
     "virtual-camera": {
         "type2": 3
     },
@@ -151,10 +151,10 @@
             "settings": {
                 "is_local_file": false,
                 "local_file": "C:/Compo/REVISION/2024/ShaderShowdown/OVERLAY/dist/index.html",
+                "url": "http://localhost:8080/overlay/index.html",
                 "width": 1920,
                 "height": 1080,
-                "fps": 60,
-                "url": "http://localhost:8080/overlay/index.html"
+                "fps": 60
             },
             "mixers": 255,
             "sync": 0,
@@ -177,7 +177,39 @@
             "deinterlace_mode": 0,
             "deinterlace_field_order": 0,
             "monitoring_type": 0,
-            "private_settings": {}
+            "private_settings": {},
+            "filters": [
+                {
+                    "prev_ver": 503382017,
+                    "name": "Shadow",
+                    "uuid": "7b39aa7f-b218-4f89-90a2-ab5653d6d6a3",
+                    "id": "obs_shadow_filter",
+                    "versioned_id": "obs_shadow_filter",
+                    "settings": {
+                        "glow_size": 34.0,
+                        "glow_intensity": 18.800000000000001,
+                        "glow_offset_angle": 90.0,
+                        "glow_offset_distance": 16.0,
+                        "glow_fill_color": 1678840081
+                    },
+                    "mixers": 0,
+                    "sync": 0,
+                    "flags": 0,
+                    "volume": 1.0,
+                    "balance": 0.5,
+                    "enabled": true,
+                    "muted": false,
+                    "push-to-mute": false,
+                    "push-to-mute-delay": 0,
+                    "push-to-talk": false,
+                    "push-to-talk-delay": 0,
+                    "hotkeys": {},
+                    "deinterlace_mode": 0,
+                    "deinterlace_field_order": 0,
+                    "monitoring_type": 0,
+                    "private_settings": {}
+                }
+            ]
         },
         {
             "prev_ver": 503382017,
@@ -243,17 +275,17 @@
                             "y": 1.0
                         },
                         "align": 5,
-                        "bounds_type": 2,
+                        "bounds_type": 0,
                         "bounds_align": 0,
                         "bounds_crop": false,
                         "bounds": {
-                            "x": 1920.0,
-                            "y": 1080.0
+                            "x": 0.0,
+                            "y": 0.0
                         },
-                        "crop_left": 0,
-                        "crop_top": 0,
-                        "crop_right": 0,
-                        "crop_bottom": 0,
+                        "crop_left": 100,
+                        "crop_top": 100,
+                        "crop_right": 101,
+                        "crop_bottom": 101,
                         "id": 5,
                         "group_item_backup": false,
                         "scale_filter": "disable",
@@ -440,17 +472,17 @@
                             "y": 1.0
                         },
                         "align": 5,
-                        "bounds_type": 2,
+                        "bounds_type": 0,
                         "bounds_align": 0,
                         "bounds_crop": false,
                         "bounds": {
-                            "x": 1920.0,
-                            "y": 1080.0
+                            "x": 0.0,
+                            "y": 0.0
                         },
-                        "crop_left": 0,
-                        "crop_top": 0,
-                        "crop_right": 0,
-                        "crop_bottom": 0,
+                        "crop_left": 100,
+                        "crop_top": 100,
+                        "crop_right": 101,
+                        "crop_bottom": 101,
                         "id": 2,
                         "group_item_backup": false,
                         "scale_filter": "disable",
@@ -557,14 +589,14 @@
             "push-to-talk-delay": 0,
             "hotkeys": {
                 "OBSBasic.SelectScene": [],
+                "libobs.show_scene_item.5": [],
+                "libobs.hide_scene_item.5": [],
                 "libobs.show_scene_item.2": [],
                 "libobs.hide_scene_item.2": [],
                 "libobs.show_scene_item.3": [],
                 "libobs.hide_scene_item.3": [],
                 "libobs.show_scene_item.4": [],
-                "libobs.hide_scene_item.4": [],
-                "libobs.show_scene_item.5": [],
-                "libobs.hide_scene_item.5": []
+                "libobs.hide_scene_item.4": []
             },
             "deinterlace_mode": 0,
             "deinterlace_field_order": 0,
@@ -637,17 +669,17 @@
                             "y": 1.0
                         },
                         "align": 5,
-                        "bounds_type": 2,
+                        "bounds_type": 0,
                         "bounds_align": 0,
                         "bounds_crop": false,
                         "bounds": {
-                            "x": 1920.0,
-                            "y": 1080.0
+                            "x": 0.0,
+                            "y": 0.0
                         },
-                        "crop_left": 0,
-                        "crop_top": 0,
-                        "crop_right": 0,
-                        "crop_bottom": 0,
+                        "crop_left": 100,
+                        "crop_top": 100,
+                        "crop_right": 101,
+                        "crop_bottom": 101,
                         "id": 2,
                         "group_item_backup": false,
                         "scale_filter": "disable",
@@ -834,17 +866,17 @@
                             "y": 1.0
                         },
                         "align": 5,
-                        "bounds_type": 2,
+                        "bounds_type": 0,
                         "bounds_align": 0,
                         "bounds_crop": false,
                         "bounds": {
-                            "x": 1920.0,
-                            "y": 1080.0
+                            "x": 0.0,
+                            "y": 0.0
                         },
-                        "crop_left": 0,
-                        "crop_top": 0,
-                        "crop_right": 0,
-                        "crop_bottom": 0,
+                        "crop_left": 100,
+                        "crop_top": 100,
+                        "crop_right": 101,
+                        "crop_bottom": 101,
                         "id": 4,
                         "group_item_backup": false,
                         "scale_filter": "disable",
@@ -1031,17 +1063,17 @@
                             "y": 1.0
                         },
                         "align": 5,
-                        "bounds_type": 2,
+                        "bounds_type": 0,
                         "bounds_align": 0,
                         "bounds_crop": false,
                         "bounds": {
-                            "x": 1920.0,
-                            "y": 1080.0
+                            "x": 0.0,
+                            "y": 0.0
                         },
-                        "crop_left": 0,
-                        "crop_top": 0,
-                        "crop_right": 0,
-                        "crop_bottom": 0,
+                        "crop_left": 100,
+                        "crop_top": 100,
+                        "crop_right": 101,
+                        "crop_bottom": 101,
                         "id": 2,
                         "group_item_backup": false,
                         "scale_filter": "disable",
@@ -1228,17 +1260,17 @@
                             "y": 1.0
                         },
                         "align": 5,
-                        "bounds_type": 2,
+                        "bounds_type": 0,
                         "bounds_align": 0,
                         "bounds_crop": false,
                         "bounds": {
-                            "x": 1920.0,
-                            "y": 1080.0
+                            "x": 0.0,
+                            "y": 0.0
                         },
-                        "crop_left": 0,
-                        "crop_top": 0,
-                        "crop_right": 0,
-                        "crop_bottom": 0,
+                        "crop_left": 100,
+                        "crop_top": 100,
+                        "crop_right": 101,
+                        "crop_bottom": 101,
                         "id": 2,
                         "group_item_backup": false,
                         "scale_filter": "disable",
@@ -1425,17 +1457,17 @@
                             "y": 1.0
                         },
                         "align": 5,
-                        "bounds_type": 2,
+                        "bounds_type": 0,
                         "bounds_align": 0,
                         "bounds_crop": false,
                         "bounds": {
-                            "x": 1920.0,
-                            "y": 1080.0
+                            "x": 0.0,
+                            "y": 0.0
                         },
-                        "crop_left": 0,
-                        "crop_top": 0,
-                        "crop_right": 0,
-                        "crop_bottom": 0,
+                        "crop_left": 100,
+                        "crop_top": 100,
+                        "crop_right": 101,
+                        "crop_bottom": 101,
                         "id": 6,
                         "group_item_backup": false,
                         "scale_filter": "disable",
@@ -1622,17 +1654,17 @@
                             "y": 1.0
                         },
                         "align": 5,
-                        "bounds_type": 2,
+                        "bounds_type": 0,
                         "bounds_align": 0,
                         "bounds_crop": false,
                         "bounds": {
-                            "x": 1920.0,
-                            "y": 1080.0
+                            "x": 0.0,
+                            "y": 0.0
                         },
-                        "crop_left": 0,
-                        "crop_top": 0,
-                        "crop_right": 0,
-                        "crop_bottom": 0,
+                        "crop_left": 100,
+                        "crop_top": 100,
+                        "crop_right": 101,
+                        "crop_bottom": 101,
                         "id": 2,
                         "group_item_backup": false,
                         "scale_filter": "disable",
@@ -1819,17 +1851,17 @@
                             "y": 1.0
                         },
                         "align": 5,
-                        "bounds_type": 2,
+                        "bounds_type": 0,
                         "bounds_align": 0,
                         "bounds_crop": false,
                         "bounds": {
-                            "x": 1920.0,
-                            "y": 1080.0
+                            "x": 0.0,
+                            "y": 0.0
                         },
-                        "crop_left": 0,
-                        "crop_top": 0,
-                        "crop_right": 0,
-                        "crop_bottom": 0,
+                        "crop_left": 100,
+                        "crop_top": 100,
+                        "crop_right": 101,
+                        "crop_bottom": 101,
                         "id": 2,
                         "group_item_backup": false,
                         "scale_filter": "disable",
@@ -2333,8 +2365,8 @@
                         "locked": false,
                         "rot": 0.0,
                         "pos": {
-                            "x": 1285.0,
-                            "y": 590.0
+                            "x": 1253.416748046875,
+                            "y": 525.370361328125
                         },
                         "scale": {
                             "x": 0.3229166567325592,
@@ -2372,8 +2404,8 @@
                         "locked": false,
                         "rot": 0.0,
                         "pos": {
-                            "x": 1285.0,
-                            "y": 241.0
+                            "x": 1253.416748046875,
+                            "y": 176.370361328125
                         },
                         "scale": {
                             "x": 0.3229166567325592,
@@ -2411,8 +2443,8 @@
                         "locked": false,
                         "rot": 0.0,
                         "pos": {
-                            "x": 650.0,
-                            "y": 620.0
+                            "x": 617.7083740234375,
+                            "y": 609.0
                         },
                         "scale": {
                             "x": 0.3229166567325592,
@@ -2450,8 +2482,8 @@
                         "locked": false,
                         "rot": 0.0,
                         "pos": {
-                            "x": 650.0,
-                            "y": 271.0
+                            "x": 617.7083740234375,
+                            "y": 259.0
                         },
                         "scale": {
                             "x": 0.3229166567325592,
@@ -2489,8 +2521,8 @@
                         "locked": false,
                         "rot": 0.0,
                         "pos": {
-                            "x": 15.0,
-                            "y": 591.0
+                            "x": -18.0,
+                            "y": 527.370361328125
                         },
                         "scale": {
                             "x": 0.3229166567325592,
@@ -2528,8 +2560,8 @@
                         "locked": false,
                         "rot": 0.0,
                         "pos": {
-                            "x": 15.0,
-                            "y": 241.0
+                            "x": -18.0,
+                            "y": 177.370361328125
                         },
                         "scale": {
                             "x": 0.3229166567325592,
@@ -2646,8 +2678,8 @@
             "versioned_id": "ndi_source",
             "settings": {
                 "ndi_fix_alpha_blending": false,
-                "ndi_source_name": "DESKTOP-220DR1F (DeckLink Quad (4) 4)",
-                "ndi_audio": false
+                "ndi_audio": false,
+                "ndi_source_name": "DESKTOP-220DR1F (DeckLink Quad (1) 1)"
             },
             "mixers": 255,
             "sync": 0,
@@ -2679,7 +2711,7 @@
             "versioned_id": "ndi_source",
             "settings": {
                 "ndi_fix_alpha_blending": false,
-                "ndi_source_name": "DESKTOP-220DR1F (DeckLink Quad (5) 5)"
+                "ndi_source_name": "DESKTOP-220DR1F (DeckLink Quad (3) 3)"
             },
             "mixers": 255,
             "sync": 0,
@@ -2714,42 +2746,6 @@
                 "ndi_source_name": "DESKTOP-220DR1F (DeckLink Quad (6) 6)"
             },
             "mixers": 255,
-            "sync": 0,
-            "flags": 0,
-            "volume": 1.0,
-            "balance": 0.5,
-            "enabled": true,
-            "muted": false,
-            "push-to-mute": false,
-            "push-to-mute-delay": 0,
-            "push-to-talk": false,
-            "push-to-talk-delay": 0,
-            "hotkeys": {
-                "libobs.mute": [],
-                "libobs.unmute": [],
-                "libobs.push-to-mute": [],
-                "libobs.push-to-talk": []
-            },
-            "deinterlace_mode": 0,
-            "deinterlace_field_order": 0,
-            "monitoring_type": 0,
-            "private_settings": {}
-        },
-        {
-            "prev_ver": 503382017,
-            "name": "Périphérique de capture vidéo (V4L2)",
-            "uuid": "9b5f1fa1-f9b0-4b08-8c63-094cfe1ee759",
-            "id": "dshow_input",
-            "versioned_id": "dshow_input",
-            "settings": {
-                "auto_reset": true,
-                "device_id": "/dev/video0",
-                "framerate": -1,
-                "input": 0,
-                "pixelformat": 1196444237,
-                "resolution": 8246337209400
-            },
-            "mixers": 0,
             "sync": 0,
             "flags": 0,
             "volume": 1.0,
@@ -2821,7 +2817,7 @@
                         "rot": 0.0,
                         "pos": {
                             "x": 0.0,
-                            "y": 0.0
+                            "y": -78.0
                         },
                         "scale": {
                             "x": 1.0,
@@ -2833,7 +2829,7 @@
                         "bounds_crop": true,
                         "bounds": {
                             "x": 640.0,
-                            "y": 1080.0
+                            "y": 1236.0
                         },
                         "crop_left": 0,
                         "crop_top": 0,
@@ -2860,7 +2856,7 @@
                         "rot": 0.0,
                         "pos": {
                             "x": 640.0,
-                            "y": 0.0
+                            "y": -75.0
                         },
                         "scale": {
                             "x": 1.0,
@@ -2872,7 +2868,7 @@
                         "bounds_crop": true,
                         "bounds": {
                             "x": 640.0,
-                            "y": 1080.0
+                            "y": 1233.0
                         },
                         "crop_left": 0,
                         "crop_top": 0,
@@ -2899,7 +2895,7 @@
                         "rot": 0.0,
                         "pos": {
                             "x": 1280.0,
-                            "y": 0.0
+                            "y": -75.0
                         },
                         "scale": {
                             "x": 1.0,
@@ -2911,7 +2907,7 @@
                         "bounds_crop": true,
                         "bounds": {
                             "x": 640.0,
-                            "y": 1080.0
+                            "y": 1238.0
                         },
                         "crop_left": 0,
                         "crop_top": 0,
@@ -3076,9 +3072,70 @@
                     "id": "move_transition_override_filter",
                     "versioned_id": "move_transition_override_filter",
                     "settings": {
-                        "source": "Source média",
+                        "source": "NDI_CAM1",
                         "position_out": 68,
                         "zoom_out": 0
+                    },
+                    "mixers": 0,
+                    "sync": 0,
+                    "flags": 0,
+                    "volume": 1.0,
+                    "balance": 0.5,
+                    "enabled": true,
+                    "muted": false,
+                    "push-to-mute": false,
+                    "push-to-mute-delay": 0,
+                    "push-to-talk": false,
+                    "push-to-talk-delay": 0,
+                    "hotkeys": {},
+                    "deinterlace_mode": 0,
+                    "deinterlace_field_order": 0,
+                    "monitoring_type": 0,
+                    "private_settings": {}
+                },
+                {
+                    "prev_ver": 503382017,
+                    "name": "Crop/Pad",
+                    "uuid": "3757f827-8d7c-43df-b795-c2728b58a217",
+                    "id": "crop_filter",
+                    "versioned_id": "crop_filter",
+                    "settings": {
+                        "left": -100,
+                        "top": -100,
+                        "right": -100,
+                        "bottom": -100
+                    },
+                    "mixers": 0,
+                    "sync": 0,
+                    "flags": 0,
+                    "volume": 1.0,
+                    "balance": 0.5,
+                    "enabled": true,
+                    "muted": false,
+                    "push-to-mute": false,
+                    "push-to-mute-delay": 0,
+                    "push-to-talk": false,
+                    "push-to-talk-delay": 0,
+                    "hotkeys": {},
+                    "deinterlace_mode": 0,
+                    "deinterlace_field_order": 0,
+                    "monitoring_type": 0,
+                    "private_settings": {}
+                },
+                {
+                    "prev_ver": 503382017,
+                    "name": "Glow",
+                    "uuid": "f6363cb0-d175-44a2-9c3c-caff6168ae78",
+                    "id": "obs_glow_filter",
+                    "versioned_id": "obs_glow_filter",
+                    "settings": {
+                        "blur_type": 2,
+                        "glow_fill_source": "_CAPTURE_SHADER1",
+                        "fill": false,
+                        "glow_size": 30.0,
+                        "glow_intensity": 40.0,
+                        "glow_fill_type": 1,
+                        "glow_fill_color": 3355443200
                     },
                     "mixers": 0,
                     "sync": 0,
@@ -3163,8 +3220,6 @@
             "push-to-talk-delay": 0,
             "hotkeys": {
                 "OBSBasic.SelectScene": [],
-                "libobs.show_scene_item.1": [],
-                "libobs.hide_scene_item.1": [],
                 "libobs.show_scene_item.2": [],
                 "libobs.hide_scene_item.2": []
             },
@@ -3182,11 +3237,72 @@
                     "id": "move_transition_override_filter",
                     "versioned_id": "move_transition_override_filter",
                     "settings": {
-                        "source": "Périphérique de capture vidéo (V4L2)",
+                        "source": "NDI_CAM2",
                         "position_in": 96,
                         "zoom_in": 0,
                         "position_out": 96,
                         "zoom_out": 0
+                    },
+                    "mixers": 0,
+                    "sync": 0,
+                    "flags": 0,
+                    "volume": 1.0,
+                    "balance": 0.5,
+                    "enabled": true,
+                    "muted": false,
+                    "push-to-mute": false,
+                    "push-to-mute-delay": 0,
+                    "push-to-talk": false,
+                    "push-to-talk-delay": 0,
+                    "hotkeys": {},
+                    "deinterlace_mode": 0,
+                    "deinterlace_field_order": 0,
+                    "monitoring_type": 0,
+                    "private_settings": {}
+                },
+                {
+                    "prev_ver": 503382017,
+                    "name": "Crop/Pad",
+                    "uuid": "60faa60b-b781-4ab3-b490-b366e5d33cfc",
+                    "id": "crop_filter",
+                    "versioned_id": "crop_filter",
+                    "settings": {
+                        "left": -100,
+                        "top": -100,
+                        "right": -100,
+                        "bottom": -100
+                    },
+                    "mixers": 0,
+                    "sync": 0,
+                    "flags": 0,
+                    "volume": 1.0,
+                    "balance": 0.5,
+                    "enabled": true,
+                    "muted": false,
+                    "push-to-mute": false,
+                    "push-to-mute-delay": 0,
+                    "push-to-talk": false,
+                    "push-to-talk-delay": 0,
+                    "hotkeys": {},
+                    "deinterlace_mode": 0,
+                    "deinterlace_field_order": 0,
+                    "monitoring_type": 0,
+                    "private_settings": {}
+                },
+                {
+                    "prev_ver": 503382017,
+                    "name": "Glow",
+                    "uuid": "214bd6b5-4e68-400b-8b06-314218570235",
+                    "id": "obs_glow_filter",
+                    "versioned_id": "obs_glow_filter",
+                    "settings": {
+                        "blur_type": 2,
+                        "glow_fill_source": "_CAPTURE_SHADER1",
+                        "fill": false,
+                        "glow_size": 30.0,
+                        "glow_intensity": 40.0,
+                        "glow_fill_type": 1,
+                        "glow_fill_color": 3355443200
                     },
                     "mixers": 0,
                     "sync": 0,
@@ -3271,8 +3387,6 @@
             "push-to-talk-delay": 0,
             "hotkeys": {
                 "OBSBasic.SelectScene": [],
-                "libobs.show_scene_item.1": [],
-                "libobs.hide_scene_item.1": [],
                 "libobs.show_scene_item.2": [],
                 "libobs.hide_scene_item.2": []
             },
@@ -3290,11 +3404,72 @@
                     "id": "move_transition_override_filter",
                     "versioned_id": "move_transition_override_filter",
                     "settings": {
-                        "source": "Périphérique de capture vidéo (V4L2)",
+                        "source": "NDI_CAM3",
                         "position_in": 72,
                         "zoom_in": 0,
                         "position_out": 72,
                         "zoom_out": 0
+                    },
+                    "mixers": 0,
+                    "sync": 0,
+                    "flags": 0,
+                    "volume": 1.0,
+                    "balance": 0.5,
+                    "enabled": true,
+                    "muted": false,
+                    "push-to-mute": false,
+                    "push-to-mute-delay": 0,
+                    "push-to-talk": false,
+                    "push-to-talk-delay": 0,
+                    "hotkeys": {},
+                    "deinterlace_mode": 0,
+                    "deinterlace_field_order": 0,
+                    "monitoring_type": 0,
+                    "private_settings": {}
+                },
+                {
+                    "prev_ver": 503382017,
+                    "name": "Crop/Pad",
+                    "uuid": "e13088e8-92f1-47e1-817b-71506154989f",
+                    "id": "crop_filter",
+                    "versioned_id": "crop_filter",
+                    "settings": {
+                        "left": -100,
+                        "top": -100,
+                        "right": -100,
+                        "bottom": -100
+                    },
+                    "mixers": 0,
+                    "sync": 0,
+                    "flags": 0,
+                    "volume": 1.0,
+                    "balance": 0.5,
+                    "enabled": true,
+                    "muted": false,
+                    "push-to-mute": false,
+                    "push-to-mute-delay": 0,
+                    "push-to-talk": false,
+                    "push-to-talk-delay": 0,
+                    "hotkeys": {},
+                    "deinterlace_mode": 0,
+                    "deinterlace_field_order": 0,
+                    "monitoring_type": 0,
+                    "private_settings": {}
+                },
+                {
+                    "prev_ver": 503382017,
+                    "name": "Glow",
+                    "uuid": "b03a5cfb-c403-42d9-be1a-be7344df361f",
+                    "id": "obs_glow_filter",
+                    "versioned_id": "obs_glow_filter",
+                    "settings": {
+                        "blur_type": 2,
+                        "glow_fill_source": "_CAPTURE_SHADER1",
+                        "fill": false,
+                        "glow_size": 30.0,
+                        "glow_intensity": 40.0,
+                        "glow_fill_type": 1,
+                        "glow_fill_color": 3355443200
                     },
                     "mixers": 0,
                     "sync": 0,
@@ -3396,11 +3571,72 @@
                     "id": "move_transition_override_filter",
                     "versioned_id": "move_transition_override_filter",
                     "settings": {
-                        "source": "Source média",
+                        "source": "G_Bonzo1",
                         "position_in": 68,
                         "zoom_in": 0,
                         "position_out": 68,
                         "zoom_out": 0
+                    },
+                    "mixers": 0,
+                    "sync": 0,
+                    "flags": 0,
+                    "volume": 1.0,
+                    "balance": 0.5,
+                    "enabled": true,
+                    "muted": false,
+                    "push-to-mute": false,
+                    "push-to-mute-delay": 0,
+                    "push-to-talk": false,
+                    "push-to-talk-delay": 0,
+                    "hotkeys": {},
+                    "deinterlace_mode": 0,
+                    "deinterlace_field_order": 0,
+                    "monitoring_type": 0,
+                    "private_settings": {}
+                },
+                {
+                    "prev_ver": 503382017,
+                    "name": "Crop/Pad",
+                    "uuid": "0fde4c15-364c-46aa-ad96-0df4263ac15e",
+                    "id": "crop_filter",
+                    "versioned_id": "crop_filter",
+                    "settings": {
+                        "left": -100,
+                        "top": -100,
+                        "right": -100,
+                        "bottom": -100
+                    },
+                    "mixers": 0,
+                    "sync": 0,
+                    "flags": 0,
+                    "volume": 1.0,
+                    "balance": 0.5,
+                    "enabled": true,
+                    "muted": false,
+                    "push-to-mute": false,
+                    "push-to-mute-delay": 0,
+                    "push-to-talk": false,
+                    "push-to-talk-delay": 0,
+                    "hotkeys": {},
+                    "deinterlace_mode": 0,
+                    "deinterlace_field_order": 0,
+                    "monitoring_type": 0,
+                    "private_settings": {}
+                },
+                {
+                    "prev_ver": 503382017,
+                    "name": "Glow",
+                    "uuid": "4aa7ccfb-30f7-45e5-be69-87ded7ac2e94",
+                    "id": "obs_glow_filter",
+                    "versioned_id": "obs_glow_filter",
+                    "settings": {
+                        "blur_type": 2,
+                        "glow_size": 30.0,
+                        "glow_fill_color": 3355443200,
+                        "glow_fill_type": 1,
+                        "glow_fill_source": "_CAPTURE_SHADER1",
+                        "glow_intensity": 40.0,
+                        "fill": false
                     },
                     "mixers": 0,
                     "sync": 0,
@@ -3502,11 +3738,72 @@
                     "id": "move_transition_override_filter",
                     "versioned_id": "move_transition_override_filter",
                     "settings": {
-                        "source": "Source média 2",
+                        "source": "G_Bonzo2",
                         "position_in": 96,
                         "zoom_in": 0,
                         "position_out": 96,
                         "zoom_out": 0
+                    },
+                    "mixers": 0,
+                    "sync": 0,
+                    "flags": 0,
+                    "volume": 1.0,
+                    "balance": 0.5,
+                    "enabled": true,
+                    "muted": false,
+                    "push-to-mute": false,
+                    "push-to-mute-delay": 0,
+                    "push-to-talk": false,
+                    "push-to-talk-delay": 0,
+                    "hotkeys": {},
+                    "deinterlace_mode": 0,
+                    "deinterlace_field_order": 0,
+                    "monitoring_type": 0,
+                    "private_settings": {}
+                },
+                {
+                    "prev_ver": 503382017,
+                    "name": "Crop/Pad",
+                    "uuid": "8d3747ac-2eb9-4a5d-89f5-762c47576ce5",
+                    "id": "crop_filter",
+                    "versioned_id": "crop_filter",
+                    "settings": {
+                        "left": -100,
+                        "top": -100,
+                        "right": -100,
+                        "bottom": -100
+                    },
+                    "mixers": 0,
+                    "sync": 0,
+                    "flags": 0,
+                    "volume": 1.0,
+                    "balance": 0.5,
+                    "enabled": true,
+                    "muted": false,
+                    "push-to-mute": false,
+                    "push-to-mute-delay": 0,
+                    "push-to-talk": false,
+                    "push-to-talk-delay": 0,
+                    "hotkeys": {},
+                    "deinterlace_mode": 0,
+                    "deinterlace_field_order": 0,
+                    "monitoring_type": 0,
+                    "private_settings": {}
+                },
+                {
+                    "prev_ver": 503382017,
+                    "name": "Glow",
+                    "uuid": "19371351-2a86-4ae9-ba77-cdf06e47fee1",
+                    "id": "obs_glow_filter",
+                    "versioned_id": "obs_glow_filter",
+                    "settings": {
+                        "blur_type": 2,
+                        "glow_fill_source": "_CAPTURE_SHADER1",
+                        "fill": false,
+                        "glow_size": 30.0,
+                        "glow_intensity": 40.0,
+                        "glow_fill_type": 1,
+                        "glow_fill_color": 3355443200
                     },
                     "mixers": 0,
                     "sync": 0,
@@ -3608,11 +3905,72 @@
                     "id": "move_transition_override_filter",
                     "versioned_id": "move_transition_override_filter",
                     "settings": {
-                        "source": "Source média 3",
+                        "source": "G_Bonzo3",
                         "position_in": 72,
                         "zoom_in": 0,
                         "position_out": 72,
                         "zoom_out": 0
+                    },
+                    "mixers": 0,
+                    "sync": 0,
+                    "flags": 0,
+                    "volume": 1.0,
+                    "balance": 0.5,
+                    "enabled": true,
+                    "muted": false,
+                    "push-to-mute": false,
+                    "push-to-mute-delay": 0,
+                    "push-to-talk": false,
+                    "push-to-talk-delay": 0,
+                    "hotkeys": {},
+                    "deinterlace_mode": 0,
+                    "deinterlace_field_order": 0,
+                    "monitoring_type": 0,
+                    "private_settings": {}
+                },
+                {
+                    "prev_ver": 503382017,
+                    "name": "Crop/Pad",
+                    "uuid": "c83f5088-4699-48e7-962c-4b26f5f660df",
+                    "id": "crop_filter",
+                    "versioned_id": "crop_filter",
+                    "settings": {
+                        "left": -100,
+                        "top": -100,
+                        "right": -100,
+                        "bottom": -100
+                    },
+                    "mixers": 0,
+                    "sync": 0,
+                    "flags": 0,
+                    "volume": 1.0,
+                    "balance": 0.5,
+                    "enabled": true,
+                    "muted": false,
+                    "push-to-mute": false,
+                    "push-to-mute-delay": 0,
+                    "push-to-talk": false,
+                    "push-to-talk-delay": 0,
+                    "hotkeys": {},
+                    "deinterlace_mode": 0,
+                    "deinterlace_field_order": 0,
+                    "monitoring_type": 0,
+                    "private_settings": {}
+                },
+                {
+                    "prev_ver": 503382017,
+                    "name": "Glow",
+                    "uuid": "8bbda308-25f0-4ba9-b07b-34fcb2de941d",
+                    "id": "obs_glow_filter",
+                    "versioned_id": "obs_glow_filter",
+                    "settings": {
+                        "blur_type": 2,
+                        "glow_fill_source": "_CAPTURE_SHADER1",
+                        "fill": false,
+                        "glow_size": 30.0,
+                        "glow_intensity": 40.0,
+                        "glow_fill_type": 1,
+                        "glow_fill_color": 3355443200
                     },
                     "mixers": 0,
                     "sync": 0,
