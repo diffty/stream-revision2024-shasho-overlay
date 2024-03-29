@@ -302,6 +302,12 @@
         </div>
     </div>
 
+    <div id="coders-nameplates-container">
+        <div class="coder-nameplate">{{ coderName1 }}</div>
+        <div class="coder-nameplate">{{ coderName2 }}</div>
+        <div class="coder-nameplate">{{ coderName3 }}</div>
+    </div>
+
     <input type="text" id="bar-bottom-info-debug" v-model="infoStripText" style="position: absolute; bottom: 0px; left: 0%;"/>
     <button type="button" @click="toggleBottomInfoStripVisibility" style="position: absolute; bottom: 0px; left: 20%;">
         Toggle bottom info: {{ isBottomInfoStripVisible }}
@@ -339,6 +345,15 @@
         height: 100px;
     }
 
+
+    #container {
+        display: flex;
+        /*overflow: hidden;*/
+        white-space: nowrap;
+        align-items: center;
+        justify-content: center;
+    }
+    
     .side-panel {
         background-color: black;
         color: white;
@@ -380,14 +395,6 @@
         background-color: white;
     }
 
-    #container {
-        display: flex;
-        /*overflow: hidden;*/
-        white-space: nowrap;
-        align-items: center;
-        justify-content: center;
-    }
-    
     #bar-left-edge, #bar-bottom-info-left-edge {
         position: absolute;
         width: 0.3em;
@@ -468,6 +475,27 @@
         position: absolute;
         width: 100%;
     }
+
+    #coders-nameplates-container {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        bottom: 130px;
+    }
+
+    .coder-nameplate {
+        background-color: white;
+        color: black;
+        font-family: 'Tungsten-Bold-TD';
+        font-size: 5em;
+        line-height: 100%;
+        overflow: hidden;
+        margin: 0.1em;
+        width: 6em;
+        padding: 0 0.1em 0 0.1em;
+        text-align: center;
+    }
+
 
     @keyframes blinker {
         50% {
