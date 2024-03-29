@@ -22,6 +22,8 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
+app.add_static_files(url_path="/overlay", local_directory="../dist")
+
 
 CONNECTIONS: Set[WebSocketServerProtocol] = set()
 CONFIG = None
