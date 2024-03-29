@@ -1,3 +1,4 @@
+import { resolve } from 'path'
 import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
 
@@ -7,5 +8,13 @@ export default defineConfig({
   server: {
     cors: { origin: "*" },
   },
-  base: ''
+  base: '',
+  build: {
+    rollupOptions: {
+      input: {
+        main: resolve(__dirname, 'index.html'),
+        splash: resolve(__dirname, 'splash.html'),
+      },
+    },
+  },
 })
