@@ -9,9 +9,6 @@
     const OBS_WS_PASSWORD = "meubapelefoute";
 
     // PROPS
-    const line1Text = ref("PIPS");
-    const line2Text = ref("POPS");
-    const stageNum = ref(0);
     const currObsSceneName = ref("INTRO");
 
     // FLAGS
@@ -98,13 +95,13 @@
 
     // OBS connection
     const obs = new OBSWebSocket();
-        await obs.connect(OBS_WS_ADDRESS, OBS_WS_PASSWORD)
-                     .then(() => {
+    await obs.connect(OBS_WS_ADDRESS, OBS_WS_PASSWORD)
+                    .then(() => {
                         isObsConnected = true;
-                     })
-                     .catch(() => {
+                    })
+                    .catch(() => {
                         console.error(`Can't connect to OBS websockets ${OBS_WS_ADDRESS}`);
-                     });
+                    });
 
     obs.on("SceneTransitionStarted", async function (evt: object) {
         const nextSceneInfo = await obs.call("GetCurrentProgramScene");
@@ -136,8 +133,11 @@
         </div>
         <div id="title-line2" class="slight-moving-reverse">
             <Transition name="slide-up-down">
-                <span id="title-line2-stage2" v-if="currObsSceneName === 'INTRO_ROUND'">COMMENTS BY {{ commentsName }}</span>
-                <span id="title-line2-stage3" v-else-if="currObsSceneName === 'INTRO_VS'">VS</span>
+                <span id="title-line2-stage2" v-if="currObsSceneName === 'INTRO_ROUND'">
+                    COMMENTARIES <br />{{ commentsName }}<br />
+                    DJ SET <br />{{ djName }}<br />
+                </span>
+                <span id="title-line2-stage3" v-else-if="currObsSceneName === 'INTRO_VS'">{{ coderName1 }} VS {{ coderName2 }} VS {{ coderName3 }}</span>
                 <span id="title-line2-stage1" v-else>SHOWDOWN</span>
             </Transition>
         </div>
@@ -212,11 +212,11 @@
     }
 
     #title-line1-stage2 {
-        font-size: 1em;
+        font-size: 0.55em;
     }
 
     #title-line1-stage3 {
-        font-size: 1em;
+        font-size: 0.55em;
     }
 
     #title-line2-stage1 {
@@ -224,11 +224,11 @@
     }
 
     #title-line2-stage2 {
-        font-size: 1em;
+        font-size: 0.60em;
     }
 
     #title-line2-stage3 {
-        font-size: 1em;
+        font-size: 0.8em;
     }
 
     /* Transitions */
