@@ -1,9 +1,7 @@
+==TODO==
+
 VERY HIGH (doit être fait pour demain midi)
-[ ] Mettre obs_osc.py sur la machine compo
-[ ] Commit nouvelle version de la collection de scenes OBS
-[ ] NiceGUI API: exposer adresses & ports
-[ ] Scènes OBS (au moins la Main)
-[ ] Nom des coders sur la main
+[ ] Etiquettes avec noms des coders sur la main
 
 HIGH
 [ ] Scenes intro:
@@ -18,6 +16,7 @@ LOW (sécu)
 [ ] Bouton pour montrer/cacher les boutons debug
 [ ] Bouton pour tenter la reconnexion à OBS
 [ ] Bouton pour tenter la reconnexion au master serveur
+[ ] NiceGUI API: exposer adresses & ports
 
 
 [X] Rétractation de l'info stripe
@@ -33,3 +32,7 @@ LOW (sécu)
 [X] Installer Git & premier clone du repo
 [X] NiceGUI: Load Config fonctionne pas 
 [X] NiceGUI: bouton pour refresh la config côté overlay
+[X] Mettre obs_osc.py sur la machine compo
+[X] Commit nouvelle version de la collection de scenes OBS
+[X] Scènes OBS (au moins la Main)
+[X] Shadow sur sources
