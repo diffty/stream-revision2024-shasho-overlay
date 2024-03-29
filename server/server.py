@@ -38,6 +38,11 @@ class TimerSetEvent(Event):
     time: int = None
 
 
+@dataclass(kw_only=True)
+class ConfigEvent(Event):
+    doUpdate: bool = False
+
+
 @dataclass
 class Round:
     coders: list[str]
@@ -64,7 +69,7 @@ def get_config_path():
     return pathlib.Path(__file__).parent.joinpath(pathlib.Path("../config/server.cfg"))
 
 
-def load_config():
+def load_config_from_disk():
     global CONFIG
     with open(get_config_path()) as fp:
         config_json = json.load(fp)
@@ -79,7 +84,7 @@ def start_timer():
     broadcast_event(TimerSetEvent(isRunning=True))
 
 
-def stop_timer():
+def pause_timer():
     broadcast_event(TimerSetEvent(isRunning=False))
 
 
@@ -110,12 +115,23 @@ def get_current_round():
     }
 
 
+def on_load_config_from_disk_click():
+    load_config_from_disk()
+    ui.notify('Configuration reloaded from disk')
+
+
+def on_refresh_overlay_config_click():
+    broadcast_event(ConfigEvent(doUpdate=True))
+
+
 # UI DEFINITION
 ui.label('REVISION 2024 - SHADER SHOWDOWN OVERLAY DASHBOARD')
-ui.button('Load config', on_click=lambda: ui.notify('Configuration reloaded'))
+
+ui.button('Load config from disk', on_click=on_load_config_from_disk_click)
+ui.button('Refresh overlay config', on_click=on_refresh_overlay_config_click)
 
 ui.button('Start timer', on_click=start_timer)
-ui.button('Stop timer', on_click=stop_timer)
+ui.button('Pause timer', on_click=pause_timer)
 ui.button('Reset timer', on_click=reset_timer)
 
 timer_field = ui.input(label="Timer", value="25:00")
@@ -151,7 +167,7 @@ async def start_websocket_server():
         await asyncio.Future()
 
 
-load_config()
+load_config_from_disk()
 
 # start the websocket server when NiceGUI server starts
 app.on_startup(start_websocket_server)

@@ -47,22 +47,24 @@
 
     var config: Config;
 
-    const configFile = await fetch(`${SERVER_API_ADDRESS}/current_round`)
-                                .catch((e: Error) => {
-                                    console.error(`Can't retrieve current round infos : ${e}`)
-                                });
+    async function updateConfig() {
+        const configFile = await fetch(`${SERVER_API_ADDRESS}/current_round`)
+                                    .catch((e: Error) => {
+                                        console.error(`Can't retrieve current round infos : ${e}`)
+                                    });
 
-    if (configFile && configFile.status == 200) {
-        console.log("Config loaded!")
-        config = await configFile.json();
+        if (configFile && configFile.status == 200) {
+            console.log("Config loaded!")
+            config = await configFile.json();
 
-        coderName1.value = config.round.coders[0];
-        coderName2.value = config.round.coders[1];
-        coderName3.value = config.round.coders[2];
-        roundName.value = config.roundName;
-        djName.value = config.round.djName;
-        commentsName.value = config.round.commentsName;
-        hostName.value = config.hostName;
+            coderName1.value = config.round.coders[0];
+            coderName2.value = config.round.coders[1];
+            coderName3.value = config.round.coders[2];
+            roundName.value = config.roundName;
+            djName.value = config.round.djName;
+            commentsName.value = config.round.commentsName;
+            hostName.value = config.hostName;
+        }
     }
 
     function toggleSidePanelsVisibility() {
@@ -166,6 +168,12 @@
 
                 updateTimerFromState();
                 break
+            
+            case "ConfigEvent":
+                if (eventMsg.payload.doUpdate) {
+                    updateConfig();
+                }
+
         }
     })
 
@@ -191,6 +199,8 @@
     obs.on("ConnectionClosed", () => {
         isObsConnected = false;
     });
+
+    await updateConfig();
 
     if (isObsConnected) {
         const currObsSceneInfo = await obs.call("GetCurrentProgramScene");
