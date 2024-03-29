@@ -195,13 +195,13 @@
 
     // OBS connection
     const obs = new OBSWebSocket();
-        await obs.connect(OBS_WS_ADDRESS, OBS_WS_PASSWORD)
-                     .then(() => {
-                        isObsConnected = true;
-                     })
-                     .catch(() => {
-                        console.error(`Can't connect to OBS websockets ${OBS_WS_ADDRESS}`);
-                     });
+    await obs.connect(OBS_WS_ADDRESS, OBS_WS_PASSWORD)
+                    .then(() => {
+                    isObsConnected = true;
+                    })
+                    .catch(() => {
+                    console.error(`Can't connect to OBS websockets ${OBS_WS_ADDRESS}`);
+                    });
 
     obs.on("SceneTransitionStarted", async function (evt: object) {
         const nextSceneInfo = await obs.call("GetCurrentProgramScene");
