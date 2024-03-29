@@ -1,9 +1,8 @@
 VERY HIGH (doit être fait pour demain midi)
-[ ] .BAT pour lancer les Bonzos
-[ ] Installer setup Python (packages etc)
-[ ] Installer Git & premier clone du repo
+[ ] NiceGUI API: exposer adresses & ports
 [ ] Scènes OBS (au moins la Main)
-[ ] Mettre obs_osc.py
+[ ] Nom des coders sur la main
+[ ] Mettre obs_osc.py sur la machine compo
 
 HIGH
 [ ] Scenes intro:
@@ -28,3 +27,8 @@ LOW (sécu)
 [X] Serveur WebSocket de gestion
 [X] Timer
 [X] Check si on peut build en .html standalone
+[X] .BAT pour lancer les Bonzos
+[X] Installer setup Python (packages etc)
+[X] Installer Git & premier clone du repo
+[X] NiceGUI: Load Config fonctionne pas 
+[X] NiceGUI: bouton pour refresh la config côté overlay
