@@ -1,5 +1,5 @@
 {
-    "current_scene": "MAIN_COMPETITION",
+    "current_scene": "INTRO_VS",
     "current_program_scene": "MAIN_COMPETITION",
     "scene_order": [
         {
@@ -73,7 +73,9 @@
             "settings": {
                 "transition_in": "None",
                 "transition_match": "None",
-                "transition_out": "None"
+                "transition_out": "None",
+                "zoom_in": false,
+                "zoom_out": false
             }
         },
         {
@@ -100,6 +102,18 @@
             "transitions": [
                 {
                     "from_scene": "INTRO",
+                    "to_scene": "MAIN_COMPETITION",
+                    "transition": "Glissement",
+                    "duration": 300
+                },
+                {
+                    "from_scene": "INTRO_ROUND",
+                    "to_scene": "MAIN_COMPETITION",
+                    "transition": "Glissement",
+                    "duration": 300
+                },
+                {
+                    "from_scene": "INTRO_VS",
                     "to_scene": "MAIN_COMPETITION",
                     "transition": "Glissement",
                     "duration": 300
@@ -188,9 +202,9 @@
                     "settings": {
                         "glow_size": 34.0,
                         "glow_intensity": 18.800000000000001,
+                        "glow_fill_color": 1678840081,
                         "glow_offset_angle": 90.0,
-                        "glow_offset_distance": 16.0,
-                        "glow_fill_color": 1678840081
+                        "glow_offset_distance": 16.0
                     },
                     "mixers": 0,
                     "sync": 0,
@@ -210,6 +224,41 @@
                     "private_settings": {}
                 }
             ]
+        },
+        {
+            "prev_ver": 503382017,
+            "name": "B_Splash",
+            "uuid": "7284728c-542d-459e-9efa-9e40d717d0e5",
+            "id": "browser_source",
+            "versioned_id": "browser_source",
+            "settings": {
+                "url": "http://localhost:8080/overlay/splash.html",
+                "width": 1920,
+                "height": 1080,
+                "reroute_audio": true
+            },
+            "mixers": 255,
+            "sync": 0,
+            "flags": 0,
+            "volume": 1.0,
+            "balance": 0.5,
+            "enabled": true,
+            "muted": false,
+            "push-to-mute": false,
+            "push-to-mute-delay": 0,
+            "push-to-talk": false,
+            "push-to-talk-delay": 0,
+            "hotkeys": {
+                "libobs.mute": [],
+                "libobs.unmute": [],
+                "libobs.push-to-mute": [],
+                "libobs.push-to-talk": [],
+                "ObsBrowser.Refresh": []
+            },
+            "deinterlace_mode": 0,
+            "deinterlace_field_order": 0,
+            "monitoring_type": 0,
+            "private_settings": {}
         },
         {
             "prev_ver": 503382017,
@@ -342,7 +391,7 @@
                         "name": "B_Overlay",
                         "source_uuid": "3d4e0f91-df5c-408a-abf4-37bdf73f8984",
                         "visible": true,
-                        "locked": true,
+                        "locked": false,
                         "rot": 0.0,
                         "pos": {
                             "x": 0.0,
@@ -363,7 +412,7 @@
                         "crop_left": 0,
                         "crop_top": 0,
                         "crop_right": 0,
-                        "crop_bottom": 122,
+                        "crop_bottom": 455,
                         "id": 2,
                         "group_item_backup": false,
                         "scale_filter": "disable",
@@ -560,7 +609,7 @@
                         "crop_left": 0,
                         "crop_top": 0,
                         "crop_right": 0,
-                        "crop_bottom": 122,
+                        "crop_bottom": 543,
                         "id": 4,
                         "group_item_backup": false,
                         "scale_filter": "disable",
@@ -736,7 +785,7 @@
                         "name": "B_Overlay",
                         "source_uuid": "3d4e0f91-df5c-408a-abf4-37bdf73f8984",
                         "visible": true,
-                        "locked": true,
+                        "locked": false,
                         "rot": 0.0,
                         "pos": {
                             "x": 0.0,
@@ -757,7 +806,7 @@
                         "crop_left": 0,
                         "crop_top": 0,
                         "crop_right": 0,
-                        "crop_bottom": 122,
+                        "crop_bottom": 455,
                         "id": 4,
                         "group_item_backup": false,
                         "scale_filter": "disable",
@@ -933,7 +982,7 @@
                         "name": "B_Overlay",
                         "source_uuid": "3d4e0f91-df5c-408a-abf4-37bdf73f8984",
                         "visible": true,
-                        "locked": true,
+                        "locked": false,
                         "rot": 0.0,
                         "pos": {
                             "x": 0.0,
@@ -954,7 +1003,7 @@
                         "crop_left": 0,
                         "crop_top": 0,
                         "crop_right": 0,
-                        "crop_bottom": 122,
+                        "crop_bottom": 455,
                         "id": 2,
                         "group_item_backup": false,
                         "scale_filter": "disable",
@@ -1151,7 +1200,7 @@
                         "crop_left": 0,
                         "crop_top": 0,
                         "crop_right": 0,
-                        "crop_bottom": 122,
+                        "crop_bottom": 543,
                         "id": 4,
                         "group_item_backup": false,
                         "scale_filter": "disable",
@@ -1327,7 +1376,7 @@
                         "name": "B_Overlay",
                         "source_uuid": "3d4e0f91-df5c-408a-abf4-37bdf73f8984",
                         "visible": true,
-                        "locked": true,
+                        "locked": false,
                         "rot": 0.0,
                         "pos": {
                             "x": 0.0,
@@ -1348,7 +1397,7 @@
                         "crop_left": 0,
                         "crop_top": 0,
                         "crop_right": 0,
-                        "crop_bottom": 122,
+                        "crop_bottom": 455,
                         "id": 4,
                         "group_item_backup": false,
                         "scale_filter": "disable",
@@ -1524,7 +1573,7 @@
                         "name": "B_Overlay",
                         "source_uuid": "3d4e0f91-df5c-408a-abf4-37bdf73f8984",
                         "visible": true,
-                        "locked": true,
+                        "locked": false,
                         "rot": 0.0,
                         "pos": {
                             "x": 0.0,
@@ -1545,7 +1594,7 @@
                         "crop_left": 0,
                         "crop_top": 0,
                         "crop_right": 0,
-                        "crop_bottom": 122,
+                        "crop_bottom": 455,
                         "id": 4,
                         "group_item_backup": false,
                         "scale_filter": "disable",
@@ -1742,7 +1791,7 @@
                         "crop_left": 0,
                         "crop_top": 0,
                         "crop_right": 0,
-                        "crop_bottom": 122,
+                        "crop_bottom": 543,
                         "id": 4,
                         "group_item_backup": false,
                         "scale_filter": "disable",
@@ -1918,7 +1967,7 @@
                         "name": "B_Overlay",
                         "source_uuid": "3d4e0f91-df5c-408a-abf4-37bdf73f8984",
                         "visible": true,
-                        "locked": true,
+                        "locked": false,
                         "rot": 0.0,
                         "pos": {
                             "x": 0.0,
@@ -1939,7 +1988,7 @@
                         "crop_left": 0,
                         "crop_top": 0,
                         "crop_right": 0,
-                        "crop_bottom": 122,
+                        "crop_bottom": 455,
                         "id": 4,
                         "group_item_backup": false,
                         "scale_filter": "disable",
@@ -2095,17 +2144,17 @@
             "versioned_id": "scene",
             "settings": {
                 "custom_size": false,
-                "id_counter": 1,
+                "id_counter": 2,
                 "items": [
                     {
-                        "name": "Texte (FreeType 2)",
-                        "source_uuid": "33e41f76-03bd-4da0-83a5-b04ccb918311",
+                        "name": "B_Splash",
+                        "source_uuid": "7284728c-542d-459e-9efa-9e40d717d0e5",
                         "visible": true,
                         "locked": false,
                         "rot": 0.0,
                         "pos": {
-                            "x": 161.0,
-                            "y": 288.0
+                            "x": 0.0,
+                            "y": 0.0
                         },
                         "scale": {
                             "x": 1.0,
@@ -2123,7 +2172,7 @@
                         "crop_top": 0,
                         "crop_right": 0,
                         "crop_bottom": 0,
-                        "id": 1,
+                        "id": 2,
                         "group_item_backup": false,
                         "scale_filter": "disable",
                         "blend_method": "default",
@@ -2151,8 +2200,8 @@
             "push-to-talk-delay": 0,
             "hotkeys": {
                 "OBSBasic.SelectScene": [],
-                "libobs.show_scene_item.1": [],
-                "libobs.hide_scene_item.1": []
+                "libobs.show_scene_item.2": [],
+                "libobs.hide_scene_item.2": []
             },
             "deinterlace_mode": 0,
             "deinterlace_field_order": 0,
@@ -2168,18 +2217,18 @@
             "id": "scene",
             "versioned_id": "scene",
             "settings": {
-                "id_counter": 1,
+                "id_counter": 2,
                 "custom_size": false,
                 "items": [
                     {
-                        "name": "Texte (FreeType 2)",
-                        "source_uuid": "33e41f76-03bd-4da0-83a5-b04ccb918311",
+                        "name": "B_Splash",
+                        "source_uuid": "7284728c-542d-459e-9efa-9e40d717d0e5",
                         "visible": true,
                         "locked": false,
                         "rot": 0.0,
                         "pos": {
-                            "x": 161.0,
-                            "y": 288.0
+                            "x": 0.0,
+                            "y": 0.0
                         },
                         "scale": {
                             "x": 1.0,
@@ -2197,7 +2246,7 @@
                         "crop_top": 0,
                         "crop_right": 0,
                         "crop_bottom": 0,
-                        "id": 1,
+                        "id": 2,
                         "group_item_backup": false,
                         "scale_filter": "disable",
                         "blend_method": "default",
@@ -2225,8 +2274,8 @@
             "push-to-talk-delay": 0,
             "hotkeys": {
                 "OBSBasic.SelectScene": [],
-                "libobs.show_scene_item.1": [],
-                "libobs.hide_scene_item.1": []
+                "libobs.show_scene_item.2": [],
+                "libobs.hide_scene_item.2": []
             },
             "deinterlace_mode": 0,
             "deinterlace_field_order": 0,
@@ -2242,18 +2291,18 @@
             "id": "scene",
             "versioned_id": "scene",
             "settings": {
-                "id_counter": 1,
+                "id_counter": 2,
                 "custom_size": false,
                 "items": [
                     {
-                        "name": "Texte (FreeType 2)",
-                        "source_uuid": "33e41f76-03bd-4da0-83a5-b04ccb918311",
+                        "name": "B_Splash",
+                        "source_uuid": "7284728c-542d-459e-9efa-9e40d717d0e5",
                         "visible": true,
                         "locked": false,
                         "rot": 0.0,
                         "pos": {
-                            "x": 161.0,
-                            "y": 288.0
+                            "x": 0.0,
+                            "y": 0.0
                         },
                         "scale": {
                             "x": 1.0,
@@ -2271,7 +2320,7 @@
                         "crop_top": 0,
                         "crop_right": 0,
                         "crop_bottom": 0,
-                        "id": 1,
+                        "id": 2,
                         "group_item_backup": false,
                         "scale_filter": "disable",
                         "blend_method": "default",
@@ -2299,8 +2348,8 @@
             "push-to-talk-delay": 0,
             "hotkeys": {
                 "OBSBasic.SelectScene": [],
-                "libobs.show_scene_item.1": [],
-                "libobs.hide_scene_item.1": []
+                "libobs.show_scene_item.2": [],
+                "libobs.hide_scene_item.2": []
             },
             "deinterlace_mode": 0,
             "deinterlace_field_order": 0,
@@ -2596,7 +2645,7 @@
                         "name": "B_Overlay",
                         "source_uuid": "3d4e0f91-df5c-408a-abf4-37bdf73f8984",
                         "visible": true,
-                        "locked": true,
+                        "locked": false,
                         "rot": 0.0,
                         "pos": {
                             "x": 0.0,
@@ -2617,7 +2666,7 @@
                         "crop_left": 0,
                         "crop_top": 0,
                         "crop_right": 0,
-                        "crop_bottom": 122,
+                        "crop_bottom": 455,
                         "id": 22,
                         "group_item_backup": false,
                         "scale_filter": "disable",
@@ -2678,8 +2727,8 @@
             "versioned_id": "ndi_source",
             "settings": {
                 "ndi_fix_alpha_blending": false,
-                "ndi_audio": false,
-                "ndi_source_name": "DESKTOP-220DR1F (DeckLink Quad (1) 1)"
+                "ndi_source_name": "",
+                "ndi_audio": false
             },
             "mixers": 255,
             "sync": 0,
@@ -2711,7 +2760,7 @@
             "versioned_id": "ndi_source",
             "settings": {
                 "ndi_fix_alpha_blending": false,
-                "ndi_source_name": "DESKTOP-220DR1F (DeckLink Quad (3) 3)"
+                "ndi_source_name": ""
             },
             "mixers": 255,
             "sync": 0,
@@ -2743,7 +2792,7 @@
             "versioned_id": "ndi_source",
             "settings": {
                 "ndi_fix_alpha_blending": false,
-                "ndi_source_name": "DESKTOP-220DR1F (DeckLink Quad (6) 6)"
+                "ndi_source_name": ""
             },
             "mixers": 255,
             "sync": 0,
@@ -2762,38 +2811,6 @@
                 "libobs.push-to-mute": [],
                 "libobs.push-to-talk": []
             },
-            "deinterlace_mode": 0,
-            "deinterlace_field_order": 0,
-            "monitoring_type": 0,
-            "private_settings": {}
-        },
-        {
-            "prev_ver": 503382017,
-            "name": "Texte (FreeType 2)",
-            "uuid": "33e41f76-03bd-4da0-83a5-b04ccb918311",
-            "id": "text_gdiplus",
-            "versioned_id": "text_gdiplus_v2",
-            "settings": {
-                "text": "SHADER\nSHOWDOWN",
-                "font": {
-                    "face": "Comic Sans MS",
-                    "style": "Regular",
-                    "size": 256,
-                    "flags": 0
-                }
-            },
-            "mixers": 0,
-            "sync": 0,
-            "flags": 0,
-            "volume": 1.0,
-            "balance": 0.5,
-            "enabled": true,
-            "muted": false,
-            "push-to-mute": false,
-            "push-to-mute-delay": 0,
-            "push-to-talk": false,
-            "push-to-talk-delay": 0,
-            "hotkeys": {},
             "deinterlace_mode": 0,
             "deinterlace_field_order": 0,
             "monitoring_type": 0,
@@ -3631,12 +3648,12 @@
                     "versioned_id": "obs_glow_filter",
                     "settings": {
                         "blur_type": 2,
-                        "glow_size": 30.0,
-                        "glow_fill_color": 3355443200,
-                        "glow_fill_type": 1,
                         "glow_fill_source": "_CAPTURE_SHADER1",
+                        "fill": false,
+                        "glow_size": 30.0,
                         "glow_intensity": 40.0,
-                        "fill": false
+                        "glow_fill_type": 1,
+                        "glow_fill_color": 3355443200
                     },
                     "mixers": 0,
                     "sync": 0,
