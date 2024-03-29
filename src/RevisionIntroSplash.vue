@@ -18,8 +18,10 @@
     <div id="title">
         <div id="title-line1">
             <span id="title-line1-text">{{ line1Text }}</span>
+            <span id="title-line1-text">{{ line1Text }}</span>
         </div>
         <div id="title-line2">
+            <span id="title-line2-text">{{ line2Text }}</span>
             <span id="title-line2-text">{{ line2Text }}</span>
         </div>
     </div>
@@ -38,6 +40,7 @@
         font-style: italic;
         text-align: center;
         transform: rotate(-5deg);
+        filter: blur(0.01px);
         position: absolute;
         top: -10%;
         left: -10%;
@@ -55,6 +58,7 @@
         font-size: 23.5em;
         color: black;
         vertical-align: bottom;
+        overflow: hidden;
     }
 
     #title-line1 span {
@@ -75,6 +79,7 @@
         height: 50%;
         width: 100%;
         line-height: 1em;
+        overflow: hidden;
     }
 
     #title-line2 span {
