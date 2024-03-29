@@ -1,14 +1,13 @@
-<!-- TODO:
-barre qui se déplir avec le pseudo sous le timer
-animation de réduction du timer
-apparition des textres gauche et droite
-
-bannière full white ?? (même les deux côtés ?)
--->
-
 <script setup lang="ts">
     import { ref } from 'vue';
     import OBSWebSocket from 'obs-websocket-js';
+
+    const OBS_WS_ADDRESS = "ws://localhost:4455";
+    const SERVER_WS_ADDRESS = "ws://localhost:6969";
+    const SERVER_API_ADDRESS = "http://localhost:8080";
+
+    var isObsConnected = false;
+    var isServerConnected = false;
 
     // defineProps<{ nick: string }>()
 
@@ -47,9 +46,12 @@ bannière full white ?? (même les deux côtés ?)
 
     var config: Config;
 
-    const configFile = await fetch("http://localhost:8080/current_round");
+    const configFile = await fetch(`${SERVER_API_ADDRESS}/current_round`)
+                                .catch((e: Error) => {
+                                    console.error(`Can't retrieve current round infos : ${e}`)
+                                });
 
-    if (configFile.status == 200) {
+    if (configFile && configFile.status == 200) {
         console.log("Config loaded!")
         config = await configFile.json();
 
@@ -96,10 +98,7 @@ bannière full white ?? (même les deux côtés ?)
         }
     }
 
-    // Dashboard connection
-    const dashWs = new WebSocket("ws://localhost:6969");
-
-    // Timer callback
+    // Timer callbacks
     var timerInterval: Timer | null = null;
 
     function updateTimerFromState() {
@@ -122,7 +121,24 @@ bannière full white ?? (même les deux côtés ?)
         updateTimerFromState();
     }
 
-    // Dashboard event handling
+    // Dashboard connection and event handling
+    const dashWs = new WebSocket(SERVER_WS_ADDRESS);
+
+    dashWs.addEventListener("open", () => {
+        console.log(`Connected to server ${SERVER_WS_ADDRESS}.`);
+        isServerConnected = true;
+    });
+
+    dashWs.addEventListener("error", (ev: ErrorEvent) => {
+        console.error(`Error with the server Websocket connection ${SERVER_WS_ADDRESS}`);
+        isServerConnected = false;
+    });
+
+    dashWs.addEventListener("close", (e: CloseEvent) => {
+        console.error(`Websocket connection with server ${SERVER_WS_ADDRESS} closed.`);
+        isServerConnected = false;
+    });
+
     dashWs.addEventListener("message", (e: MessageEvent) => {
         const eventMsg = JSON.parse(e.data);
 
@@ -152,19 +168,33 @@ bannière full white ?? (même les deux côtés ?)
         }
     })
 
-
-
     // OBS connection
     const obs = new OBSWebSocket();
-    await obs.connect("ws://localhost:4455", "vWbRjK35sRMOZPAy");
+        await obs.connect(OBS_WS_ADDRESS, "vWbRjK35sRMOZPAy")
+                     .then(() => {
+                        isObsConnected = true;
+                     })
+                     .catch(() => {
+                        console.error(`Can't connect to OBS websockets ${OBS_WS_ADDRESS}`);
+                     });
 
     obs.on("SceneTransitionStarted", async function (evt: object) {
         const nextSceneInfo = await obs.call("GetCurrentProgramScene");
         updateValuesUsingSceneName(nextSceneInfo.currentProgramSceneName);
     });
 
-    const currObsSceneInfo = await obs.call("GetCurrentProgramScene");
-    updateValuesUsingSceneName(currObsSceneInfo.sceneName);
+    obs.on("ConnectionError", () => {
+        isObsConnected = false;
+    });
+
+    obs.on("ConnectionClosed", () => {
+        isObsConnected = false;
+    });
+
+    if (isObsConnected) {
+        const currObsSceneInfo = await obs.call("GetCurrentProgramScene");
+        updateValuesUsingSceneName(currObsSceneInfo.sceneName);
+    }
 </script>
 
 <template>
@@ -180,6 +210,8 @@ bannière full white ?? (même les deux côtés ?)
 
             <div style="margin: 20px; margin-top: 10px; color: black;">{{ roundName.toUpperCase() }}</div>
         </div>
+
+        <div class="side-panel-shutter" id="side-left-shutter"></div>
     </div>
     
     <div class="side-panel" id="side-right-title" :class="{
@@ -194,6 +226,8 @@ bannière full white ?? (même les deux côtés ?)
 
             <div style="margin: 20px; margin-top: 10px; color: black;">{{ djName.toUpperCase() }}</div>
         </div>
+
+        <div class="side-panel-shutter" id="side-right-shutter"></div>
     </div>
 
     <div id="container">
@@ -373,6 +407,33 @@ bannière full white ?? (même les deux côtés ?)
         -webkit-text-stroke-color: black;*/
         color: black;
         text-align: center;
+    }
+
+    .side-panel-shutter {
+        position: absolute;
+        height: 100%;
+        background-color: black;
+        top: 0;
+        /* animation: 1s ease-in-out 0s shutter-animation infinite; */
+    }
+
+    #side-right-shutter {
+        animation-direction: reverse;
+    }
+
+    @keyframes shutter-animation {
+        0% {
+            left: 0%;
+            right: 100%;
+        }
+        50% {
+            left: 0%;
+            right: 0%;
+        }
+        100% {
+            left: 100%;
+            right: 0%;
+        }
     }
 
     #timer-text {
