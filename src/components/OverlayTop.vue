@@ -13,7 +13,7 @@
     // defineProps<{ nick: string }>()
 
     type Round = {
-        coders: Array[string];
+        coders: Array<string>;
         djName: string;
         commentsName: string;
     }
@@ -136,7 +136,6 @@
 
         updateTimerFromState();
         updateTimerStyle();
-
     }
     
     // Dashboard connection and event handling
