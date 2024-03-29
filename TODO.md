@@ -1,8 +1,9 @@
 VERY HIGH (doit être fait pour demain midi)
+[ ] Mettre obs_osc.py sur la machine compo
+[ ] Commit nouvelle version de la collection de scenes OBS
 [ ] NiceGUI API: exposer adresses & ports
 [ ] Scènes OBS (au moins la Main)
 [ ] Nom des coders sur la main
-[ ] Mettre obs_osc.py sur la machine compo
 
 HIGH
 [ ] Scenes intro:
