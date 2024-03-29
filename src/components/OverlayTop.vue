@@ -418,7 +418,7 @@
         background-color: black;
         left: 0.3em;
         right: 0.3em;
-        height: 40px;
+        height: 59px;
         /* margin-bottom: -0.35em; */
         bottom: 0em;
         z-index: -10;
@@ -426,7 +426,7 @@
 
     #bar-bottom-info-text {
         color: white;
-        font-size: 36px;
+        font-size: 56px;
         line-height: 100%;
         height: 100%;
         text-align: center;
@@ -529,8 +529,8 @@
     .make_timer_small {
         transition: all 0.50s;
         height: 100px;
-        width: 250px;
-        font-size: 6em;
+        width: 300px;
+        font-size: 6.25em;
     }
 
     .make_timer_big {
@@ -558,7 +558,7 @@
 
     .make_appear_bottom_infostrip {
         transition: margin-bottom 0.50s;
-        margin-bottom: -40px;
+        margin-bottom: -59px;
     }
 
     .make_disappear_bottom_infostrip {
