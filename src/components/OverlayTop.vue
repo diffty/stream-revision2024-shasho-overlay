@@ -5,6 +5,7 @@
     const OBS_WS_ADDRESS = "ws://localhost:4455";
     const SERVER_WS_ADDRESS = "ws://localhost:6969";
     const SERVER_API_ADDRESS = "http://localhost:8080";
+    const OBS_WS_PASSWORD = "meubapelefoute";
 
     var isObsConnected = false;
     var isServerConnected = false;
@@ -170,7 +171,7 @@
 
     // OBS connection
     const obs = new OBSWebSocket();
-        await obs.connect(OBS_WS_ADDRESS, "vWbRjK35sRMOZPAy")
+        await obs.connect(OBS_WS_ADDRESS, OBS_WS_PASSWORD)
                      .then(() => {
                         isObsConnected = true;
                      })
