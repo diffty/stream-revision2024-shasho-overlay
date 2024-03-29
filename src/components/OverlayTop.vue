@@ -29,6 +29,8 @@
     const timerIsBig = ref(true)
     const isBottomInfoStripVisible = ref(false)
     const isBottomInfoStripTransitionActive = ref(false)
+    const isTimerBlinking = ref(false);
+    const isTimerColorsInverted = ref(false);
     const coderName1 = ref("");
     const coderName2 = ref("");
     const coderName3 = ref("");
@@ -107,7 +109,7 @@
     function updateTimerFromState() {
         if (timerState.isRunning) {
             const newTimerValue = (timerState.startState - (Date.now() - timerState.startTime) / 1000);
-            timer.value = newTimerValue;
+            timer.value = Math.max(newTimerValue, 0);
         }
         else {
             timer.value = timerState.startState;
@@ -116,16 +118,30 @@
         // dashWs.send("test");
     }
 
+    function updateTimerStyle() {
+        // TODO: make timer blink when 0
+        if (timer.value <= 10 && timer.value > 0) {
+            isTimerBlinking.value = true;
+        }
+        else {
+            isTimerBlinking.value = false;
+        }
+    }
+    
+
     function timerCallback() {
         if (!timerState.isRunning && timerInterval != null) {
             clearInterval(timerInterval);
         }
 
         updateTimerFromState();
-    }
+        updateTimerStyle();
 
+    }
+    
     // Dashboard connection and event handling
     const dashWs = new WebSocket(SERVER_WS_ADDRESS);
+    // isTimerColorsInverted.value = true;
 
     dashWs.addEventListener("open", () => {
         console.log(`Connected to server ${SERVER_WS_ADDRESS}.`);
@@ -244,7 +260,8 @@
     <div id="container">
         <div id="bar-center" :class="{
             make_timer_small: !timerIsBig,
-            make_timer_big: timerIsBig }">
+            make_timer_big: timerIsBig,
+            invert: isTimerColorsInverted }">
 
             <div id="bar-bottom-info" :class="{
                     make_appear_bottom_infostrip: isBottomInfoStripVisible,
@@ -281,7 +298,7 @@
                 </svg>
             </div>
 
-            <div id="timer-text">{{ Math.floor(timer / 60).toString().padStart(2, '0') }}:{{ Math.floor(timer % 60).toString().padStart(2, '0') }}</div>
+            <div id="timer-text" :class="{ blink: isTimerBlinking }">{{ Math.floor(timer / 60).toString().padStart(2, '0') }}:{{ Math.floor(timer % 60).toString().padStart(2, '0') }}</div>
         </div>
     </div>
 
@@ -450,6 +467,20 @@
     #timer-text {
         position: absolute;
         width: 100%;
+    }
+
+    @keyframes blinker {
+        50% {
+            opacity: 0;
+        }
+    }
+
+    .blink {
+        animation: 0.5s blinker steps(1, end) infinite
+    }
+
+    .invert {
+        filter: invert(1);
     }
 
     .make_grow_topbar {
