@@ -16,12 +16,85 @@
 
     // FLAGS
     var isObsConnected = false;
+    var isServerConnected = false;
 
+
+    // OBJECTS DEFINITIONS
+    type Round = {
+        coders: Array<string>;
+        djName: string;
+        commentsName: string;
+    }
+
+    type Config = {
+        roundName: string;
+        hostName: string;
+        round: Round;
+    };
+
+    const coderName1 = ref("");
+    const coderName2 = ref("");
+    const coderName3 = ref("");
+    const roundName = ref("");
+    const djName = ref("");
+    const commentsName = ref("");
+    const hostName = ref("");
+
+    var config: Config;
 
     function updateValuesUsingSceneName(sceneName: string) {
         currObsSceneName.value = sceneName;
     }
 
+    async function updateConfig() {
+        const configFile = await fetch(`${SERVER_API_ADDRESS}/current_round`)
+                                    .catch((e: Error) => {
+                                        console.error(`Can't retrieve current round infos : ${e}`)
+                                    });
+
+        if (configFile && configFile.status == 200) {
+            console.log("Config loaded!")
+            config = await configFile.json();
+
+            coderName1.value = config.round.coders[0];
+            coderName2.value = config.round.coders[1];
+            coderName3.value = config.round.coders[2];
+            roundName.value = config.roundName;
+            djName.value = config.round.djName;
+            commentsName.value = config.round.commentsName;
+            hostName.value = config.hostName;
+        }
+    }
+
+    // Dashboard connection and event handling
+    const dashWs = new WebSocket(SERVER_WS_ADDRESS);
+
+    dashWs.addEventListener("open", () => {
+        console.log(`Connected to server ${SERVER_WS_ADDRESS}.`);
+        isServerConnected = true;
+    });
+
+    dashWs.addEventListener("error", (ev: ErrorEvent) => {
+        console.error(`Error with the server Websocket connection ${SERVER_WS_ADDRESS}`);
+        isServerConnected = false;
+    });
+
+    dashWs.addEventListener("close", (e: CloseEvent) => {
+        console.error(`Websocket connection with server ${SERVER_WS_ADDRESS} closed.`);
+        isServerConnected = false;
+    });
+
+    dashWs.addEventListener("message", (e: MessageEvent) => {
+        const eventMsg = JSON.parse(e.data);
+
+        switch (eventMsg.type) {
+            case "ConfigEvent":
+                if (eventMsg.payload.doUpdate) {
+                    updateConfig();
+                }
+                break;
+        }
+    })
 
     // OBS connection
     const obs = new OBSWebSocket();
@@ -56,15 +129,15 @@
     <div id="title" class="slight-tilting">
         <div id="title-line1" class="slight-moving">
             <Transition name="slide-down-up">
-                <span id="title-line1-stage2" v-if="currObsSceneName === 'INTRO_ROUND'">{{ line1Text }}</span>
-                <span id="title-line1-stage3" v-else-if="currObsSceneName === 'INTRO_VS'">COOL TEXT</span>
+                <span id="title-line1-stage2" v-if="currObsSceneName === 'INTRO_ROUND'">{{ roundName }}</span>
+                <span id="title-line1-stage3" v-else-if="currObsSceneName === 'INTRO_VS'">{{ roundName }}</span>
                 <span id="title-line1-stage1" v-else>SHADER</span>
             </Transition>
         </div>
         <div id="title-line2" class="slight-moving-reverse">
             <Transition name="slide-up-down">
-                <span id="title-line2-stage2" v-if="currObsSceneName === 'INTRO_ROUND'">{{ line2Text }}</span>
-                <span id="title-line2-stage3" v-else-if="currObsSceneName === 'INTRO_VS'">TEST2</span>
+                <span id="title-line2-stage2" v-if="currObsSceneName === 'INTRO_ROUND'">COMMENTS BY {{ commentsName }}</span>
+                <span id="title-line2-stage3" v-else-if="currObsSceneName === 'INTRO_VS'">VS</span>
                 <span id="title-line2-stage1" v-else>SHOWDOWN</span>
             </Transition>
         </div>
@@ -169,7 +242,7 @@
 
     .slide-down-up-enter-from,
     .slide-down-up-leave-to {
-        margin-bottom: -400px;
+        margin-bottom: -500px;
     }
 
     .slide-up-down-enter-active {
@@ -182,7 +255,7 @@
 
     .slide-up-down-enter-from,
     .slide-up-down-leave-to {
-        margin-top: -400px;
+        margin-top: -500px;
     }
 
     /* Animations */
