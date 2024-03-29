@@ -22,5 +22,9 @@
 * Run `bun install` at the root of the repository
 
 
+## Building
+`bunx --bun vite build`
+
+
 ## Usage
 `bunx --bun vite`
