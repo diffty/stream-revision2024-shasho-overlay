@@ -1,15 +1,6 @@
 ==TODO==
 
-VERY HIGH (doit être fait pour demain midi)
-[ ] Etiquettes avec noms des coders sur la main
-
 HIGH
-[ ] Scenes intro:
-    * Titre
-    * Host/Commentaires
-    * Round en cours
-
-MID
 [ ] Anim pour changer d'info dans la barre du haut
 
 LOW (sécu)
@@ -36,3 +27,8 @@ LOW (sécu)
 [X] Commit nouvelle version de la collection de scenes OBS
 [X] Scènes OBS (au moins la Main)
 [X] Shadow sur sources
+[X] Etiquettes avec noms des coders sur la main
+[X] Scenes intro:
+    * Titre
+    * Host/Commentaires
+    * Round en cours
