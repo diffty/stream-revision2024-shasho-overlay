@@ -136,8 +136,8 @@
         <div id="title-line2" class="slight-moving-reverse">
             <Transition name="slide-up-down">
                 <span id="title-line2-stage2" class="title-stage-line" v-if="currObsSceneName === 'INTRO_ROUND'">
-                    COMMENTARIES <br />{{ commentsName }}<br />
-                    DJ SET <br />{{ djName }}<br />
+                    <div style="line-height: 0.8em; margin-top: 0.1em">COMMENTARY <br />{{ commentsName }}</div>
+                    <div style="line-height: 0.8em; margin-top: 0.3em">DJ SET <br />{{ djName }}</div>
                 </span>
                 <span id="title-line2-stage3" class="title-stage-line" v-else-if="currObsSceneName === 'INTRO_VS'">
                     {{ coderName1 }}<br />
@@ -209,7 +209,7 @@
         top: 0;
         left: 0;
         width: 100%;
-        line-height: 1em;
+        line-height: 0.8em;
     }
 
     #title-line1-stage1 {
@@ -226,20 +226,24 @@
 
     #title-line2-stage1 {
         font-size: 1em;
+        padding-top: 0.15em;
     }
 
     #title-line2-stage2 {
         font-size: 0.55em;
+        padding-top: 0.15em;
     }
 
     #title-line2-stage3 {
         font-size: 0.7em;
+        padding-top: 0.15em;
     }
 
     .small-versus {
         position: relative;
         font-size: 0.5em;
         line-height: 0;
+        vertical-align: middle;
     }
 
     /* Transitions */
