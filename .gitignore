@@ -21,8 +21,8 @@ node_modules
 *.sln
 *.sw?
 
-server/bin
-server/lib
-server/pyvenv.cfg
+backend/bin
+backend/lib
+backend/pyvenv.cfg
 
-src/assets/fonts
+frontend/assets/fonts
