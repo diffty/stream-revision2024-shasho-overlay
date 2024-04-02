@@ -9,12 +9,16 @@ export default defineConfig({
     cors: { origin: "*" },
   },
   base: '',
+  root: 'frontend/',
   build: {
     rollupOptions: {
       input: {
-        main: resolve(__dirname, 'index.html'),
-        splash: resolve(__dirname, 'splash.html'),
+        main: resolve(__dirname, 'frontend', 'index.html'),
+        splash: resolve(__dirname, 'frontend', 'splash.html'),
       },
+      output: {
+        dir: "dist/",
+      }
     },
   },
 })

@@ -5,7 +5,7 @@
     const OBS_WS_ADDRESS = "ws://localhost:4455";
     const SERVER_WS_ADDRESS = "ws://localhost:6969";
     const SERVER_API_ADDRESS = "http://localhost:8080";
-    const OBS_WS_PASSWORD = "meubapelefoute";
+    const OBS_WS_PASSWORD = "revision2024";
 
     var isObsConnected = false;
     var isServerConnected = false;
