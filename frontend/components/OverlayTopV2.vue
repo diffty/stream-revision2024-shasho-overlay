@@ -833,12 +833,15 @@
 
     .slide-up-enter-from {
         opacity: 0;
-        transform: translateY(1em);
+        transform: rotateX(90deg);
+        transform: rotateX(-90deg) translateY(-1em);
+
     }
 
     .slide-up-leave-to {
         opacity: 0;
-        transform: translateY(-1em);
+        transform: rotateX(-90deg) translateY(1em);
+
     }
 
     .title-scroller {
