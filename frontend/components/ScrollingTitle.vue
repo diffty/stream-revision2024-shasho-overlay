@@ -4,47 +4,46 @@
     const title = ref();
     const title_content = ref();
     const scrolling_title_singletext_subwrap = ref();
+    const scrolling_title_singletext_before = ref();
+    const scrolling_title_singletext_real = ref();
+    const scrolling_title_singletext_after = ref();
 
-    function makeScrollingTitleStrip(parentHtmlElement: HTMLElement, text: string) {
-        var i = 0;
+    const props = defineProps({
+        reversed: Boolean,
+        text: {
+            type: String,
+            required: true
+        }
+    });
+
+    onMounted(() => {
         var totalSize = 0;
         var realElementId = 1;
         
         var wrapHtmlElement = scrolling_title_singletext_subwrap.value;
+        if (props.reversed)
+            wrapHtmlElement.classList.add("is_scrolling_reverse");
+        else
+            wrapHtmlElement.classList.add("is_scrolling");
 
-        var beforeHtmlElement = document.createElement("div");
-        var realHtmlElement = document.createElement("div");
-        var afterHtmlElement = document.createElement("div");
-        
-        wrapHtmlElement.classList.add("is_scrolling_reverse");
-
-        beforeHtmlElement.className = "scrolling-title-singletext-before";
-        realHtmlElement.className = "scrolling-title-singletext-real";
-        afterHtmlElement.className = "scrolling-title-singletext-after";
-
-        wrapHtmlElement?.appendChild(beforeHtmlElement);
-        wrapHtmlElement?.appendChild(realHtmlElement);
-        wrapHtmlElement?.appendChild(afterHtmlElement);
-
-        // parentHtmlElement?.appendChild(wrapHtmlElement);
-
-        while (totalSize < (parentHtmlElement.offsetWidth)) {
+        var i = 0;
+        while (totalSize < (title_content.value.offsetWidth)) {
             var newSpan = document.createElement("span");
-            newSpan.innerHTML = text.replace(" ", "&nbsp;");
+            newSpan.innerHTML = props.text.replace(" ", "&nbsp;");
 
-            if (i < realElementId) beforeHtmlElement?.appendChild(newSpan);
-            if (i == realElementId) realHtmlElement?.appendChild(newSpan);
+            if (i < realElementId) {
+                scrolling_title_singletext_before.value.appendChild(newSpan);
+            }
+            else if (i == realElementId) {
+                scrolling_title_singletext_real.value.appendChild(newSpan);
+            }
             if (i > realElementId) {
-                afterHtmlElement?.appendChild(newSpan);
+                scrolling_title_singletext_after.value.appendChild(newSpan);
                 totalSize += newSpan.offsetWidth;
             }
 
             i += 1;
         }
-    }
-
-    onMounted(() => {
-        makeScrollingTitleStrip(title_content.value, "ZIZICACA PENIS")
     })
 </script>
 
@@ -53,14 +52,16 @@
         <div ref="title_content" id="title_content">
             <div ref="scrolling_title_singletext_wrap" id="scrolling-title-singletext-wrap">
                 <div ref="scrolling_title_singletext_subwrap" id="scrolling-title-singletext-subwrap">
-
+                    <div ref="scrolling_title_singletext_before" id="scrolling-title-singletext-before"></div>
+                    <div ref="scrolling_title_singletext_real" id="scrolling-title-singletext-real"></div>
+                    <div ref="scrolling_title_singletext_after" id="scrolling-title-singletext-after"></div>
                 </div>
             </div>
         </div>
     </div>
 </template>
 
-<style>
+<style scoped>
     @keyframes scrolling {
         0% {
             left: 0%;
@@ -79,13 +80,6 @@
     }
 
     #title_strip {
-        display: block;
-        width: 100%;
-        height: 150px;
-        position: absolute;
-        top: 300px;
-        background-color: black;
-        font-size: 9em;
         margin: 0;
         padding: 0;
         line-height: 100%;
@@ -96,21 +90,21 @@
         display: inline;
         position: absolute;
         width: 100%;
-
+        white-space: nowrap;
     }
 
-    .scrolling-title-singletext-before {
+    #scrolling-title-singletext-before {
         display: block;
         position: absolute;
         right: 100%;
         top: 0;
     }
 
-    .scrolling-title-singletext-real {
+    #scrolling-title-singletext-real {
         
     }
 
-    .scrolling-title-singletext-after {
+    #scrolling-title-singletext-after {
         display: block;
         position: absolute;
         left: 100%;

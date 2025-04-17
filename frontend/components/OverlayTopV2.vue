@@ -1,7 +1,7 @@
 <script setup lang="ts">
     import { ref } from 'vue';
     import OBSWebSocket from 'obs-websocket-js';
-import { forEachChild } from 'typescript';
+    import ScrollingTitle from './ScrollingTitle.vue';
 
     const OBS_WS_ADDRESS = "ws://localhost:4455";
     const SERVER_WS_ADDRESS = "ws://localhost:6969";
@@ -424,6 +424,9 @@ import { forEachChild } from 'typescript';
         </div>
     </div>
 
+    <ScrollingTitle text="SHADER" class="title-scroller title-scroller-shader" />
+    <ScrollingTitle text="SHOWDOWN" reversed class="title-scroller title-scroller-showdown "/>
+
     <div id="coders-nameplates-container">
         <div class="coder-nameplate">{{ coderName1 }}</div>
         <div class="coder-nameplate">{{ coderName2 }}</div>
@@ -837,5 +840,25 @@ import { forEachChild } from 'typescript';
         opacity: 0;
         transform: translateY(-1em);
     }
+
+    .title-scroller {
+        display: block;
+        width: 100%;
+        height: 200px;
+        position: absolute;
+        background-color: black;
+        font-size: 9em;
+        font-family: "Chivo", sans-serif;
+        font-size: 12em;
+    }
+
+    .title-scroller-shader {
+        top: 300px;
+    }
+
+    .title-scroller-showdown {
+        top: 500px;
+    }
+
 </style>
 
