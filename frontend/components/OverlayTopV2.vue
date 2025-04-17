@@ -2,6 +2,7 @@
     import { ref } from 'vue';
     import OBSWebSocket from 'obs-websocket-js';
     import ScrollingTitle from './ScrollingTitle.vue';
+    import DigitWheel from './DigitWheel.vue';
 
     const OBS_WS_ADDRESS = "ws://localhost:4455";
     const SERVER_WS_ADDRESS = "ws://localhost:6969";
@@ -308,14 +309,12 @@
 
         <div id="left-sidebar" style="margin: 20px; margin-top: 10px;"></div>
 
-        <!---
         <div class="side-panel-content" id="side-left-content" :class="{
             make_grow_side_panel_content: sidePanelsVisibility,
             make_shrink_side_panel_content: !sidePanelsVisibility }">
 
             <div style="margin: 20px; margin-top: 10px; color: black;">{{ roundName.toUpperCase() }}</div>
         </div>
-        -->
         
         <div class="side-panel-shutter" id="side-left-shutter"></div>
     </div>
@@ -378,54 +377,18 @@
             </div>
 
             <div id="timer-text" :class="{ blink: isTimerBlinking }">
-                <!--{{ Math.floor(timer / 60).toString().padStart(2, '0') }}:{{ Math.floor(timer % 60).toString().padStart(2, '0') }}-->
-                <div class="timer-digit-wrap">
-                    <div class="timer-digit-container">
-                        <Transition name="slide-up">
-                            <span class="timer-digit">
-                                {{ Math.floor(timer / 60).toString().padStart(2, '0')[0] }}
-                            </span>
-                        </Transition>
-                    </div>
-                </div>
-                <div class="timer-digit-wrap">
-                    <div class="timer-digit-container">
-                        <Transition name="slide-up">
-                            <span class="timer-digit">
-                                {{ Math.floor(timer / 60).toString().padStart(2, '0')[1] }}
-                            </span>
-                        </Transition>
-                    </div>
-                </div>
+                <DigitWheel :num="Math.floor(timer / 60).toString().padStart(2, '0')[0]"/>
+                <DigitWheel :num="Math.floor(timer / 60).toString().padStart(2, '0')[1]"/>
                 <div class="timer-digit-wrap">
                     <div class="timer-digit-container" style="width: 0.40ch">
                         <span class="timer-digit" style="width: auto">:</span>
                     </div>
                 </div>
-                <div class="timer-digit-wrap">
-                    <div class="timer-digit-container">
-                        <Transition name="slide-up">
-                            <span class="timer-digit">
-                                {{ Math.floor(timer % 60).toString().padStart(2, '0')[0] }}
-                            </span>
-                        </Transition>
-                    </div>
-                </div>
-                <div class="timer-digit-wrap">
-                    <div class="timer-digit-container">
-                        <Transition name="slide-up">
-                            <span class="timer-digit" :key="timer">
-                                {{ Math.floor(timer % 60).toString().padStart(2, '0')[1] }}
-                            </span>
-                        </Transition>
-                    </div>
-                </div>
+                <DigitWheel :num="Math.floor(timer % 60).toString().padStart(2, '0')[0]"/>
+                <DigitWheel :num="Math.floor(timer % 60).toString().padStart(2, '0')[1]"/>
             </div>
         </div>
     </div>
-
-    <ScrollingTitle text="SHADER" class="title-scroller title-scroller-shader" />
-    <ScrollingTitle text="SHOWDOWN" reversed class="title-scroller title-scroller-showdown "/>
 
     <div id="coders-nameplates-container">
         <div class="coder-nameplate">{{ coderName1 }}</div>
@@ -841,27 +804,5 @@
     .slide-up-leave-to {
         opacity: 0;
         transform: rotateX(-90deg) translateY(1em);
-
     }
-
-    .title-scroller {
-        display: block;
-        width: 100%;
-        height: 200px;
-        position: absolute;
-        background-color: black;
-        font-size: 9em;
-        font-family: "Chivo", sans-serif;
-        font-size: 12em;
-    }
-
-    .title-scroller-shader {
-        top: 300px;
-    }
-
-    .title-scroller-showdown {
-        top: 500px;
-    }
-
 </style>
-
