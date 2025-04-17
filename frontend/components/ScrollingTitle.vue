@@ -13,9 +13,14 @@
         text: {
             type: String,
             required: true
+        },
+        animDuration: {
+            type: Number,
         }
     });
 
+    const animDuration = ref(props.animDuration || "2s");
+    
     onMounted(() => {
         var totalSize = 0;
         var realElementId = 1;
@@ -72,11 +77,11 @@
     }
 
     .is_scrolling {
-        animation: scrolling 1s linear 0s infinite; 
+        animation: scrolling v-bind('animDuration') linear 0s infinite; 
     }
 
     .is_scrolling_reverse {
-        animation: scrolling 1s linear 0s infinite reverse; 
+        animation: scrolling v-bind('animDuration') linear 0s infinite reverse; 
     }
 
     #title_strip {
