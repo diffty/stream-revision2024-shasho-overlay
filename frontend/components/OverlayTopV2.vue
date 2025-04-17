@@ -464,7 +464,8 @@
 
     #side-left-content {
         position: absolute;
-        right: 0;
+        /* right: 0; */
+        left: 25%;
         top: 0;
         height: 100%;
         background-color: white;
@@ -749,7 +750,8 @@
 
     .make_grow_side_panel_content {
         transition: width 0.50s;
-        transition-delay: 0.20s;
+        transition-delay: 1s;
+        overflow: hidden;
         width: 75%;
     }
 
