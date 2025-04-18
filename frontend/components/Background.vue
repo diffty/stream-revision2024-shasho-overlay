@@ -51,9 +51,6 @@
         <ScrollingTitle text="SHADER" animDuration="5s" class="title-scroller title-scroller-shader" />
         <ScrollingTitle text="SHOWDOWN" animDuration="5s" reversed class="title-scroller title-scroller-showdown "/>
         <ScrollingTitle text="SHADER" animDuration="5s" class="title-scroller title-scroller-shader" />
-        <ScrollingTitle text="SHOWDOWN" animDuration="5s" reversed class="title-scroller title-scroller-showdown "/>
-        <ScrollingTitle text="SHADER" animDuration="5s" class="title-scroller title-scroller-shader" />
-        <ScrollingTitle text="SHOWDOWN" animDuration="5s" reversed class="title-scroller title-scroller-showdown "/>
     </div>
 </template>
 
