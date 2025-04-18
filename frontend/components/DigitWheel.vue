@@ -2,7 +2,7 @@
     import { ref, onMounted } from 'vue';
 
     const props = defineProps({
-        num: Number
+        num: String
     });
 
 </script>

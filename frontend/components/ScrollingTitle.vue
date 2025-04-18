@@ -92,7 +92,7 @@
     }
 
     #title_content {
-        display: inline;
+        /* display: inline; */
         position: absolute;
         width: 100%;
         white-space: nowrap;
@@ -117,7 +117,7 @@
     }
 
     #scrolling-title-singletext-wrap {
-        display: inline;
+        /* display: inline; */
         position: absolute;
     }
 
@@ -126,4 +126,9 @@
         position: relative;
     }
 
+    .stroke-behind {
+        color: red;
+        -webkit-text-stroke: 5px white;
+        paint-order: stroke fill;
+    } 
 </style>

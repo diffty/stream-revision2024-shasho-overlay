@@ -8,6 +8,9 @@
         },
         side: {
             type: String
+        },
+        visible: {
+            type: Boolean
         }
     });
 
@@ -17,16 +20,12 @@
     const sidebar_after = ref();
     const side = ref(props.side?.toLowerCase() == "right" ? "right" : "left");
     
-    function make() {
-        var i = 0;
-        var totalSize = 0;
-        var realElementId = 2;
-        
-        const wrapHtmlElement = sidebar_wrap.value;
-        const beforeHtmlElement = sidebar_before.value;
-        const realHtmlElement = sidebar_real.value;
-        const afterHtmlElement = sidebar_after.value;
-        
+    var wrapHtmlElement = sidebar_wrap.value;
+    var beforeHtmlElement = sidebar_before.value;
+    var realHtmlElement = sidebar_real.value;
+    var afterHtmlElement = sidebar_after.value;
+
+    function clear() {
         // Clearing bar content of previous letter nodes
         while (beforeHtmlElement.firstChild) {
             beforeHtmlElement.removeChild(beforeHtmlElement.firstChild);
@@ -39,6 +38,14 @@
         while (afterHtmlElement.firstChild) {
             afterHtmlElement.removeChild(afterHtmlElement.firstChild);
         }
+    }
+
+    function make() {
+        var i = 0;
+        var totalSize = 0;
+        var realElementId = 2;
+        
+        clear();
 
         while (totalSize < (window.innerWidth / 2.)) {  // todo: prendre plutôt la width de l'element parent (si elle est bien set)
             for (let j = 0; j < props.text.length; j++) {
@@ -121,11 +128,21 @@
     }
 
     onMounted(() => {
+        wrapHtmlElement = sidebar_wrap.value;
+        beforeHtmlElement = sidebar_before.value;
+        realHtmlElement = sidebar_real.value;
+        afterHtmlElement = sidebar_after.value;
+
         make();
     });
 
     onUpdated(() => {
-        make();
+        if (props.text == "") {
+            clear();
+        }
+        else {
+            make();
+        }
     });
 </script>
 
@@ -247,38 +264,15 @@
         animation-direction: normal;
     }
 
+    .letter-do-fade-out {
+        animation: 0.75s linear 1s 1 letter-fade-in ; /* 0.5s */
+        animation-fill-mode: backwards;
+        animation-direction: reverse;
+    }
+
     .stroke-behind {
         color: black;
         -webkit-text-stroke: 2px white;
         paint-order: stroke fill;
-    }
-
-    /* THROW THE REST?? | */
-    /*                  V */
-    .side-panel-shutter {
-        position: absolute;
-        height: 100%;
-        background-color: black;
-        top: 0;
-        /* animation: 1s ease-in-out 0s shutter-animation infinite; */
-    }
-
-    #side-right-shutter {
-        animation-direction: reverse;
-    }
-
-    @keyframes shutter-animation {
-        0% {
-            left: 0%;
-            right: 100%;
-        }
-        50% {
-            left: 0%;
-            right: 0%;
-        }
-        100% {
-            left: 100%;
-            right: 0%;
-        }
     }
 </style>

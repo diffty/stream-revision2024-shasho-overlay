@@ -3,6 +3,7 @@
     import OBSWebSocket from 'obs-websocket-js';
     import ScrollingTitle from './ScrollingTitle.vue';
     import DigitWheel from './DigitWheel.vue';
+    import SidebarScrollingTitle from './SidebarScrollingTitle.vue';
 
     const OBS_WS_ADDRESS = "ws://localhost:4455";
     const SERVER_WS_ADDRESS = "ws://localhost:6969";
@@ -27,7 +28,8 @@
     };
 
     const infoStripText = ref("")
-    const sidePanelsVisibility = ref(true)
+    const sidePanelsVisibility = ref(1)
+    const sidePanelsContentVisibility = ref(1)
     const timerIsBig = ref(true)
     const isBottomInfoStripVisible = ref(false)
     const isBottomInfoStripTransitionActive = ref(false)
@@ -42,6 +44,14 @@
     const commentsName = ref("");
     const hostName = ref("");
     const timer = ref(0);
+    const sidebar_left_title = ref("ROUND")
+    const sidebar_left_content = ref("")
+    const sidebar_right_title = ref("MUSIC")
+    const sidebar_right_content = ref("")
+    const shutter_left = ref();
+    const shutter_right = ref();
+    const side_left_content = ref();
+    const side_right_content = ref();
 
     var timerState = {
         isRunning: false,
@@ -72,88 +82,12 @@
     }
 
     function toggleSidePanelsVisibility() {
-        sidePanelsVisibility.value = !sidePanelsVisibility.value;
-        if (sidePanelsVisibility.value) {
-            var parentHtmlElement = document.getElementById("left-sidebar");
-            if (parentHtmlElement) {
-                makeSideBarHeader(parentHtmlElement, "ROUND");
-            }
-        }
+        sidePanelsVisibility.value = sidePanelsVisibility.value == 0 ? 1 : 0;
+        //sidePanelsContentVisibility.value = sidePanelsContentVisibility.value == 0 ? 1 : 0;
     }
 
     function toggleTimerSize() {
         timerIsBig.value = !timerIsBig.value;
-    }
-
-    function makeSideBarHeader(parentHtmlElement: HTMLElement, text: string) {
-        var i = 0;
-        var totalSize = 0;
-        var realElementId = 2;
-        
-        // Clearing bar content of previous letter nodes
-        while (parentHtmlElement.firstChild) {
-            parentHtmlElement.removeChild(parentHtmlElement.firstChild);
-        }
-
-        var wrapHtmlElement = document.createElement("div");
-
-        var beforeHtmlElement = document.createElement("div");
-        var realHtmlElement = document.createElement("div");
-        var afterHtmlElement = document.createElement("div");
-        
-        wrapHtmlElement.classList.add("left-sidebar-wrap");
-        wrapHtmlElement.classList.add("left-sidebar-is-arriving");
-
-        beforeHtmlElement.className = "left-sidebar-before";
-        realHtmlElement.className = "left-sidebar-real";
-        afterHtmlElement.className = "left-sidebar-after";
-
-        wrapHtmlElement?.appendChild(beforeHtmlElement);
-        wrapHtmlElement?.appendChild(realHtmlElement);
-        wrapHtmlElement?.appendChild(afterHtmlElement);
-
-        parentHtmlElement?.appendChild(wrapHtmlElement);
-
-        while (totalSize < (window.innerWidth / 2.)) {
-            for (let j = 0; j < text.length; j++) {
-                var newSpan = document.createElement("span");
-                newSpan.textContent = text[j];
-
-                if (newSpan.textContent == " ") {
-                    newSpan.textContent = ""
-                    newSpan.innerHTML = "&nbsp";
-
-                }
-
-                if (i != realElementId) {
-                    newSpan.classList.add("stroke-behind");
-                    newSpan.classList.add("letter-do-fade-in-out");
-                }
-                else {
-                    newSpan.classList.add("real-text");
-                    newSpan.classList.add("stroke-behind");
-                    newSpan.classList.add("letter-do-fade-in");
-                }
-
-
-                newSpan.style.opacity = "0";
-                newSpan.style.animationDelay = (((text.length*10) - (i * text.length + j)) * 0.01).toString() + "s";
-
-                if (i < realElementId) beforeHtmlElement?.appendChild(newSpan);
-                if (i == realElementId) realHtmlElement?.appendChild(newSpan);
-                if (i > realElementId) {
-                    afterHtmlElement?.appendChild(newSpan);
-                    totalSize += newSpan.offsetWidth;
-                }
-            }
-
-            i += 1;
-        }
-
-        //newSpan.className = "stroke-behind";
-            
-        //newSpan.style.position = "absolute";
-        //newSpan.style.left = (i * 1).toString() + "em";
     }
 
     function toggleBottomInfoStripVisibility() {
@@ -164,12 +98,14 @@
     function updateValuesUsingSceneName(sceneName: string) {
         if (sceneName == "MAIN_COMPETITION") {
             timerIsBig.value = true;
-            sidePanelsVisibility.value = true;
+            sidePanelsVisibility.value = 1;
+            sidePanelsContentVisibility.value = 1;
             isBottomInfoStripVisible.value = false;
         }
         else {
             timerIsBig.value = false;
-            sidePanelsVisibility.value = false;
+            sidePanelsVisibility.value = 0;
+            sidePanelsContentVisibility.value = 0;
             isBottomInfoStripVisible.value = true;
             
             const r = /CODER(\d+)/;
@@ -267,7 +203,6 @@
                 if (eventMsg.payload.doUpdate) {
                     updateConfig();
                 }
-
         }
     })
 
@@ -300,39 +235,98 @@
         const currObsSceneInfo = await obs.call("GetCurrentProgramScene");
         updateValuesUsingSceneName(currObsSceneInfo.sceneName);
     }
+
+    sidebar_left_content.value = roundName.value
+    sidebar_right_content.value = djName.value
+
+    function animate() {
+        shutter_left.value.classList.add("shutter-activated")
+        sidebar_left_title.value = ""
+
+        shutter_right.value.classList.add("shutter-activated")
+        sidebar_right_title.value = ""
+
+        window.setTimeout(() => {
+            sidePanelsContentVisibility.value = 2;
+        }, 500)
+
+        shutter_left.value.addEventListener("animationend", (e: any) => {
+            shutter_left.value.classList.remove("shutter-activated");
+
+            if (sidebar_left_title.value == "ROUND") {
+                sidebar_left_title.value = "COMMENTS"
+                sidebar_left_content.value = commentsName.value
+            }
+            else {
+                sidebar_left_title.value = "ROUND"
+                sidebar_left_content.value = roundName.value
+            }
+
+            sidePanelsContentVisibility.value = 1;
+        })
+
+        shutter_right.value.addEventListener("animationend", (e: any) => {
+            shutter_right.value.classList.remove("shutter-activated");
+
+            if (sidebar_right_title.value == "MUSIC") {
+                sidebar_right_title.value = "VJING"
+                sidebar_right_content.value = hostName.value
+            }
+            else {
+                sidebar_right_title.value = "MUSIC"
+                sidebar_right_content.value = djName.value
+            }
+
+            sidePanelsContentVisibility.value = 1;
+        })
+
+        setTimeout(animate, 10000);
+    }
+
+    setTimeout(animate, 10000);
 </script>
 
 <template>
     <div class="side-panel" id="side-left-title" :class="{
-        make_grow_side_panel: sidePanelsVisibility,
-        make_shrink_side_panel: !sidePanelsVisibility }">
+        make_grow_side_panel: sidePanelsVisibility == 1,
+        make_shrink_side_panel: sidePanelsVisibility == 0 }">
 
-        <div id="left-sidebar" style="margin: 20px; margin-top: 10px;"></div>
+        <div id="left-sidebar" style="margin: 20px; margin-top: 10px;">
+            <div style="position: absolute; left: 20px;">
+                <SidebarScrollingTitle :text="sidebar_left_title" />
+            </div>
+        </div>
 
-        <div class="side-panel-content" id="side-left-content" :class="{
-            make_grow_side_panel_content: sidePanelsVisibility,
-            make_shrink_side_panel_content: !sidePanelsVisibility }">
+        <div ref="side_left_content" class="side-panel-content" id="side-left-content" :class="{
+            make_grow_side_panel_content: sidePanelsContentVisibility == 1,
+            make_shrink_side_panel_content: sidePanelsContentVisibility == 0,
+            make_instant_open_side_panel_content: sidePanelsContentVisibility == 2 }">
 
-            <div style="margin: 20px; margin-top: 10px; color: black;">{{ roundName.toUpperCase() }}</div>
+            <div style="margin: 20px; margin-top: 10px; color: black;">{{ sidebar_left_content.toUpperCase() }}</div>
         </div>
         
-        <div class="side-panel-shutter" id="side-left-shutter"></div>
+        <div ref="shutter_left" class="side-panel-shutter" id="side-left-shutter"></div>
     </div>
     
     <div class="side-panel" id="side-right-title" :class="{
-        make_grow_side_panel: sidePanelsVisibility,
-        make_shrink_side_panel: !sidePanelsVisibility }">
+        make_grow_side_panel: sidePanelsVisibility == 1,
+        make_shrink_side_panel: sidePanelsVisibility == 0 }">
 
-        <div style="margin: 20px; margin-top: 10px;">MUSIC</div>
-
-        <div class="side-panel-content" id="side-right-content" :class="{
-            make_grow_side_panel_content: sidePanelsVisibility,
-            make_shrink_side_panel_content: !sidePanelsVisibility }">
-
-            <div style="margin: 20px; margin-top: 10px; color: black;">{{ djName.toUpperCase() }}</div>
+        <div style="margin: 20px; margin-top: 10px;">
+            <div style="position: absolute; right: 20px;">
+                <SidebarScrollingTitle :text="sidebar_right_title" side="right" />
+            </div>
         </div>
 
-        <div class="side-panel-shutter" id="side-right-shutter"></div>
+        <div ref="side_right_content" class="side-panel-content" id="side-right-content" :class="{
+            make_grow_side_panel_content: sidePanelsContentVisibility == 1,
+            make_shrink_side_panel_content: sidePanelsContentVisibility == 0,
+            make_instant_open_side_panel_content: sidePanelsContentVisibility == 2 }">
+
+            <div style="margin: 20px; margin-top: 10px; color: black;">{{ sidebar_right_content.toUpperCase() }}</div>
+        </div>
+
+        <div ref="shutter_right" class="side-panel-shutter" id="side-right-shutter"></div>
     </div>
 
     <div id="container">
@@ -401,17 +395,13 @@
         Toggle bottom info: {{ isBottomInfoStripVisible }}
     </button>
     <button type="button" @click="toggleSidePanelsVisibility" style="position: absolute; bottom: 0px; left: 40%;">
-        Toggle edge: {{ sidePanelsVisibility }}
+        Toggle edge: {{ sidePanelsVisibility }} / {{ sidePanelsContentVisibility }}
     </button>
     <button type="button" @click="toggleTimerSize" style="position: absolute; bottom: 0px; left: 60%;">
         Toggle timer: {{ timerIsBig }}
     </button>
-    <button type="button" @click="startTestAnim" style="position: absolute; bottom: 0px; left: 80%;">
-        TestAnim
-    </button>
 </template>
 
-<!--- scoped --->
 <style> 
     @font-face {
         font-family: "Tungsten-Bold-TD";
@@ -465,7 +455,7 @@
     #side-left-content {
         position: absolute;
         /* right: 0; */
-        left: 25%;
+        left: 32%;
         top: 0;
         height: 100%;
         background-color: white;
@@ -482,7 +472,7 @@
 
     #side-right-content {
         position: absolute;
-        left: 0;
+        right: 32%;
         top: 0;
         height: 100%;
         background-color: white;
@@ -537,60 +527,12 @@
         text-align: center;
     }
 
-    .left-sidebar-before {
-        display: block;
-        position: absolute;
-        right: 100%;
-        top: 0;
-    }
-
-
-    .left-sidebar-real {
-        
-    }
-
-    .left-sidebar-after {
-        display: block;
-        position: absolute;
-        left: 100%;
-        top: 0;
-    }
-
-    .left-sidebar-wrap {
-        display: inline;
-        position: absolute;
-        /* left: 20px; */
-    }
-
-    .left-sidebar-wrap span {
-
-    }
-
-    @keyframes left-sidebar-arrive {
-        0% {
-            left: 400px
-        }
-        100% {
-            left: 20px
-        }
-    }
-
-    .left-sidebar-is-arriving {
-        animation: left-sidebar-arrive 1s ease-out 0s 1;
-    }
-
-    .stroke-behind {
-        color: black;
-        -webkit-text-stroke: 2px white;
-        paint-order: stroke fill;
-    } 
-
+    /* SHUTTER */
     .side-panel-shutter {
         position: absolute;
         height: 100%;
         background-color: black;
         top: 0;
-        /* animation: 1s ease-in-out 0s shutter-animation infinite; */
     }
 
     #side-right-shutter {
@@ -602,7 +544,11 @@
             left: 0%;
             right: 100%;
         }
-        50% {
+        30% {
+            left: 0%;
+            right: 0%;
+        }
+        60% {
             left: 0%;
             right: 0%;
         }
@@ -612,46 +558,11 @@
         }
     }
 
-    @keyframes letter-fade-in {
-        0% {
-            opacity: 0%;
-            color: black;
-        }
-        50% {
-            -webkit-text-stroke-color: white;
-            opacity: 100%;
-            color: black;
-        }
-        100% {
-            -webkit-text-stroke-color: black;
-            opacity: 100%;
-            color: white;
-        }
+    .shutter-activated {
+        animation: 1s ease-in-out 0s shutter-animation 1;
     }
 
-    @keyframes letter-fade-in-out {
-        0% {
-            opacity: 0%;
-        }
-        50% {
-            opacity: 100%;
-        }
-        100% {
-            opacity: 0%;
-        }
-    }
-
-    .letter-do-fade-in-out {
-        animation: 0.75s linear 1s 1 letter-fade-in-out; /* 0.5s */
-    }
-
-    .letter-do-fade-in {
-        animation: 0.75s linear 1s 1 letter-fade-in ; /* 0.5s */
-        animation-fill-mode: forwards;
-        animation-direction: normal;
-    }
-
-
+    /* TIMER */
     #timer-text {
         position: absolute;
         width: 100%;
@@ -679,6 +590,17 @@
 
     }
     
+    @keyframes blinker {
+        50% {
+            opacity: 0;
+        }
+    }
+
+    .blink {
+        animation: 0.5s blinker steps(1, end) infinite
+    }
+
+    
     #coders-nameplates-container {
         display: flex;
         flex-direction: column;
@@ -697,17 +619,6 @@
         width: 6em;
         padding: 0 0.1em 0 0.1em;
         text-align: center;
-    }
-
-
-    @keyframes blinker {
-        50% {
-            opacity: 0;
-        }
-    }
-
-    .blink {
-        animation: 0.5s blinker steps(1, end) infinite
     }
 
     .invert {
@@ -729,6 +640,11 @@
         width: 50%;
     }
 
+    .instant_close_side_panel_content {
+        transition: width 1ms;
+        width: 0%;
+    }
+
     .make_timer_small {
         transition: all 0.50s;
         height: 100px;
@@ -738,9 +654,9 @@
 
     .make_timer_big {
         transition: all 0.50s;
-        font-size: 15em;
-        height: 250px;
-        width: 500px;
+        font-size: 13em;
+        height: 220px;
+        width: 400px;
     }
 
     .make_shrink_side_panel {
@@ -757,6 +673,11 @@
 
     .make_shrink_side_panel_content {
         transition: width 0.50s;
+        width: 0%;
+    }
+
+    .make_instant_open_side_panel_content {
+        transition: width 1ms;
         width: 0%;
     }
 
