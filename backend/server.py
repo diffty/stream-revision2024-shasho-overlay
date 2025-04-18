@@ -175,4 +175,4 @@ load_config_from_disk()
 app.on_startup(start_websocket_server)
 
 
-ui.run(host="localhost")
+ui.run(host="0.0.0.0")
