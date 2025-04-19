@@ -151,8 +151,8 @@
 </script>
 
 <template>
-    <div>
-        <div ref="sidebar_wrap" :class="side+'-sidebar-wrap '+side+'-sidebar-is-arriving'">
+    <div ref="sidebar_parent">
+        <div ref="sidebar_wrap" :class="side+'-sidebar-wrap'">
             <div ref="sidebar_before" :class="side+'-sidebar-before'"></div>
             <div ref="sidebar_real" :class="side+'-sidebar-real'"></div>
             <div ref="sidebar_after" :class="side+'-sidebar-after'"></div>
