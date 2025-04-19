@@ -550,11 +550,11 @@
             left: 0%;
             right: 100%;
         }
-        30% {
+        50% {
             left: 0%;
             right: 0%;
         }
-        60% {
+        90% {
             left: 0%;
             right: 0%;
         }
@@ -565,7 +565,7 @@
     }
 
     .shutter-activated {
-        animation: 1s ease-in-out 0s shutter-animation 1;
+        animation: 0.9s ease-in-out 0s shutter-animation 1;
     }
 
     /* TIMER */
