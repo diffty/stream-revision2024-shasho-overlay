@@ -199,7 +199,6 @@
 
                     timerInterval = window.setInterval(timerCallback, 200);
                 }
-                }
                 else {
                     timerState.isRunning = false;
                 }
