@@ -117,6 +117,12 @@ def get_current_round():
     }
 
 
+def on_load_and_refresh_click():
+    load_config_from_disk()
+    broadcast_event(ConfigEvent(doUpdate=True))
+    ui.notify('Loaded & refreshheeedd')
+
+
 def on_load_config_from_disk_click():
     load_config_from_disk()
     ui.notify('Configuration reloaded from disk')
@@ -127,8 +133,9 @@ def on_refresh_overlay_config_click():
 
 
 # UI DEFINITION
-ui.label('REVISION 2024 - SHADER SHOWDOWN OVERLAY DASHBOARD')
+ui.label('REVISION 2025 - SHADER SHOWDOWN OVERLAY DASHBOARD')
 
+ui.button('Load & Refresh', on_click=on_load_and_refresh_click)
 ui.button('Load config from disk', on_click=on_load_config_from_disk_click)
 ui.button('Refresh overlay config', on_click=on_refresh_overlay_config_click)
 
