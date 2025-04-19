@@ -280,10 +280,10 @@
             sidePanelsContentVisibility.value = 1;
         })
 
-        setTimeout(animate, 10000);
+        setTimeout(animate, 20000);
     }
 
-    setTimeout(animate, 10000);
+    setTimeout(animate, 20000);
 </script>
 
 <template>
