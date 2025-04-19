@@ -484,6 +484,10 @@
         background-color: white;
     }
 
+    .side-panel-content {
+        overflow: hidden;
+    }
+
     #bar-left-edge, #bar-bottom-info-left-edge {
         position: absolute;
         width: 0.3em;
