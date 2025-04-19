@@ -191,13 +191,13 @@
     }
 
     .left-sidebar-wrap {
-        display: inline;
+        display: block;
         position: absolute;
         left: 0px;
     }
 
     .right-sidebar-wrap {
-        display: inline;
+        display: block;
         position: absolute;
         right: 0px;
     }
