@@ -18,6 +18,7 @@
     const sidebar_before = ref();
     const sidebar_real = ref();
     const sidebar_after = ref();
+    const sidebar_parent = ref();
     const side = ref(props.side?.toLowerCase() == "right" ? "right" : "left");
     
     var wrapHtmlElement = sidebar_wrap.value;
@@ -47,7 +48,7 @@
         
         clear();
 
-        while (totalSize < (window.innerWidth / 2.)) {  // todo: prendre plutôt la width de l'element parent (si elle est bien set)
+        while (totalSize < sidebar_parent.value.offsetWidth) {  // todo: prendre plutôt la width de l'element parent (si elle est bien set)
             for (let j = 0; j < props.text.length; j++) {
                 var newSpan = document.createElement("span");
 
@@ -79,8 +80,11 @@
                 // newSpan.style.animationDelay = animationDelay.toString() + "s";
 
                 if (i < realElementId) beforeHtmlElement?.appendChild(newSpan);
-                if (i == realElementId) realHtmlElement?.appendChild(newSpan);
-                if (i > realElementId) {
+                else if (i == realElementId) {
+                    realHtmlElement?.appendChild(newSpan);
+                    totalSize += newSpan.offsetWidth;
+                }
+                else if (i > realElementId) {
                     afterHtmlElement?.appendChild(newSpan);
                     totalSize += newSpan.offsetWidth;
                 }

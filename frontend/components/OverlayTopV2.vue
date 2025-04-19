@@ -291,8 +291,8 @@
         make_grow_side_panel: sidePanelsVisibility == 1,
         make_shrink_side_panel: sidePanelsVisibility == 0 }">
 
-        <div id="left-sidebar" style="margin: 20px; margin-top: 10px;">
-            <div style="position: absolute; left: 20px;">
+        <div class="sidebar">
+            <div style="position: absolute; left: 20px; width: 100%;">
                 <SidebarScrollingTitle :text="sidebar_left_title" />
             </div>
         </div>
@@ -312,8 +312,8 @@
         make_grow_side_panel: sidePanelsVisibility == 1,
         make_shrink_side_panel: sidePanelsVisibility == 0 }">
 
-        <div style="margin: 20px; margin-top: 10px;">
-            <div style="position: absolute; right: 20px;">
+        <div class="sidebar">
+            <div style="position: absolute; right: 20px; width: 100%;">
                 <SidebarScrollingTitle :text="sidebar_right_title" side="right" />
             </div>
         </div>
@@ -443,6 +443,12 @@
         font-size: 5em;
         line-height: 100%;
         overflow: hidden;
+    }
+
+    .sidebar {
+        margin: 20px;
+        margin-top: 10px;
+        width: 100%;
     }
 
     #side-left-title {
