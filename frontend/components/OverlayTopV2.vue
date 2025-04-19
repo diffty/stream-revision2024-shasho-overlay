@@ -119,7 +119,7 @@
     }
 
     // Timer callbacks
-    var timerInterval: Timer | null = null;
+    var timerInterval: number | null = null;
 
     function updateTimerFromState() {
         if (timerState.isRunning) {
@@ -147,6 +147,7 @@
     function timerCallback() {
         if (!timerState.isRunning && timerInterval != null) {
             clearInterval(timerInterval);
+            timerInterval = null;
         }
 
         updateTimerFromState();
@@ -190,7 +191,14 @@
                 if (eventMsg.payload.isRunning == true && timerState.isRunning != true) {
                     timerState.isRunning = true;
                     timerState.startTime = Date.now();
-                    window.setInterval(timerCallback, 200);
+
+                    if (timerInterval != null) {
+                        clearInterval(timerInterval);
+                        timerInterval = null;
+                    }
+
+                    timerInterval = window.setInterval(timerCallback, 200);
+                }
                 }
                 else {
                     timerState.isRunning = false;
