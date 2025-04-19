@@ -158,9 +158,9 @@
             <ScrollingTitle text="SHOWDOWN" reversed id="title-scrolling-showdown" animDuration="10s" class="title-scrolling" />
         </div>
     </div>
-    <button type="button" @click="toggleOpen" style="position: absolute; bottom: 0px; left: 60%;">
+    <!-- <button type="button" @click="toggleOpen" style="position: absolute; bottom: 0px; left: 60%;">
         Open it
-    </button>
+    </button> -->
 </template>
 
 <style scoped>
