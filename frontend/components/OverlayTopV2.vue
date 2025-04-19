@@ -81,6 +81,34 @@
         }
     }
 
+    async function pullTimer() {
+        const timerStateInfoRequest = await fetch(`${SERVER_API_ADDRESS}/timer`)
+                                    .catch((e: Error) => {
+                                        console.error(`Can't retrieve current timer infos : ${e}`)
+                                    });
+
+        if (timerStateInfoRequest && timerStateInfoRequest.status == 200) {
+            console.log("Timer loaded!")
+            let timerStateInfo = await timerStateInfoRequest.json();
+            
+            timerState.isRunning = timerStateInfo.isRunning;
+            timerState.startTime = timerStateInfo.startTime * 1000;
+            timerState.startState = timerStateInfo.time;
+
+            console.log(timerState);
+
+            if (timerState.isRunning) {
+                if (timerInterval != null) {
+                    clearInterval(timerInterval);
+                    timerInterval = null;
+                }
+                timerInterval = window.setInterval(timerCallback, 200);
+            }
+            
+            updateTimerFromState();
+        }
+    }
+
     function toggleSidePanelsVisibility() {
         sidePanelsVisibility.value = sidePanelsVisibility.value == 0 ? 1 : 0;
         //sidePanelsContentVisibility.value = sidePanelsContentVisibility.value == 0 ? 1 : 0;
@@ -124,7 +152,7 @@
     function updateTimerFromState() {
         if (timerState.isRunning) {
             const newTimerValue = (timerState.startState - (Date.now() - timerState.startTime) / 1000);
-            timer.value = Math.floor(Math.max(newTimerValue, 0));
+            timer.value = Math.max(newTimerValue, 0);
         }
         else {
             timer.value = timerState.startState;
@@ -180,7 +208,7 @@
             case "TimerSetEvent":
                 console.log(eventMsg);
 
-                if (eventMsg.payload.time != null) {
+                if (eventMsg.payload.time != null && eventMsg.payload.time != undefined) {
                     //timer.value = eventMsg.payload.time;
                     timerState.startState = eventMsg.payload.time;
                 }
@@ -188,10 +216,9 @@
                     timerState.startState = timer.value;
                 }
                 
-                if (eventMsg.payload.isRunning == true && timerState.isRunning != true) {
-                    timerState.isRunning = true;
-                    timerState.startTime = Date.now();
+                timerState.startTime = Date.now();
 
+                if (eventMsg.payload.isRunning == true && timerState.isRunning != true) {
                     if (timerInterval != null) {
                         clearInterval(timerInterval);
                         timerInterval = null;
@@ -199,8 +226,9 @@
 
                     timerInterval = window.setInterval(timerCallback, 200);
                 }
-                else {
-                    timerState.isRunning = false;
+                
+                if (eventMsg.payload.isRunning != null && eventMsg.payload.isRunning != undefined) {
+                    timerState.isRunning = eventMsg.payload.isRunning;
                 }
 
                 updateTimerFromState();
@@ -237,6 +265,7 @@
     });
 
     await updateConfig();
+    await pullTimer();
 
     if (isObsConnected) {
         const currObsSceneInfo = await obs.call("GetCurrentProgramScene");

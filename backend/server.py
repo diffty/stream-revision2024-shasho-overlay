@@ -2,6 +2,7 @@ import re
 
 from dataclasses import dataclass, asdict, field
 import json
+import time
 import asyncio
 from typing import Set, Union
 import pathlib
@@ -25,10 +26,6 @@ app.add_middleware(
 app.add_static_files(url_path="/overlay", local_directory="../dist")
 
 
-CONNECTIONS: Set[WebSocketServerProtocol] = set()
-CONFIG = None
-
-
 @dataclass(kw_only=True)
 class Event:
     pass
@@ -38,6 +35,8 @@ class Event:
 class TimerSetEvent(Event):
     isRunning: bool = None
     time: int = None
+    startTime: float = None
+
 
 
 @dataclass(kw_only=True)
@@ -61,7 +60,20 @@ class Config:
     roundDuration: int
 
 
+CONNECTIONS: Set[WebSocketServerProtocol] = set()
+CONFIG = None
+SERVER_TIMER_STATE = None
+
+
 def broadcast_event(e: Event):
+    # TODO: GET RID OF THIS ASAP PLEAAASSSE
+    if isinstance(e, TimerSetEvent):
+        if e.isRunning is not None:
+            SERVER_TIMER_STATE.isRunning = e.isRunning
+
+        if e.time is not None:
+            SERVER_TIMER_STATE.time = e.time
+        
     websockets.broadcast(CONNECTIONS, json.dumps({
                                         "type": e.__class__.__name__,
                                         "payload": asdict(e)
@@ -82,8 +94,10 @@ def reset_timer():
     broadcast_event(TimerSetEvent(isRunning=False,
                                   time=1500))
 
+
 def start_timer():
     broadcast_event(TimerSetEvent(isRunning=True))
+    SERVER_TIMER_STATE.startTime = time.time()
 
 
 def pause_timer():
@@ -99,10 +113,13 @@ def set_timer(new_time: Union[str, int]):
             else:
                 new_timer_value = int(reg_res.group(1)) * 60 + int(reg_res.group(2))
             
-            broadcast_event(TimerSetEvent(isRunning=False, time=new_timer_value))
+            broadcast_event(TimerSetEvent(time=new_timer_value))
     
     elif type(new_time) is int:
-        broadcast_event(TimerSetEvent(isRunning=False, time=new_time))
+        broadcast_event(TimerSetEvent(time=new_time))
+    
+    # Updating it in server state just in case
+    SERVER_TIMER_STATE.startTime = time.time()
 
 
 # REST API
@@ -114,6 +131,15 @@ def get_current_round():
         "roundName": CONFIG.roundName,
         "hostName": CONFIG.hostName,
         "round": curr_round_infos,
+    }
+
+
+@app.get('/timer')
+def get_timer_state():
+    return {
+        "isRunning": SERVER_TIMER_STATE.isRunning,
+        "time": SERVER_TIMER_STATE.time,
+        "startTime": SERVER_TIMER_STATE.startTime,
     }
 
 
@@ -177,6 +203,8 @@ async def start_websocket_server():
 
 
 load_config_from_disk()
+
+SERVER_TIMER_STATE = TimerSetEvent(isRunning=False, time=CONFIG.roundDuration)
 
 # start the websocket server when NiceGUI server starts
 app.on_startup(start_websocket_server)
