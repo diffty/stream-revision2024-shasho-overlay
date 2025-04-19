@@ -44,7 +44,7 @@
     function make() {
         var i = 0;
         var totalSize = 0;
-        var realElementId = 2;
+        var realElementId = 1;
         
         clear();
 
