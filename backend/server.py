@@ -105,6 +105,8 @@ def pause_timer():
 
 
 def set_timer(new_time: Union[str, int]):
+    global timer_field
+
     if type(new_time) is str:
         reg_res = re.search(r"^(\d+)(?::(\d{1,2}))?$", timer_field.value, re.I)
         if reg_res:
@@ -158,34 +160,41 @@ def on_refresh_overlay_config_click():
     broadcast_event(ConfigEvent(doUpdate=True))
 
 
-# UI DEFINITION
-ui.label('REVISION 2025 - SHADER SHOWDOWN OVERLAY DASHBOARD')
+@ui.page('/')
+def root_page():
+    global connections_label, messages, timer_field
+    
+    # UI DEFINITION
+    ui.label('REVISION 2025 - SHADER SHOWDOWN OVERLAY DASHBOARD')
 
-ui.button('Load & Refresh', on_click=on_load_and_refresh_click)
-ui.button('Load config from disk', on_click=on_load_config_from_disk_click)
-ui.button('Refresh overlay config', on_click=on_refresh_overlay_config_click)
+    ui.button('Load & Refresh', on_click=on_load_and_refresh_click)
+    ui.button('Load config from disk', on_click=on_load_config_from_disk_click)
+    ui.button('Refresh overlay config', on_click=on_refresh_overlay_config_click)
 
-ui.button('Start timer', on_click=start_timer)
-ui.button('Pause timer', on_click=pause_timer)
-ui.button('Reset timer', on_click=reset_timer)
+    ui.button('Start timer', on_click=start_timer)
+    ui.button('Pause timer', on_click=pause_timer)
+    ui.button('Reset timer', on_click=reset_timer)
 
-timer_field = ui.input(label="Timer", value="25:00")
+    timer_field = ui.input(label="Timer", value="25:00")
 
-ui.button('Set timer', on_click=lambda: set_timer(timer_field.value))
+    ui.button('Set timer', on_click=lambda: set_timer(timer_field.value))
 
 
-with ui.row().classes('items-center'):
-    connections_label = ui.label('0')
-    ui.label('Connections')
+    with ui.row().classes('items-center'):
+        connections_label = ui.label('0')
+        ui.label('Connections')
 
-ui.separator().classes('mt-6')
+    ui.separator().classes('mt-6')
 
-ui.label('incoming messages:')
-messages = ui.column().classes('ml-4')
+    ui.label('incoming messages:')
+    messages = ui.column().classes('ml-4')
 
 
 async def handle_connect(websocket: WebSocketServerProtocol):
     """Register the new websocket connection, handle incoming messages and remove the connection when it is closed."""
+
+    global connections_label, messages
+    
     try:
         CONNECTIONS.add(websocket)
         connections_label.text = len(CONNECTIONS)
@@ -197,7 +206,10 @@ async def handle_connect(websocket: WebSocketServerProtocol):
         connections_label.text = len(CONNECTIONS)
 
 
+# start the websocket server when NiceGUI server starts
+@app.on_startup
 async def start_websocket_server():
+
     async with websockets.serve(handle_connect, 'localhost', 6969):
         await asyncio.Future()
 
@@ -206,8 +218,6 @@ load_config_from_disk()
 
 SERVER_TIMER_STATE = TimerSetEvent(isRunning=False, time=CONFIG.roundDuration)
 
-# start the websocket server when NiceGUI server starts
-app.on_startup(start_websocket_server)
 
 
 ui.run(host="0.0.0.0")
