@@ -322,7 +322,7 @@
 
                 currTitleIdx = (currTitleIdx + 1) % nbLeftTitles;
                 
-            }, 1000);
+            }, 50);
         }, 500);
     }
 
