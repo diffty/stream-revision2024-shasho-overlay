@@ -15,29 +15,18 @@
     });
 
     const sidebar_wrap = ref();
-    const sidebar_before = ref();
     const sidebar_real = ref();
-    const sidebar_after = ref();
+    const sidebar_title_text = ref();
     const sidebar_parent = ref();
     const side = ref(props.side?.toLowerCase() == "right" ? "right" : "left");
     
     var wrapHtmlElement = sidebar_wrap.value;
-    var beforeHtmlElement = sidebar_before.value;
     var realHtmlElement = sidebar_real.value;
-    var afterHtmlElement = sidebar_after.value;
 
     function clear() {
         // Clearing bar content of previous letter nodes
-        while (beforeHtmlElement.firstChild) {
-            beforeHtmlElement.removeChild(beforeHtmlElement.firstChild);
-        }
-
         while (realHtmlElement.firstChild) {
             realHtmlElement.removeChild(realHtmlElement.firstChild);
-        }
-
-        while (afterHtmlElement.firstChild) {
-            afterHtmlElement.removeChild(afterHtmlElement.firstChild);
         }
     }
 
@@ -46,122 +35,66 @@
         var totalSize = 0;
         var realElementId = 1;
         
-        clear();
+        // clear();
 
-        while (totalSize < sidebar_parent.value.offsetWidth) {  // todo: prendre plutôt la width de l'element parent (si elle est bien set)
-            for (let j = 0; j < props.text.length; j++) {
-                var newSpan = document.createElement("span");
+        // var newSpan = document.createElement("span");
 
-                newSpan.textContent = props.text[j];
+        // newSpan.textContent = props.text;
+        // newSpan.classList.add("real-text");
 
-                if (newSpan.textContent == " ") {
-                    newSpan.textContent = ""
-                    newSpan.innerHTML = "&nbsp";
-                }
+        // realHtmlElement?.appendChild(newSpan);
 
-                if (i != realElementId) {
-                    newSpan.classList.add("stroke-behind");
-                    newSpan.classList.add("letter-do-fade-in-out");
-                }
-                else {
-                    newSpan.classList.add("real-text");
-                    newSpan.classList.add("stroke-behind");
-                    newSpan.classList.add("letter-do-fade-in");
-                }
+        // if (side.value == "right") {
+        //     let j = 0;
 
-                newSpan.style.opacity = "0";
+        //     for (let i = 0; i < realHtmlElement.children.length; i++) {
+        //         realHtmlElement.children[i].style.animationDelay = (j * 0.01).toString() + 's';
+        //         j++;
+        //     }
+        // }
+        // else {
+        //     let j = 0;
+        //     for (let i = 0; i < realHtmlElement.children.length; i++) {
+        //         realHtmlElement.children[i].style.animationDelay = ((afterHtmlElement.children.length - j - 1) * 0.01).toString() + 's';
+        //         j++;
+        //     }
+        // }
 
-                let animationDelay = 0.;
-                
-                // OBSOLETE. SEE CODE BELOW 
-                // if (side.value == "left") {
-                //     animationDelay = ((props.text.length*10) - (i * props.text.length + j)) * 0.01;
-                // }
-                // newSpan.style.animationDelay = animationDelay.toString() + "s";
+        // sidebar_wrap.value.classList.add(side.value + "-sidebar-is-arriving")
 
-                if (i < realElementId) beforeHtmlElement?.appendChild(newSpan);
-                else if (i == realElementId) {
-                    realHtmlElement?.appendChild(newSpan);
-                    totalSize += newSpan.offsetWidth;
-                }
-                else if (i > realElementId) {
-                    afterHtmlElement?.appendChild(newSpan);
-                    totalSize += newSpan.offsetWidth;
-                }
-            }
-
-            i += 1;
-        }
-
-        if (side.value == "right") {
-            let j = 0;
-
-            for (let i = 0; i < afterHtmlElement.children.length; i++) {
-                afterHtmlElement.children[i].style.animationDelay = (j * 0.01).toString() + 's';
-                j++;
-            }
-
-            for (let i = 0; i < realHtmlElement.children.length; i++) {
-                realHtmlElement.children[i].style.animationDelay = (j * 0.01).toString() + 's';
-                j++;
-            }
-
-            for (let i = 0; i < beforeHtmlElement.children.length; i++) {
-                beforeHtmlElement.children[i].style.animationDelay = (j * 0.01).toString() + 's';
-                j++;
-            }
-        }
-        else {
-            let j = 0;
-
-            for (let i = 0; i < beforeHtmlElement.children.length; i++) {
-                beforeHtmlElement.children[i].style.animationDelay = ((afterHtmlElement.children.length - j - 1) * 0.01).toString() + 's';
-                j++;
-            }
-
-            for (let i = 0; i < realHtmlElement.children.length; i++) {
-                realHtmlElement.children[i].style.animationDelay = ((afterHtmlElement.children.length - j - 1) * 0.01).toString() + 's';
-                j++;
-            }
-
-            for (let i = 0; i < afterHtmlElement.children.length; i++) {
-                afterHtmlElement.children[i].style.animationDelay = ((afterHtmlElement.children.length - j - 1) * 0.01).toString() + 's';
-                j++;
-            }
-        }
+        // sidebar_wrap.value.addEventListener("animationend", (e: any) => {
+        //     sidebar_wrap.value.classList.remove(side.value + "-sidebar-is-arriving")
+        // });
     }
 
     onMounted(() => {
-        wrapHtmlElement = sidebar_wrap.value;
-        beforeHtmlElement = sidebar_before.value;
-        realHtmlElement = sidebar_real.value;
-        afterHtmlElement = sidebar_after.value;
 
-        make();
+        // make();
     });
 
     onUpdated(() => {
-        if (props.text == "") {
+
+        /*if (props.text == "") {
             clear();
         }
         else {
             make();
-        }
+        }*/
     });
 </script>
 
 <template>
     <div ref="sidebar_parent">
         <div ref="sidebar_wrap" :class="side+'-sidebar-wrap'">
-            <div ref="sidebar_before" :class="side+'-sidebar-before'"></div>
-            <div ref="sidebar_real" :class="side+'-sidebar-real'"></div>
-            <div ref="sidebar_after" :class="side+'-sidebar-after'"></div>
+            <Transition :name="'slide-'+side">
+                <div ref="sidebar_real" :class="side+'-sidebar-real'" :key="props.text">{{ props.text }}</div>
+            </Transition>
         </div>
     </div>
     <div class="side-panel-shutter" id="side-left-shutter"></div>
 </template>
 
-<style>
+<style scoped>
     .left-sidebar-before {
         display: block;
         position: absolute;
@@ -278,5 +211,44 @@
         color: black;
         -webkit-text-stroke: 2px white;
         paint-order: stroke fill;
+    }
+
+
+    .slide-left-enter-active,
+    .slide-left-leave-active {
+        transition: all 0.5s ease;
+    }
+
+    .slide-left-enter-from {
+        opacity: 0;
+        margin-left: -100px;
+    }
+    .slide-left-enter-to,
+    .slide-left-leave-from {
+        opacity: 1;
+        margin-left: 0px;
+    }
+    .slide-left-leave-to {
+        opacity: 0;
+        margin-left: 100px;
+    }
+
+    .slide-right-enter-active,
+    .slide-right-leave-active {
+        transition: all 0.5s ease;
+    }
+
+    .slide-right-enter-from {
+        opacity: 0;
+        margin-right: -100px;
+    }
+    .slide-right-enter-to,
+    .slide-right-leave-from {
+        opacity: 1;
+        margin-right: 0px;
+    }
+    .slide-right-leave-to {
+        opacity: 0;
+        margin-right: 100px;
     }
 </style>

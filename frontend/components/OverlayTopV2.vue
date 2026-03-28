@@ -44,9 +44,17 @@
     const commentsName = ref("");
     const hostName = ref("");
     const timer = ref(0);
-    const sidebar_left_title = ref("ROUND")
+    const sidebar_left_title_list = [
+        ["ROUND", roundName],
+        ["COMMENTS", commentsName],
+    ];
+    const sidebar_right_title_list = [
+        ["MUSIC", djName],
+        ["VJING", hostName],
+    ];
+    const sidebar_left_title = ref(sidebar_left_title_list[0][0])
     const sidebar_left_content = ref("")
-    const sidebar_right_title = ref("MUSIC")
+    const sidebar_right_title = ref(sidebar_right_title_list[0][0])
     const sidebar_right_content = ref("")
     const shutter_left = ref();
     const shutter_right = ref();
@@ -58,6 +66,8 @@
         startTime: -1,
         startState: 0
     }
+
+    var currTitleIdx = 0;
 
     var config: Config;
 
@@ -284,42 +294,39 @@
 
         window.setTimeout(() => {
             sidePanelsContentVisibility.value = 2;
-        }, 500)
 
-        shutter_left.value.addEventListener("animationend", (e: any) => {
-            shutter_left.value.classList.remove("shutter-activated");
+            window.setTimeout(() => {
+                shutter_left.value.classList.remove("shutter-activated");
 
-            if (sidebar_left_title.value == "ROUND") {
-                sidebar_left_title.value = "COMMENTS"
-                sidebar_left_content.value = commentsName.value
-            }
-            else {
-                sidebar_left_title.value = "ROUND"
-                sidebar_left_content.value = roundName.value
-            }
+                let nbLeftTitles = sidebar_left_title_list.length;
+                let currLeftTitleIdx = currTitleIdx % nbLeftTitles;
+                let currLeftTitleName = sidebar_left_title_list[currLeftTitleIdx][0];
+                let currLeftTitleRef = sidebar_left_title_list[currLeftTitleIdx][1];
 
-            sidePanelsContentVisibility.value = 1;
-        })
+                sidebar_left_title.value = currLeftTitleName
+                sidebar_left_content.value = currLeftTitleRef.value
 
-        shutter_right.value.addEventListener("animationend", (e: any) => {
-            shutter_right.value.classList.remove("shutter-activated");
+                sidePanelsContentVisibility.value = 1;
 
-            if (sidebar_right_title.value == "MUSIC") {
-                sidebar_right_title.value = "VJING"
-                sidebar_right_content.value = hostName.value
-            }
-            else {
-                sidebar_right_title.value = "MUSIC"
-                sidebar_right_content.value = djName.value
-            }
+                shutter_right.value.classList.remove("shutter-activated");
+                
+                let nbRightTitles = sidebar_right_title_list.length;
+                let currRightTitleIdx = currTitleIdx % nbRightTitles;
+                let currRightTitleName = sidebar_right_title_list[currRightTitleIdx][0];
+                let currRightTitleRef = sidebar_right_title_list[currRightTitleIdx][1];
 
-            sidePanelsContentVisibility.value = 1;
-        })
+                sidebar_right_title.value = currRightTitleName
+                sidebar_right_content.value = currRightTitleRef.value
 
-        setTimeout(animate, 20000);
+                sidePanelsContentVisibility.value = 1;
+
+                currTitleIdx = (currTitleIdx + 1) % nbLeftTitles;
+                
+            }, 1000);
+        }, 500);
     }
 
-    setTimeout(animate, 20000);
+    window.setInterval(animate, 20000);
 </script>
 
 <template>
@@ -329,7 +336,7 @@
 
         <div class="sidebar">
             <div style="position: absolute; left: 20px; width: 100%;">
-                <SidebarScrollingTitle :text="sidebar_left_title" />
+                <SidebarScrollingTitle :text="sidebar_left_title" side="left" />
             </div>
         </div>
 
@@ -590,11 +597,11 @@
             left: 0%;
             right: 100%;
         }
-        50% {
+        45% {
             left: 0%;
             right: 0%;
         }
-        90% {
+        65% {
             left: 0%;
             right: 0%;
         }
@@ -712,7 +719,7 @@
 
     .make_grow_side_panel_content {
         transition: width 0.50s;
-        transition-delay: 1s;
+        transition-delay: 0.20s;
         overflow: hidden;
         width: 75%;
     }
@@ -737,6 +744,25 @@
         margin-bottom: 0px;
     }
 
+    .slide-up-enter-active,
+    .slide-up-leave-active {
+        transition: all 0.25s ease-out;
+    }
+
+    .slide-up-enter-from {
+        opacity: 0;
+        transform: rotateX(90deg);
+        transform: rotateX(-90deg) translateY(-1em);
+
+    }
+
+    .slide-up-leave-to {
+        opacity: 0;
+        transform: rotateX(-90deg) translateY(1em);
+    }
+</style>
+
+<style scoped>
     .slide-right-enter-active,
     .slide-right-leave-active {
         transition: all 0.5s ease;
@@ -756,22 +782,5 @@
     .slide-right-leave-to {
         opacity: 0;
         margin-left: 100px;
-    }
-
-    .slide-up-enter-active,
-    .slide-up-leave-active {
-        transition: all 0.25s ease-out;
-    }
-
-    .slide-up-enter-from {
-        opacity: 0;
-        transform: rotateX(90deg);
-        transform: rotateX(-90deg) translateY(-1em);
-
-    }
-
-    .slide-up-leave-to {
-        opacity: 0;
-        transform: rotateX(-90deg) translateY(1em);
     }
 </style>
