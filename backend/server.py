@@ -165,7 +165,7 @@ def root_page():
     global connections_label, messages, timer_field
     
     # UI DEFINITION
-    ui.label('REVISION 2025 - SHADER SHOWDOWN OVERLAY DASHBOARD')
+    ui.label('REVISION 2026 - SHADER SHOWDOWN OVERLAY DASHBOARD')
 
     ui.button('Load & Refresh', on_click=on_load_and_refresh_click)
     ui.button('Load config from disk', on_click=on_load_config_from_disk_click)
