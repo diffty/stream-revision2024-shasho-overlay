@@ -39,7 +39,7 @@
     const hostName = ref("");
 
     const isOpened = ref(false)
-    const isRoundScene = ref(false)
+    const isRoundScene = ref(true)
 
     var config: Config;
 
