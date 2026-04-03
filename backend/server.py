@@ -1,4 +1,7 @@
 import re
+import os
+
+from dotenv import load_dotenv
 
 from dataclasses import dataclass, asdict, field
 import json
@@ -7,11 +10,14 @@ import asyncio
 from typing import Set, Union
 import pathlib
 
+import requests
 import websockets
 from websockets.server import WebSocketServerProtocol
-
 from nicegui import app, ui
 from fastapi.middleware.cors import CORSMiddleware
+
+
+load_dotenv()
 
 
 # CORS shit
@@ -23,7 +29,7 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-app.add_static_files(url_path="/overlay", local_directory="../dist")
+app.add_static_files(url_path="/overlay", local_directory="./dist")
 
 
 @dataclass(kw_only=True)
@@ -63,6 +69,14 @@ class Config:
 CONNECTIONS: Set[WebSocketServerProtocol] = set()
 CONFIG = None
 SERVER_TIMER_STATE = None
+PM_SHADER_TOKEN = os.environ.get("PM_SHADER_TOKEN", None)
+PM_API_BASE_URL = os.environ.get("PM_API_BASE_URL", None)
+PM_TEST_MODE = False
+COMPETITIONS_EXPANSIONS_DICT = {}
+
+
+if PM_SHADER_TOKEN is None:
+    print("WARNING!! No PM_SHADER_TOKEN in env. Partymeister features will be unavailable!")
 
 
 def broadcast_event(e: Event):
@@ -145,6 +159,75 @@ def get_timer_state():
     }
 
 
+@app.get('/competition_detail')
+def get_pm_competition_detail(id: int):
+    if PM_TEST_MODE:
+        return {
+            "data": {
+                "id": 42,
+                "name": "Shader Showdown Qualifier 1",
+                "competition_type": "Shader Showdown",
+                "sort_position": 10,
+                "voting_enabled": True,
+                "live_voting_enabled": False,
+                "entries": [
+                    {
+                        "id": 101,
+                        "title": "PlayerOne",
+                        "author": "PlayerOne",
+                        "sort_position": 1,
+                        "status": 1,
+                        "votes": 42.5
+                    },
+                    {
+                        "id": 102,
+                        "title": "PlayerTwo",
+                        "author": "PlayerTwo",
+                        "sort_position": 2,
+                        "status": 1,
+                        "votes": 38.0
+                    }
+                ],
+                "total_votes": 80.5
+            }
+        }
+    else:
+        resp = requests.get(f"{PM_API_BASE_URL}/shader-showdown/competitions/{id}", headers={
+            "X-Shader-Token": PM_SHADER_TOKEN,
+        })
+        return resp.json()
+
+
+@app.get('/competitions_list')
+def get_pm_competitions_list():
+    global PM_TEST_MODE
+    if PM_TEST_MODE:
+        return {
+            "data": [
+                {
+                    "id": 13,
+                    "name": "Shader Showdown Round 1",
+                    "competition_type": "Shader Showdown Final",
+                    "sort_position": 100,
+                    "voting_enabled": False,
+                    "live_voting_enabled": False,
+                    "entry_count": 0
+                }
+            ]
+        }
+    
+    else:
+        resp = requests.get(f"{PM_API_BASE_URL}/shader-showdown/competitions/", headers={
+            "X-Shader-Token": PM_SHADER_TOKEN,
+        })
+        return resp.json()
+
+
+def on_pm_api_test_change(new_state):
+    global PM_TEST_MODE
+    PM_TEST_MODE = new_state.value
+    
+
 def on_load_and_refresh_click():
     load_config_from_disk()
     broadcast_event(ConfigEvent(doUpdate=True))
@@ -160,9 +243,77 @@ def on_refresh_overlay_config_click():
     broadcast_event(ConfigEvent(doUpdate=True))
 
 
+def refresh_single_competition_results(id: int):
+    comp_detail = get_pm_competition_detail(id)
+
+    if comp_detail and "data" in comp_detail:
+        comp_data = comp_detail["data"]
+        comp_exp = COMPETITIONS_EXPANSIONS_DICT[id]
+        comp_exp.clear()
+        
+        with comp_exp:
+            entries_data = comp_data["entries"]
+
+            series = []
+
+            entries_title_list = []
+            entries_votes_list = []
+            
+            for entry_data in entries_data:
+                entries_title_list.append(entry_data["title"])
+                entries_votes_list.append(entry_data["votes"])
+
+            series.append(
+                {
+                    'type': 'bar',
+                    'data': entries_votes_list
+                }
+            )
+
+            ui.echart({
+                'xAxis': {'type': 'value'},
+                'yAxis': {'type': 'category', 'data': entries_title_list, 'inverse': True},
+                'legend': {'textStyle': {'color': 'gray'}},
+                'series': series,
+            })
+
+            state_to_str = lambda state: "enabled" if state is True else "disabled"
+            state_css_class = lambda state: "text-green-500" if state is True else "text-red-500"
+            ui.label(f"Voting is {state_to_str(comp_data['voting_enabled'])}").classes(state_css_class(comp_data['voting_enabled']))
+            ui.label(f"Live voting is {state_to_str(comp_data['live_voting_enabled'])}").classes(state_css_class(comp_data['live_voting_enabled']))
+
+    else:
+        ui.label("Can't retrieve entry data!")
+
+
+def on_refresh_opened_competitions():
+    for comp_id, comp_exp in COMPETITIONS_EXPANSIONS_DICT.items():
+        if comp_exp.value == True:
+            refresh_single_competition_results(comp_id)
+
+
+def on_refresh_results_click():
+    global results_div
+
+    results_div.clear()
+
+    COMPETITIONS_EXPANSIONS_DICT.clear()
+
+    comp_results_list = get_pm_competitions_list()
+
+    with results_div:
+        if comp_results_list and "data" in comp_results_list:
+            for comp_result in comp_results_list["data"]:
+                with ui.expansion(comp_result["name"]).classes('w-full') as comp_expansion:
+                    COMPETITIONS_EXPANSIONS_DICT[comp_result["id"]] = comp_expansion
+                    refresh_single_competition_results(comp_result["id"])
+        else:
+            ui.label("Competitions info loading failed!")
+
+
 @ui.page('/')
 def root_page():
-    global connections_label, messages, timer_field
+    global connections_label, messages, timer_field, results_div
     
     # UI DEFINITION
     ui.label('REVISION 2026 - SHADER SHOWDOWN OVERLAY DASHBOARD')
@@ -179,10 +330,21 @@ def root_page():
 
     ui.button('Set timer', on_click=lambda: set_timer(timer_field.value))
 
-
     with ui.row().classes('items-center'):
         connections_label = ui.label('0')
         ui.label('Connections')
+
+    ui.separator().classes('mt-6')
+
+    ui.label('Results')
+
+    with ui.row():
+        ui.button('Refresh All', on_click=on_refresh_results_click)
+        ui.button('Refresh Opened', on_click=on_refresh_opened_competitions)
+
+    results_div = ui.column().classes('ml-4')
+
+    ui.checkbox("PM API TEST", on_change=on_pm_api_test_change)
 
     ui.separator().classes('mt-6')
 

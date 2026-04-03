@@ -1,2 +1,4 @@
 websockets
 nicegui
+dotenv
+requests
