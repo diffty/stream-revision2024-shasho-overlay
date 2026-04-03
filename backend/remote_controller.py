@@ -60,4 +60,4 @@ def root_page():
     ui.button("CODER 2 SOLO", on_click=lambda: on_coder_scene(2, suffix="SOLO"))
     ui.button("CODER 3 SOLO", on_click=lambda: on_coder_scene(3, suffix="SOLO"))
 
-ui.run(on_air=True, port=6666)
+ui.run(port=1991)
