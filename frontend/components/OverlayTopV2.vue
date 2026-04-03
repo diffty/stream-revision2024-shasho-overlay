@@ -402,14 +402,14 @@
             </div>
 
             <div id="bar-left-edge">
-                <svg viewBox="0 0 100 100" preserveAspectRatio="none" style="right: 0;">
-                    <polygon points="0,0 100,0 100,100" style="fill: white;"></polygon>
+                <svg viewBox="0 0 120 100" preserveAspectRatio="none" style="right: 0;">
+                    <polygon points="0,0 120,0 120,100 100,100" style="fill: white;"></polygon>
                 </svg>
             </div>
 
             <div id="bar-right-edge">
-                <svg viewBox="0 0 100 100" preserveAspectRatio="none" style="left: 0;">
-                    <polygon points="0,0 100,0 0,100" style="fill: white;"></polygon>
+                <svg viewBox="0 0 120 100" preserveAspectRatio="none" style="left: 0;">
+                    <polygon points="0,0 120,0 20,100 0,100" style="fill: white;"></polygon>
                 </svg>
             </div>
 
@@ -537,7 +537,7 @@
         height: 100%;
         top: 0;
         left: 0;
-        margin-left: -0.3em;
+        margin-left: -0.27em;
     }
 
     #bar-right-edge, #bar-bottom-info-right-edge {
@@ -546,7 +546,7 @@
         height: 100%;
         top: 0;
         right: 0;
-        margin-right: -0.3em;
+        margin-right: -0.27em;
     }
 
     #bar-bottom-info {
