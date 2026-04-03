@@ -37,11 +37,23 @@
                             "x": 0.0,
                             "y": 0.0
                         },
+                        "pos_rel": {
+                            "x": -1.7777777910232544,
+                            "y": -1.0
+                        },
                         "scale": {
                             "x": 1.0,
                             "y": 1.0
                         },
+                        "scale_rel": {
+                            "x": 1.0,
+                            "y": 1.0
+                        },
                         "bounds": {
+                            "x": 0.0,
+                            "y": 0.0
+                        },
+                        "bounds_rel": {
                             "x": 0.0,
                             "y": 0.0
                         },
@@ -208,11 +220,23 @@
                             "x": 0.0,
                             "y": 0.0
                         },
+                        "pos_rel": {
+                            "x": -1.7777777910232544,
+                            "y": -1.0
+                        },
                         "scale": {
                             "x": 1.0,
                             "y": 1.0
                         },
+                        "scale_rel": {
+                            "x": 1.0,
+                            "y": 1.0
+                        },
                         "bounds": {
+                            "x": 0.0,
+                            "y": 0.0
+                        },
+                        "bounds_rel": {
                             "x": 0.0,
                             "y": 0.0
                         },
@@ -379,11 +403,23 @@
                             "x": 0.0,
                             "y": 0.0
                         },
+                        "pos_rel": {
+                            "x": -1.7777777910232544,
+                            "y": -1.0
+                        },
                         "scale": {
                             "x": 1.0,
                             "y": 1.0
                         },
+                        "scale_rel": {
+                            "x": 1.0,
+                            "y": 1.0
+                        },
                         "bounds": {
+                            "x": 0.0,
+                            "y": 0.0
+                        },
+                        "bounds_rel": {
                             "x": 0.0,
                             "y": 0.0
                         },
@@ -550,13 +586,25 @@
                             "x": 0.0,
                             "y": 0.0
                         },
+                        "pos_rel": {
+                            "x": -1.7777777910232544,
+                            "y": -1.0
+                        },
                         "scale": {
+                            "x": 0.1953125,
+                            "y": 0.1953703761100769
+                        },
+                        "scale_rel": {
                             "x": 0.1953125,
                             "y": 0.1953703761100769
                         },
                         "bounds": {
                             "x": 1.0,
                             "y": 1.0
+                        },
+                        "bounds_rel": {
+                            "x": 0.0018518518190830946,
+                            "y": 0.0018518518190830946
                         },
                         "scale_filter": "disable",
                         "blend_method": "default",
@@ -659,13 +707,25 @@
                             "x": 0.0,
                             "y": 0.0
                         },
+                        "pos_rel": {
+                            "x": -1.7777777910232544,
+                            "y": -1.0
+                        },
                         "scale": {
+                            "x": 0.1953125,
+                            "y": 0.1953703761100769
+                        },
+                        "scale_rel": {
                             "x": 0.1953125,
                             "y": 0.1953703761100769
                         },
                         "bounds": {
                             "x": 1.0,
                             "y": 1.0
+                        },
+                        "bounds_rel": {
+                            "x": 0.0018518518190830946,
+                            "y": 0.0018518518190830946
                         },
                         "scale_filter": "disable",
                         "blend_method": "default",
@@ -768,13 +828,25 @@
                             "x": 0.0,
                             "y": 0.0
                         },
+                        "pos_rel": {
+                            "x": -1.7777777910232544,
+                            "y": -1.0
+                        },
                         "scale": {
+                            "x": 0.1953125,
+                            "y": 0.1953703761100769
+                        },
+                        "scale_rel": {
                             "x": 0.1953125,
                             "y": 0.1953703761100769
                         },
                         "bounds": {
                             "x": 1.0,
                             "y": 1.0
+                        },
+                        "bounds_rel": {
+                            "x": 0.0018518518190830946,
+                            "y": 0.0018518518190830946
                         },
                         "scale_filter": "disable",
                         "blend_method": "default",
@@ -840,6 +912,232 @@
                     "private_settings": {}
                 }
             ]
+        },
+        {
+            "prev_ver": 536936448,
+            "name": "Group 4",
+            "uuid": "3725d5ee-9928-4618-95ee-c70d19688d4d",
+            "id": "group",
+            "versioned_id": "group",
+            "settings": {
+                "id_counter": 0,
+                "custom_size": true,
+                "cx": 1924,
+                "cy": 208,
+                "items": [
+                    {
+                        "name": "T_Vote",
+                        "source_uuid": "d3636680-4756-4806-b310-bd520dc7bdd2",
+                        "visible": true,
+                        "locked": false,
+                        "rot": 0.0,
+                        "scale_ref": {
+                            "x": 1920.0,
+                            "y": 1080.0
+                        },
+                        "align": 5,
+                        "bounds_type": 0,
+                        "bounds_align": 0,
+                        "bounds_crop": false,
+                        "crop_left": 0,
+                        "crop_top": 0,
+                        "crop_right": 0,
+                        "crop_bottom": 0,
+                        "id": 40,
+                        "group_item_backup": false,
+                        "pos": {
+                            "x": 2.0,
+                            "y": 111.5
+                        },
+                        "pos_rel": {
+                            "x": -1.7740740776062012,
+                            "y": -0.7935185432434082
+                        },
+                        "scale": {
+                            "x": 1.0,
+                            "y": 1.0
+                        },
+                        "scale_rel": {
+                            "x": 1.0,
+                            "y": 1.0
+                        },
+                        "bounds": {
+                            "x": 0.0,
+                            "y": 0.0
+                        },
+                        "bounds_rel": {
+                            "x": 0.0,
+                            "y": 0.0
+                        },
+                        "scale_filter": "bilinear",
+                        "blend_method": "default",
+                        "blend_type": "normal",
+                        "show_transition": {
+                            "duration": 300
+                        },
+                        "hide_transition": {
+                            "duration": 300
+                        },
+                        "private_settings": {}
+                    },
+                    {
+                        "name": "I_VoteQRCode",
+                        "source_uuid": "0d83ccef-c517-4347-a541-114a911f569b",
+                        "visible": true,
+                        "locked": false,
+                        "rot": 0.0,
+                        "scale_ref": {
+                            "x": 1920.0,
+                            "y": 1080.0
+                        },
+                        "align": 5,
+                        "bounds_type": 0,
+                        "bounds_align": 0,
+                        "bounds_crop": false,
+                        "crop_left": 0,
+                        "crop_top": 0,
+                        "crop_right": 0,
+                        "crop_bottom": 0,
+                        "id": 42,
+                        "group_item_backup": false,
+                        "pos": {
+                            "x": 0.0,
+                            "y": 0.0
+                        },
+                        "pos_rel": {
+                            "x": -1.7777777910232544,
+                            "y": -1.0
+                        },
+                        "scale": {
+                            "x": 0.770370364189148,
+                            "y": 0.770370364189148
+                        },
+                        "scale_rel": {
+                            "x": 0.770370364189148,
+                            "y": 0.770370364189148
+                        },
+                        "bounds": {
+                            "x": 1.0,
+                            "y": 1.0
+                        },
+                        "bounds_rel": {
+                            "x": 0.0018518518190830946,
+                            "y": 0.0018518518190830946
+                        },
+                        "scale_filter": "bilinear",
+                        "blend_method": "default",
+                        "blend_type": "normal",
+                        "show_transition": {
+                            "duration": 0
+                        },
+                        "hide_transition": {
+                            "duration": 0
+                        },
+                        "private_settings": {}
+                    },
+                    {
+                        "name": "I_VoteQRCode",
+                        "source_uuid": "0d83ccef-c517-4347-a541-114a911f569b",
+                        "visible": true,
+                        "locked": false,
+                        "rot": 0.0,
+                        "scale_ref": {
+                            "x": 1920.0,
+                            "y": 1080.0
+                        },
+                        "align": 5,
+                        "bounds_type": 0,
+                        "bounds_align": 0,
+                        "bounds_crop": false,
+                        "crop_left": 0,
+                        "crop_top": 0,
+                        "crop_right": 0,
+                        "crop_bottom": 0,
+                        "id": 43,
+                        "group_item_backup": false,
+                        "pos": {
+                            "x": 1716.0,
+                            "y": 0.0
+                        },
+                        "pos_rel": {
+                            "x": 1.399999976158142,
+                            "y": -1.0
+                        },
+                        "scale": {
+                            "x": 0.770370364189148,
+                            "y": 0.770370364189148
+                        },
+                        "scale_rel": {
+                            "x": 0.770370364189148,
+                            "y": 0.770370364189148
+                        },
+                        "bounds": {
+                            "x": 1.0,
+                            "y": 1.0
+                        },
+                        "bounds_rel": {
+                            "x": 0.0018518518190830946,
+                            "y": 0.0018518518190830946
+                        },
+                        "scale_filter": "bilinear",
+                        "blend_method": "default",
+                        "blend_type": "normal",
+                        "show_transition": {
+                            "duration": 0
+                        },
+                        "hide_transition": {
+                            "duration": 0
+                        },
+                        "private_settings": {}
+                    }
+                ]
+            },
+            "mixers": 0,
+            "sync": 0,
+            "flags": 0,
+            "volume": 1.0,
+            "balance": 0.5,
+            "enabled": true,
+            "muted": false,
+            "push-to-mute": false,
+            "push-to-mute-delay": 0,
+            "push-to-talk": false,
+            "push-to-talk-delay": 0,
+            "hotkeys": {},
+            "deinterlace_mode": 0,
+            "deinterlace_field_order": 0,
+            "monitoring_type": 0,
+            "canvas_uuid": "6c69626f-6273-4c00-9d88-c5136d61696e",
+            "private_settings": {},
+            "filters": [
+                {
+                    "prev_ver": 536936448,
+                    "name": "Move transition override",
+                    "uuid": "11d30902-7f2d-43e0-907f-6400d27e38d8",
+                    "id": "move_transition_override_filter",
+                    "versioned_id": "move_transition_override_filter",
+                    "settings": {
+                        "position_in": 34,
+                        "position_out": 34
+                    },
+                    "mixers": 0,
+                    "sync": 0,
+                    "flags": 0,
+                    "volume": 1.0,
+                    "balance": 0.5,
+                    "enabled": true,
+                    "muted": false,
+                    "push-to-mute": false,
+                    "push-to-mute-delay": 0,
+                    "push-to-talk": false,
+                    "push-to-talk-delay": 0,
+                    "hotkeys": {},
+                    "deinterlace_mode": 0,
+                    "deinterlace_field_order": 0,
+                    "monitoring_type": 0,
+                    "private_settings": {}
+                }
+            ]
         }
     ],
     "scene_order": [
@@ -850,7 +1148,7 @@
             "name": "INTRO_ROUND"
         },
         {
-            "name": "INTRO_USELESS"
+            "name": "INTRO_RESULTS"
         },
         {
             "name": "MAIN_COMPETITION"
@@ -902,6 +1200,15 @@
         },
         {
             "name": "_CAM_SHADER3"
+        },
+        {
+            "name": "_CAM_SHADER1_INTRO"
+        },
+        {
+            "name": "_CAM_SHADER2_INTRO"
+        },
+        {
+            "name": "_CAM_SHADER3_INTRO"
         }
     ],
     "current_scene": "MAIN_COMPETITION",
@@ -910,13 +1217,6 @@
     "current_transition": "Move",
     "transition_duration": 300,
     "transitions": [
-        {
-            "name": "Glissement",
-            "id": "slide_transition",
-            "settings": {
-                "direction": "down"
-            }
-        },
         {
             "name": "Move",
             "id": "move_transition",
@@ -930,13 +1230,20 @@
                 "zoom_out": 100.0,
                 "nested_scenes": false
             }
+        },
+        {
+            "name": "Glissement",
+            "id": "slide_transition",
+            "settings": {
+                "direction": "down"
+            }
         }
     ],
     "quick_transitions": [],
     "saved_projectors": [],
     "preview_locked": false,
     "scaling_enabled": false,
-    "scaling_level": -10,
+    "scaling_level": -11,
     "scaling_off_x": 0.0,
     "scaling_off_y": 0.0,
     "virtual-camera": {
@@ -1056,6 +1363,101 @@
         },
         {
             "prev_ver": 536936448,
+            "name": "B_Results",
+            "uuid": "a654ec99-4c5c-4cce-a30a-5ab9b9c42865",
+            "id": "browser_source",
+            "versioned_id": "browser_source",
+            "settings": {
+                "width": 1920,
+                "height": 1080,
+                "url": "http://localhost:8080/overlay/results.html",
+                "reroute_audio": true,
+                "fps_custom": false,
+                "css": "body { background-color: rgba(0, 0, 0, 0); margin: 0px auto; overflow: hidden; color: white; }"
+            },
+            "mixers": 255,
+            "sync": 0,
+            "flags": 0,
+            "volume": 1.0,
+            "balance": 0.5,
+            "enabled": true,
+            "muted": false,
+            "push-to-mute": false,
+            "push-to-mute-delay": 0,
+            "push-to-talk": false,
+            "push-to-talk-delay": 0,
+            "hotkeys": {
+                "libobs.mute": [],
+                "libobs.unmute": [],
+                "libobs.push-to-mute": [],
+                "libobs.push-to-talk": [],
+                "ObsBrowser.Refresh": []
+            },
+            "deinterlace_mode": 0,
+            "deinterlace_field_order": 0,
+            "monitoring_type": 0,
+            "private_settings": {},
+            "filters": [
+                {
+                    "prev_ver": 536936448,
+                    "name": "Shadow",
+                    "uuid": "88459655-d94d-4028-bb58-89d9c65f5ef6",
+                    "id": "obs_shadow_filter",
+                    "versioned_id": "obs_shadow_filter",
+                    "settings": {
+                        "glow_size": 2.0,
+                        "glow_offset_distance": 11.0,
+                        "glow_intensity": 94.0
+                    },
+                    "mixers": 0,
+                    "sync": 0,
+                    "flags": 0,
+                    "volume": 1.0,
+                    "balance": 0.5,
+                    "enabled": true,
+                    "muted": false,
+                    "push-to-mute": false,
+                    "push-to-mute-delay": 0,
+                    "push-to-talk": false,
+                    "push-to-talk-delay": 0,
+                    "hotkeys": {},
+                    "deinterlace_mode": 0,
+                    "deinterlace_field_order": 0,
+                    "monitoring_type": 0,
+                    "private_settings": {}
+                },
+                {
+                    "prev_ver": 536936448,
+                    "name": "Move transition override",
+                    "uuid": "d7aecf13-ad4e-4f2c-9947-beb2fca8648e",
+                    "id": "move_transition_override_filter",
+                    "versioned_id": "move_transition_override_filter",
+                    "settings": {
+                        "transition_out": "Fade",
+                        "transition_in": "Fade",
+                        "transition_match": "Fade"
+                    },
+                    "mixers": 0,
+                    "sync": 0,
+                    "flags": 0,
+                    "volume": 1.0,
+                    "balance": 0.5,
+                    "enabled": true,
+                    "muted": false,
+                    "push-to-mute": false,
+                    "push-to-mute-delay": 0,
+                    "push-to-talk": false,
+                    "push-to-talk-delay": 0,
+                    "hotkeys": {},
+                    "deinterlace_mode": 0,
+                    "deinterlace_field_order": 0,
+                    "monitoring_type": 0,
+                    "private_settings": {}
+                }
+            ]
+        },
+        {
+            "prev_ver": 536936448,
             "name": "B_Splash",
             "uuid": "7284728c-542d-459e-9efa-9e40d717d0e5",
             "id": "browser_source",
@@ -1104,7 +1506,7 @@
                     {
                         "name": "_BG",
                         "source_uuid": "7543966a-672e-4784-8eb0-2bf322df1c39",
-                        "visible": true,
+                        "visible": false,
                         "locked": true,
                         "rot": 0.0,
                         "scale_ref": {
@@ -1125,11 +1527,23 @@
                             "x": 0.0,
                             "y": 0.0
                         },
+                        "pos_rel": {
+                            "x": -1.7777777910232544,
+                            "y": -1.0
+                        },
                         "scale": {
                             "x": 1.0,
                             "y": 1.0
                         },
+                        "scale_rel": {
+                            "x": 1.0,
+                            "y": 1.0
+                        },
                         "bounds": {
+                            "x": 0.0,
+                            "y": 0.0
+                        },
+                        "bounds_rel": {
                             "x": 0.0,
                             "y": 0.0
                         },
@@ -1168,11 +1582,23 @@
                             "x": 0.0,
                             "y": 0.0
                         },
+                        "pos_rel": {
+                            "x": -1.7777777910232544,
+                            "y": -1.0
+                        },
                         "scale": {
                             "x": 1.0,
                             "y": 1.0
                         },
+                        "scale_rel": {
+                            "x": 1.0,
+                            "y": 1.0
+                        },
                         "bounds": {
+                            "x": 0.0,
+                            "y": 0.0
+                        },
+                        "bounds_rel": {
                             "x": 0.0,
                             "y": 0.0
                         },
@@ -1211,11 +1637,23 @@
                             "x": 0.0,
                             "y": 0.0
                         },
+                        "pos_rel": {
+                            "x": -1.7777777910232544,
+                            "y": -1.0
+                        },
                         "scale": {
                             "x": 1.0,
                             "y": 1.0
                         },
+                        "scale_rel": {
+                            "x": 1.0,
+                            "y": 1.0
+                        },
                         "bounds": {
+                            "x": 0.0,
+                            "y": 0.0
+                        },
+                        "bounds_rel": {
                             "x": 0.0,
                             "y": 0.0
                         },
@@ -1251,14 +1689,26 @@
                         "id": 11,
                         "group_item_backup": false,
                         "pos": {
-                            "x": -1248.0,
-                            "y": -547.0
+                            "x": -1250.0,
+                            "y": -549.0
+                        },
+                        "pos_rel": {
+                            "x": -4.092592716217041,
+                            "y": -2.0166666507720947
                         },
                         "scale": {
                             "x": 2.401562452316284,
                             "y": 2.4018518924713135
                         },
+                        "scale_rel": {
+                            "x": 2.401562452316284,
+                            "y": 2.4018518924713135
+                        },
                         "bounds": {
+                            "x": 0.0,
+                            "y": 0.0
+                        },
+                        "bounds_rel": {
                             "x": 0.0,
                             "y": 0.0
                         },
@@ -1319,7 +1769,7 @@
                     {
                         "name": "_BG",
                         "source_uuid": "7543966a-672e-4784-8eb0-2bf322df1c39",
-                        "visible": true,
+                        "visible": false,
                         "locked": false,
                         "rot": 0.0,
                         "scale_ref": {
@@ -1340,11 +1790,23 @@
                             "x": 0.0,
                             "y": 0.0
                         },
+                        "pos_rel": {
+                            "x": -1.7777777910232544,
+                            "y": -1.0
+                        },
                         "scale": {
                             "x": 1.0,
                             "y": 1.0
                         },
+                        "scale_rel": {
+                            "x": 1.0,
+                            "y": 1.0
+                        },
                         "bounds": {
+                            "x": 0.0,
+                            "y": 0.0
+                        },
+                        "bounds_rel": {
                             "x": 0.0,
                             "y": 0.0
                         },
@@ -1383,11 +1845,23 @@
                             "x": 0.0,
                             "y": 0.0
                         },
+                        "pos_rel": {
+                            "x": -1.7777777910232544,
+                            "y": -1.0
+                        },
                         "scale": {
                             "x": 1.0,
                             "y": 1.0
                         },
+                        "scale_rel": {
+                            "x": 1.0,
+                            "y": 1.0
+                        },
                         "bounds": {
+                            "x": 0.0,
+                            "y": 0.0
+                        },
+                        "bounds_rel": {
                             "x": 0.0,
                             "y": 0.0
                         },
@@ -1426,11 +1900,23 @@
                             "x": 0.0,
                             "y": -100.0
                         },
+                        "pos_rel": {
+                            "x": -1.7777777910232544,
+                            "y": -1.185185194015503
+                        },
                         "scale": {
                             "x": 1.0,
                             "y": 1.0
                         },
+                        "scale_rel": {
+                            "x": 1.0,
+                            "y": 1.0
+                        },
                         "bounds": {
+                            "x": 0.0,
+                            "y": 0.0
+                        },
+                        "bounds_rel": {
                             "x": 0.0,
                             "y": 0.0
                         },
@@ -1469,11 +1955,23 @@
                             "x": -1248.0,
                             "y": -547.0
                         },
+                        "pos_rel": {
+                            "x": -4.088889122009277,
+                            "y": -2.012962818145752
+                        },
                         "scale": {
                             "x": 2.401562452316284,
                             "y": 2.4018518924713135
                         },
+                        "scale_rel": {
+                            "x": 2.401562452316284,
+                            "y": 2.4018518924713135
+                        },
                         "bounds": {
+                            "x": 0.0,
+                            "y": 0.0
+                        },
+                        "bounds_rel": {
                             "x": 0.0,
                             "y": 0.0
                         },
@@ -1534,7 +2032,7 @@
                     {
                         "name": "_BG",
                         "source_uuid": "7543966a-672e-4784-8eb0-2bf322df1c39",
-                        "visible": true,
+                        "visible": false,
                         "locked": true,
                         "rot": 0.0,
                         "scale_ref": {
@@ -1555,11 +2053,23 @@
                             "x": 0.0,
                             "y": 0.0
                         },
+                        "pos_rel": {
+                            "x": -1.7777777910232544,
+                            "y": -1.0
+                        },
                         "scale": {
                             "x": 1.0,
                             "y": 1.0
                         },
+                        "scale_rel": {
+                            "x": 1.0,
+                            "y": 1.0
+                        },
                         "bounds": {
+                            "x": 0.0,
+                            "y": 0.0
+                        },
+                        "bounds_rel": {
                             "x": 0.0,
                             "y": 0.0
                         },
@@ -1598,11 +2108,23 @@
                             "x": 0.0,
                             "y": 0.0
                         },
+                        "pos_rel": {
+                            "x": -1.7777777910232544,
+                            "y": -1.0
+                        },
                         "scale": {
                             "x": 1.0,
                             "y": 1.0
                         },
+                        "scale_rel": {
+                            "x": 1.0,
+                            "y": 1.0
+                        },
                         "bounds": {
+                            "x": 0.0,
+                            "y": 0.0
+                        },
+                        "bounds_rel": {
                             "x": 0.0,
                             "y": 0.0
                         },
@@ -1641,13 +2163,25 @@
                             "x": 1545.0,
                             "y": 869.0
                         },
+                        "pos_rel": {
+                            "x": 1.0833333730697632,
+                            "y": 0.6092592477798462
+                        },
                         "scale": {
+                            "x": 0.1953125,
+                            "y": 0.1953703761100769
+                        },
+                        "scale_rel": {
                             "x": 0.1953125,
                             "y": 0.1953703761100769
                         },
                         "bounds": {
                             "x": 1.0,
                             "y": 1.0
+                        },
+                        "bounds_rel": {
+                            "x": 0.0018518518190830946,
+                            "y": 0.0018518518190830946
                         },
                         "scale_filter": "disable",
                         "blend_method": "default",
@@ -1684,11 +2218,23 @@
                             "x": 1545.0,
                             "y": 869.0
                         },
+                        "pos_rel": {
+                            "x": 1.0833333730697632,
+                            "y": 0.6092592477798462
+                        },
                         "scale": {
                             "x": 1.0,
                             "y": 1.0
                         },
+                        "scale_rel": {
+                            "x": 1.0,
+                            "y": 1.0
+                        },
                         "bounds": {
+                            "x": 0.0,
+                            "y": 0.0
+                        },
+                        "bounds_rel": {
                             "x": 0.0,
                             "y": 0.0
                         },
@@ -1727,11 +2273,23 @@
                             "x": 0.0,
                             "y": 0.0
                         },
+                        "pos_rel": {
+                            "x": -1.7777777910232544,
+                            "y": -1.0
+                        },
                         "scale": {
                             "x": 1.0,
                             "y": 1.0
                         },
+                        "scale_rel": {
+                            "x": 1.0,
+                            "y": 1.0
+                        },
                         "bounds": {
+                            "x": 0.0,
+                            "y": 0.0
+                        },
+                        "bounds_rel": {
                             "x": 0.0,
                             "y": 0.0
                         },
@@ -1770,11 +2328,23 @@
                             "x": -1247.0,
                             "y": -549.0
                         },
+                        "pos_rel": {
+                            "x": -4.087037086486816,
+                            "y": -2.0166666507720947
+                        },
                         "scale": {
                             "x": 2.401562452316284,
                             "y": 2.4018518924713135
                         },
+                        "scale_rel": {
+                            "x": 2.401562452316284,
+                            "y": 2.4018518924713135
+                        },
                         "bounds": {
+                            "x": 0.0,
+                            "y": 0.0
+                        },
+                        "bounds_rel": {
                             "x": 0.0,
                             "y": 0.0
                         },
@@ -1837,7 +2407,7 @@
                     {
                         "name": "_BG",
                         "source_uuid": "7543966a-672e-4784-8eb0-2bf322df1c39",
-                        "visible": true,
+                        "visible": false,
                         "locked": true,
                         "rot": 0.0,
                         "scale_ref": {
@@ -1858,11 +2428,23 @@
                             "x": 0.0,
                             "y": 0.0
                         },
+                        "pos_rel": {
+                            "x": -1.7777777910232544,
+                            "y": -1.0
+                        },
                         "scale": {
                             "x": 1.0,
                             "y": 1.0
                         },
+                        "scale_rel": {
+                            "x": 1.0,
+                            "y": 1.0
+                        },
                         "bounds": {
+                            "x": 0.0,
+                            "y": 0.0
+                        },
+                        "bounds_rel": {
                             "x": 0.0,
                             "y": 0.0
                         },
@@ -1901,11 +2483,23 @@
                             "x": 0.0,
                             "y": 0.0
                         },
+                        "pos_rel": {
+                            "x": -1.7777777910232544,
+                            "y": -1.0
+                        },
                         "scale": {
                             "x": 1.0,
                             "y": 1.0
                         },
+                        "scale_rel": {
+                            "x": 1.0,
+                            "y": 1.0
+                        },
                         "bounds": {
+                            "x": 0.0,
+                            "y": 0.0
+                        },
+                        "bounds_rel": {
                             "x": 0.0,
                             "y": 0.0
                         },
@@ -1944,11 +2538,23 @@
                             "x": 0.0,
                             "y": 0.0
                         },
+                        "pos_rel": {
+                            "x": -1.7777777910232544,
+                            "y": -1.0
+                        },
                         "scale": {
                             "x": 1.0,
                             "y": 1.0
                         },
+                        "scale_rel": {
+                            "x": 1.0,
+                            "y": 1.0
+                        },
                         "bounds": {
+                            "x": 0.0,
+                            "y": 0.0
+                        },
+                        "bounds_rel": {
                             "x": 0.0,
                             "y": 0.0
                         },
@@ -1987,11 +2593,23 @@
                             "x": -1248.0,
                             "y": -547.0
                         },
+                        "pos_rel": {
+                            "x": -4.088889122009277,
+                            "y": -2.012962818145752
+                        },
                         "scale": {
                             "x": 2.401562452316284,
                             "y": 2.4018518924713135
                         },
+                        "scale_rel": {
+                            "x": 2.401562452316284,
+                            "y": 2.4018518924713135
+                        },
                         "bounds": {
+                            "x": 0.0,
+                            "y": 0.0
+                        },
+                        "bounds_rel": {
                             "x": 0.0,
                             "y": 0.0
                         },
@@ -2052,7 +2670,7 @@
                     {
                         "name": "_BG",
                         "source_uuid": "7543966a-672e-4784-8eb0-2bf322df1c39",
-                        "visible": true,
+                        "visible": false,
                         "locked": true,
                         "rot": 0.0,
                         "scale_ref": {
@@ -2073,11 +2691,23 @@
                             "x": 0.0,
                             "y": 0.0
                         },
+                        "pos_rel": {
+                            "x": -1.7777777910232544,
+                            "y": -1.0
+                        },
                         "scale": {
                             "x": 1.0,
                             "y": 1.0
                         },
+                        "scale_rel": {
+                            "x": 1.0,
+                            "y": 1.0
+                        },
                         "bounds": {
+                            "x": 0.0,
+                            "y": 0.0
+                        },
+                        "bounds_rel": {
                             "x": 0.0,
                             "y": 0.0
                         },
@@ -2116,11 +2746,23 @@
                             "x": 0.0,
                             "y": 0.0
                         },
+                        "pos_rel": {
+                            "x": -1.7777777910232544,
+                            "y": -1.0
+                        },
                         "scale": {
                             "x": 1.0,
                             "y": 1.0
                         },
+                        "scale_rel": {
+                            "x": 1.0,
+                            "y": 1.0
+                        },
                         "bounds": {
+                            "x": 0.0,
+                            "y": 0.0
+                        },
+                        "bounds_rel": {
                             "x": 0.0,
                             "y": 0.0
                         },
@@ -2159,11 +2801,23 @@
                             "x": 0.0,
                             "y": -100.0
                         },
+                        "pos_rel": {
+                            "x": -1.7777777910232544,
+                            "y": -1.185185194015503
+                        },
                         "scale": {
                             "x": 1.0,
                             "y": 1.0
                         },
+                        "scale_rel": {
+                            "x": 1.0,
+                            "y": 1.0
+                        },
                         "bounds": {
+                            "x": 0.0,
+                            "y": 0.0
+                        },
+                        "bounds_rel": {
                             "x": 0.0,
                             "y": 0.0
                         },
@@ -2202,11 +2856,23 @@
                             "x": -1248.0,
                             "y": -547.0
                         },
+                        "pos_rel": {
+                            "x": -4.088889122009277,
+                            "y": -2.012962818145752
+                        },
                         "scale": {
                             "x": 2.401562452316284,
                             "y": 2.4018518924713135
                         },
+                        "scale_rel": {
+                            "x": 2.401562452316284,
+                            "y": 2.4018518924713135
+                        },
                         "bounds": {
+                            "x": 0.0,
+                            "y": 0.0
+                        },
+                        "bounds_rel": {
                             "x": 0.0,
                             "y": 0.0
                         },
@@ -2267,7 +2933,7 @@
                     {
                         "name": "_BG",
                         "source_uuid": "7543966a-672e-4784-8eb0-2bf322df1c39",
-                        "visible": true,
+                        "visible": false,
                         "locked": true,
                         "rot": 0.0,
                         "scale_ref": {
@@ -2288,11 +2954,23 @@
                             "x": 0.0,
                             "y": 0.0
                         },
+                        "pos_rel": {
+                            "x": -1.7777777910232544,
+                            "y": -1.0
+                        },
                         "scale": {
                             "x": 1.0,
                             "y": 1.0
                         },
+                        "scale_rel": {
+                            "x": 1.0,
+                            "y": 1.0
+                        },
                         "bounds": {
+                            "x": 0.0,
+                            "y": 0.0
+                        },
+                        "bounds_rel": {
                             "x": 0.0,
                             "y": 0.0
                         },
@@ -2331,11 +3009,23 @@
                             "x": 0.0,
                             "y": 0.0
                         },
+                        "pos_rel": {
+                            "x": -1.7777777910232544,
+                            "y": -1.0
+                        },
                         "scale": {
                             "x": 1.0,
                             "y": 1.0
                         },
+                        "scale_rel": {
+                            "x": 1.0,
+                            "y": 1.0
+                        },
                         "bounds": {
+                            "x": 0.0,
+                            "y": 0.0
+                        },
+                        "bounds_rel": {
                             "x": 0.0,
                             "y": 0.0
                         },
@@ -2374,13 +3064,25 @@
                             "x": 1545.0,
                             "y": 869.0
                         },
+                        "pos_rel": {
+                            "x": 1.0833333730697632,
+                            "y": 0.6092592477798462
+                        },
                         "scale": {
+                            "x": 0.1953125,
+                            "y": 0.1953703761100769
+                        },
+                        "scale_rel": {
                             "x": 0.1953125,
                             "y": 0.1953703761100769
                         },
                         "bounds": {
                             "x": 1.0,
                             "y": 1.0
+                        },
+                        "bounds_rel": {
+                            "x": 0.0018518518190830946,
+                            "y": 0.0018518518190830946
                         },
                         "scale_filter": "disable",
                         "blend_method": "default",
@@ -2417,11 +3119,23 @@
                             "x": 1545.0,
                             "y": 869.0
                         },
+                        "pos_rel": {
+                            "x": 1.0833333730697632,
+                            "y": 0.6092592477798462
+                        },
                         "scale": {
                             "x": 1.0,
                             "y": 1.0
                         },
+                        "scale_rel": {
+                            "x": 1.0,
+                            "y": 1.0
+                        },
                         "bounds": {
+                            "x": 0.0,
+                            "y": 0.0
+                        },
+                        "bounds_rel": {
                             "x": 0.0,
                             "y": 0.0
                         },
@@ -2460,11 +3174,23 @@
                             "x": 0.0,
                             "y": 0.0
                         },
+                        "pos_rel": {
+                            "x": -1.7777777910232544,
+                            "y": -1.0
+                        },
                         "scale": {
                             "x": 1.0,
                             "y": 1.0
                         },
+                        "scale_rel": {
+                            "x": 1.0,
+                            "y": 1.0
+                        },
                         "bounds": {
+                            "x": 0.0,
+                            "y": 0.0
+                        },
+                        "bounds_rel": {
                             "x": 0.0,
                             "y": 0.0
                         },
@@ -2503,11 +3229,23 @@
                             "x": -1248.0,
                             "y": -547.0
                         },
+                        "pos_rel": {
+                            "x": -4.088889122009277,
+                            "y": -2.012962818145752
+                        },
                         "scale": {
                             "x": 2.401562452316284,
                             "y": 2.4018518924713135
                         },
+                        "scale_rel": {
+                            "x": 2.401562452316284,
+                            "y": 2.4018518924713135
+                        },
                         "bounds": {
+                            "x": 0.0,
+                            "y": 0.0
+                        },
+                        "bounds_rel": {
                             "x": 0.0,
                             "y": 0.0
                         },
@@ -2570,7 +3308,7 @@
                     {
                         "name": "_BG",
                         "source_uuid": "7543966a-672e-4784-8eb0-2bf322df1c39",
-                        "visible": true,
+                        "visible": false,
                         "locked": true,
                         "rot": 0.0,
                         "scale_ref": {
@@ -2591,11 +3329,23 @@
                             "x": 0.0,
                             "y": 0.0
                         },
+                        "pos_rel": {
+                            "x": -1.7777777910232544,
+                            "y": -1.0
+                        },
                         "scale": {
                             "x": 1.0,
                             "y": 1.0
                         },
+                        "scale_rel": {
+                            "x": 1.0,
+                            "y": 1.0
+                        },
                         "bounds": {
+                            "x": 0.0,
+                            "y": 0.0
+                        },
+                        "bounds_rel": {
                             "x": 0.0,
                             "y": 0.0
                         },
@@ -2634,11 +3384,23 @@
                             "x": 0.0,
                             "y": 0.0
                         },
+                        "pos_rel": {
+                            "x": -1.7777777910232544,
+                            "y": -1.0
+                        },
                         "scale": {
                             "x": 1.0,
                             "y": 1.0
                         },
+                        "scale_rel": {
+                            "x": 1.0,
+                            "y": 1.0
+                        },
                         "bounds": {
+                            "x": 0.0,
+                            "y": 0.0
+                        },
+                        "bounds_rel": {
                             "x": 0.0,
                             "y": 0.0
                         },
@@ -2677,13 +3439,25 @@
                             "x": 1545.0,
                             "y": 1087.0
                         },
+                        "pos_rel": {
+                            "x": 1.0833333730697632,
+                            "y": 1.012963056564331
+                        },
                         "scale": {
+                            "x": 0.1953125,
+                            "y": 0.1953703761100769
+                        },
+                        "scale_rel": {
                             "x": 0.1953125,
                             "y": 0.1953703761100769
                         },
                         "bounds": {
                             "x": 1.0,
                             "y": 1.0
+                        },
+                        "bounds_rel": {
+                            "x": 0.0018518518190830946,
+                            "y": 0.0018518518190830946
                         },
                         "scale_filter": "disable",
                         "blend_method": "default",
@@ -2720,11 +3494,23 @@
                             "x": 0.0,
                             "y": 0.0
                         },
+                        "pos_rel": {
+                            "x": -1.7777777910232544,
+                            "y": -1.0
+                        },
                         "scale": {
                             "x": 1.0,
                             "y": 1.0
                         },
+                        "scale_rel": {
+                            "x": 1.0,
+                            "y": 1.0
+                        },
                         "bounds": {
+                            "x": 0.0,
+                            "y": 0.0
+                        },
+                        "bounds_rel": {
                             "x": 0.0,
                             "y": 0.0
                         },
@@ -2763,11 +3549,23 @@
                             "x": -1248.0,
                             "y": -547.0
                         },
+                        "pos_rel": {
+                            "x": -4.088889122009277,
+                            "y": -2.012962818145752
+                        },
                         "scale": {
                             "x": 2.401562452316284,
                             "y": 2.4018518924713135
                         },
+                        "scale_rel": {
+                            "x": 2.401562452316284,
+                            "y": 2.4018518924713135
+                        },
                         "bounds": {
+                            "x": 0.0,
+                            "y": 0.0
+                        },
+                        "bounds_rel": {
                             "x": 0.0,
                             "y": 0.0
                         },
@@ -2830,7 +3628,7 @@
                     {
                         "name": "_BG",
                         "source_uuid": "7543966a-672e-4784-8eb0-2bf322df1c39",
-                        "visible": true,
+                        "visible": false,
                         "locked": true,
                         "rot": 0.0,
                         "scale_ref": {
@@ -2851,11 +3649,23 @@
                             "x": 0.0,
                             "y": 0.0
                         },
+                        "pos_rel": {
+                            "x": -1.7777777910232544,
+                            "y": -1.0
+                        },
                         "scale": {
                             "x": 1.0,
                             "y": 1.0
                         },
+                        "scale_rel": {
+                            "x": 1.0,
+                            "y": 1.0
+                        },
                         "bounds": {
+                            "x": 0.0,
+                            "y": 0.0
+                        },
+                        "bounds_rel": {
                             "x": 0.0,
                             "y": 0.0
                         },
@@ -2894,11 +3704,23 @@
                             "x": 0.0,
                             "y": 0.0
                         },
+                        "pos_rel": {
+                            "x": -1.7777777910232544,
+                            "y": -1.0
+                        },
                         "scale": {
                             "x": 1.0,
                             "y": 1.0
                         },
+                        "scale_rel": {
+                            "x": 1.0,
+                            "y": 1.0
+                        },
                         "bounds": {
+                            "x": 0.0,
+                            "y": 0.0
+                        },
+                        "bounds_rel": {
                             "x": 0.0,
                             "y": 0.0
                         },
@@ -2937,11 +3759,23 @@
                             "x": 0.0,
                             "y": -100.0
                         },
+                        "pos_rel": {
+                            "x": -1.7777777910232544,
+                            "y": -1.185185194015503
+                        },
                         "scale": {
                             "x": 1.0,
                             "y": 1.0
                         },
+                        "scale_rel": {
+                            "x": 1.0,
+                            "y": 1.0
+                        },
                         "bounds": {
+                            "x": 0.0,
+                            "y": 0.0
+                        },
+                        "bounds_rel": {
                             "x": 0.0,
                             "y": 0.0
                         },
@@ -2980,11 +3814,23 @@
                             "x": -1248.0,
                             "y": -547.0
                         },
+                        "pos_rel": {
+                            "x": -4.088889122009277,
+                            "y": -2.012962818145752
+                        },
                         "scale": {
                             "x": 2.401562452316284,
                             "y": 2.4018518924713135
                         },
+                        "scale_rel": {
+                            "x": 2.401562452316284,
+                            "y": 2.4018518924713135
+                        },
                         "bounds": {
+                            "x": 0.0,
+                            "y": 0.0
+                        },
+                        "bounds_rel": {
                             "x": 0.0,
                             "y": 0.0
                         },
@@ -3045,7 +3891,7 @@
                     {
                         "name": "_BG",
                         "source_uuid": "7543966a-672e-4784-8eb0-2bf322df1c39",
-                        "visible": true,
+                        "visible": false,
                         "locked": true,
                         "rot": 0.0,
                         "scale_ref": {
@@ -3066,11 +3912,23 @@
                             "x": 0.0,
                             "y": 0.0
                         },
+                        "pos_rel": {
+                            "x": -1.7777777910232544,
+                            "y": -1.0
+                        },
                         "scale": {
                             "x": 1.0,
                             "y": 1.0
                         },
+                        "scale_rel": {
+                            "x": 1.0,
+                            "y": 1.0
+                        },
                         "bounds": {
+                            "x": 0.0,
+                            "y": 0.0
+                        },
+                        "bounds_rel": {
                             "x": 0.0,
                             "y": 0.0
                         },
@@ -3109,11 +3967,23 @@
                             "x": 0.0,
                             "y": 0.0
                         },
+                        "pos_rel": {
+                            "x": -1.7777777910232544,
+                            "y": -1.0
+                        },
                         "scale": {
                             "x": 1.0,
                             "y": 1.0
                         },
+                        "scale_rel": {
+                            "x": 1.0,
+                            "y": 1.0
+                        },
                         "bounds": {
+                            "x": 0.0,
+                            "y": 0.0
+                        },
+                        "bounds_rel": {
                             "x": 0.0,
                             "y": 0.0
                         },
@@ -3152,13 +4022,25 @@
                             "x": 1545.0,
                             "y": 869.0
                         },
+                        "pos_rel": {
+                            "x": 1.0833333730697632,
+                            "y": 0.6092592477798462
+                        },
                         "scale": {
+                            "x": 0.1953125,
+                            "y": 0.1953703761100769
+                        },
+                        "scale_rel": {
                             "x": 0.1953125,
                             "y": 0.1953703761100769
                         },
                         "bounds": {
                             "x": 1.0,
                             "y": 1.0
+                        },
+                        "bounds_rel": {
+                            "x": 0.0018518518190830946,
+                            "y": 0.0018518518190830946
                         },
                         "scale_filter": "disable",
                         "blend_method": "default",
@@ -3195,11 +4077,23 @@
                             "x": 1545.0,
                             "y": 869.0
                         },
+                        "pos_rel": {
+                            "x": 1.0833333730697632,
+                            "y": 0.6092592477798462
+                        },
                         "scale": {
                             "x": 1.0,
                             "y": 1.0
                         },
+                        "scale_rel": {
+                            "x": 1.0,
+                            "y": 1.0
+                        },
                         "bounds": {
+                            "x": 0.0,
+                            "y": 0.0
+                        },
+                        "bounds_rel": {
                             "x": 0.0,
                             "y": 0.0
                         },
@@ -3238,11 +4132,23 @@
                             "x": 0.0,
                             "y": 0.0
                         },
+                        "pos_rel": {
+                            "x": -1.7777777910232544,
+                            "y": -1.0
+                        },
                         "scale": {
                             "x": 1.0,
                             "y": 1.0
                         },
+                        "scale_rel": {
+                            "x": 1.0,
+                            "y": 1.0
+                        },
                         "bounds": {
+                            "x": 0.0,
+                            "y": 0.0
+                        },
+                        "bounds_rel": {
                             "x": 0.0,
                             "y": 0.0
                         },
@@ -3281,11 +4187,23 @@
                             "x": -1248.0,
                             "y": -547.0
                         },
+                        "pos_rel": {
+                            "x": -4.088889122009277,
+                            "y": -2.012962818145752
+                        },
                         "scale": {
                             "x": 2.401562452316284,
                             "y": 2.4018518924713135
                         },
+                        "scale_rel": {
+                            "x": 2.401562452316284,
+                            "y": 2.4018518924713135
+                        },
                         "bounds": {
+                            "x": 0.0,
+                            "y": 0.0
+                        },
+                        "bounds_rel": {
                             "x": 0.0,
                             "y": 0.0
                         },
@@ -3334,6 +4252,60 @@
                 "transition_duration": 300,
                 "show_in_multiview": false
             }
+        },
+        {
+            "prev_ver": 536936448,
+            "name": "Colour",
+            "uuid": "2f1753f3-80fc-445c-a8a8-017632d0ed8f",
+            "id": "color_source",
+            "versioned_id": "color_source_v3",
+            "settings": {
+                "color": 4278190080
+            },
+            "mixers": 0,
+            "sync": 0,
+            "flags": 0,
+            "volume": 1.0,
+            "balance": 0.5,
+            "enabled": true,
+            "muted": false,
+            "push-to-mute": false,
+            "push-to-mute-delay": 0,
+            "push-to-talk": false,
+            "push-to-talk-delay": 0,
+            "hotkeys": {},
+            "deinterlace_mode": 0,
+            "deinterlace_field_order": 0,
+            "monitoring_type": 0,
+            "private_settings": {},
+            "filters": [
+                {
+                    "prev_ver": 536936448,
+                    "name": "Colour Correction",
+                    "uuid": "c1357cf3-591c-4ef6-a802-82732ef7df64",
+                    "id": "color_filter",
+                    "versioned_id": "color_filter_v2",
+                    "settings": {
+                        "opacity": 0.9755
+                    },
+                    "mixers": 0,
+                    "sync": 0,
+                    "flags": 0,
+                    "volume": 1.0,
+                    "balance": 0.5,
+                    "enabled": true,
+                    "muted": false,
+                    "push-to-mute": false,
+                    "push-to-mute-delay": 0,
+                    "push-to-talk": false,
+                    "push-to-talk-delay": 0,
+                    "hotkeys": {},
+                    "deinterlace_mode": 0,
+                    "deinterlace_field_order": 0,
+                    "monitoring_type": 0,
+                    "private_settings": {}
+                }
+            ]
         },
         {
             "prev_ver": 536936448,
@@ -3446,13 +4418,13 @@
             "versioned_id": "scene",
             "settings": {
                 "custom_size": false,
-                "id_counter": 5,
+                "id_counter": 9,
                 "items": [
                     {
                         "name": "_CAM_SHADER3",
                         "source_uuid": "d0c78af3-0488-46c0-8035-2155d1ceccd8",
-                        "visible": true,
-                        "locked": false,
+                        "visible": false,
+                        "locked": true,
                         "rot": 0.0,
                         "scale_ref": {
                             "x": 1920.0,
@@ -3472,11 +4444,23 @@
                             "x": 1276.0,
                             "y": 0.0
                         },
+                        "pos_rel": {
+                            "x": 0.585185170173645,
+                            "y": -1.0
+                        },
                         "scale": {
                             "x": 1.0,
                             "y": 1.0
                         },
+                        "scale_rel": {
+                            "x": 1.0,
+                            "y": 1.0
+                        },
                         "bounds": {
+                            "x": 0.0,
+                            "y": 0.0
+                        },
+                        "bounds_rel": {
                             "x": 0.0,
                             "y": 0.0
                         },
@@ -3494,8 +4478,8 @@
                     {
                         "name": "_CAM_SHADER2",
                         "source_uuid": "fa187b2a-667b-4e46-9073-0105ccd4fe6b",
-                        "visible": true,
-                        "locked": false,
+                        "visible": false,
+                        "locked": true,
                         "rot": 0.0,
                         "scale_ref": {
                             "x": 1920.0,
@@ -3515,11 +4499,23 @@
                             "x": 644.0,
                             "y": 0.0
                         },
+                        "pos_rel": {
+                            "x": -0.585185170173645,
+                            "y": -1.0
+                        },
                         "scale": {
                             "x": 1.0,
                             "y": 1.0
                         },
+                        "scale_rel": {
+                            "x": 1.0,
+                            "y": 1.0
+                        },
                         "bounds": {
+                            "x": 0.0,
+                            "y": 0.0
+                        },
+                        "bounds_rel": {
                             "x": 0.0,
                             "y": 0.0
                         },
@@ -3537,8 +4533,8 @@
                     {
                         "name": "_CAM_SHADER1",
                         "source_uuid": "d470d502-9d37-42f5-8b3a-d54a787d289a",
-                        "visible": true,
-                        "locked": false,
+                        "visible": false,
+                        "locked": true,
                         "rot": 0.0,
                         "scale_ref": {
                             "x": 1920.0,
@@ -3558,11 +4554,188 @@
                             "x": 0.0,
                             "y": 0.0
                         },
+                        "pos_rel": {
+                            "x": -1.7777777910232544,
+                            "y": -1.0
+                        },
                         "scale": {
                             "x": 1.0,
                             "y": 1.0
                         },
+                        "scale_rel": {
+                            "x": 1.0,
+                            "y": 1.0
+                        },
                         "bounds": {
+                            "x": 0.0,
+                            "y": 0.0
+                        },
+                        "bounds_rel": {
+                            "x": 0.0,
+                            "y": 0.0
+                        },
+                        "scale_filter": "disable",
+                        "blend_method": "default",
+                        "blend_type": "normal",
+                        "show_transition": {
+                            "duration": 300
+                        },
+                        "hide_transition": {
+                            "duration": 300
+                        },
+                        "private_settings": {}
+                    },
+                    {
+                        "name": "_CAM_SHADER3_INTRO",
+                        "source_uuid": "e09cf711-c36e-41fa-b338-a457641d9a2f",
+                        "visible": true,
+                        "locked": true,
+                        "rot": 0.0,
+                        "scale_ref": {
+                            "x": 1920.0,
+                            "y": 1080.0
+                        },
+                        "align": 5,
+                        "bounds_type": 0,
+                        "bounds_align": 0,
+                        "bounds_crop": false,
+                        "crop_left": 640,
+                        "crop_top": 0,
+                        "crop_right": 640,
+                        "crop_bottom": 0,
+                        "id": 6,
+                        "group_item_backup": false,
+                        "pos": {
+                            "x": 1280.0,
+                            "y": 0.0
+                        },
+                        "pos_rel": {
+                            "x": 0.5925925970077515,
+                            "y": -1.0
+                        },
+                        "scale": {
+                            "x": 1.0,
+                            "y": 1.0
+                        },
+                        "scale_rel": {
+                            "x": 1.0,
+                            "y": 1.0
+                        },
+                        "bounds": {
+                            "x": 0.0,
+                            "y": 0.0
+                        },
+                        "bounds_rel": {
+                            "x": 0.0,
+                            "y": 0.0
+                        },
+                        "scale_filter": "disable",
+                        "blend_method": "default",
+                        "blend_type": "normal",
+                        "show_transition": {
+                            "duration": 300
+                        },
+                        "hide_transition": {
+                            "duration": 300
+                        },
+                        "private_settings": {}
+                    },
+                    {
+                        "name": "_CAM_SHADER2_INTRO",
+                        "source_uuid": "c6d67c7d-9ade-4869-8935-73cb70f150b2",
+                        "visible": true,
+                        "locked": true,
+                        "rot": 0.0,
+                        "scale_ref": {
+                            "x": 1920.0,
+                            "y": 1080.0
+                        },
+                        "align": 5,
+                        "bounds_type": 0,
+                        "bounds_align": 0,
+                        "bounds_crop": false,
+                        "crop_left": 640,
+                        "crop_top": 0,
+                        "crop_right": 640,
+                        "crop_bottom": 0,
+                        "id": 7,
+                        "group_item_backup": false,
+                        "pos": {
+                            "x": 644.0,
+                            "y": 0.0
+                        },
+                        "pos_rel": {
+                            "x": -0.585185170173645,
+                            "y": -1.0
+                        },
+                        "scale": {
+                            "x": 1.0,
+                            "y": 1.0
+                        },
+                        "scale_rel": {
+                            "x": 1.0,
+                            "y": 1.0
+                        },
+                        "bounds": {
+                            "x": 0.0,
+                            "y": 0.0
+                        },
+                        "bounds_rel": {
+                            "x": 0.0,
+                            "y": 0.0
+                        },
+                        "scale_filter": "disable",
+                        "blend_method": "default",
+                        "blend_type": "normal",
+                        "show_transition": {
+                            "duration": 300
+                        },
+                        "hide_transition": {
+                            "duration": 300
+                        },
+                        "private_settings": {}
+                    },
+                    {
+                        "name": "_CAM_SHADER1_INTRO",
+                        "source_uuid": "4bc66abd-45bf-4b1a-8a5c-3bbc6dad8539",
+                        "visible": true,
+                        "locked": true,
+                        "rot": 0.0,
+                        "scale_ref": {
+                            "x": 1920.0,
+                            "y": 1080.0
+                        },
+                        "align": 5,
+                        "bounds_type": 0,
+                        "bounds_align": 0,
+                        "bounds_crop": false,
+                        "crop_left": 640,
+                        "crop_top": 0,
+                        "crop_right": 640,
+                        "crop_bottom": 0,
+                        "id": 8,
+                        "group_item_backup": false,
+                        "pos": {
+                            "x": 0.0,
+                            "y": 0.0
+                        },
+                        "pos_rel": {
+                            "x": -1.7777777910232544,
+                            "y": -1.0
+                        },
+                        "scale": {
+                            "x": 1.0,
+                            "y": 1.0
+                        },
+                        "scale_rel": {
+                            "x": 1.0,
+                            "y": 1.0
+                        },
+                        "bounds": {
+                            "x": 0.0,
+                            "y": 0.0
+                        },
+                        "bounds_rel": {
                             "x": 0.0,
                             "y": 0.0
                         },
@@ -3601,11 +4774,23 @@
                             "x": 0.0,
                             "y": 0.0
                         },
+                        "pos_rel": {
+                            "x": -1.7777777910232544,
+                            "y": -1.0
+                        },
                         "scale": {
                             "x": 1.0,
                             "y": 1.0
                         },
+                        "scale_rel": {
+                            "x": 1.0,
+                            "y": 1.0
+                        },
                         "bounds": {
+                            "x": 0.0,
+                            "y": 0.0
+                        },
+                        "bounds_rel": {
                             "x": 0.0,
                             "y": 0.0
                         },
@@ -3642,247 +4827,38 @@
                 "libobs.show_scene_item.5": [],
                 "libobs.hide_scene_item.5": [],
                 "libobs.show_scene_item.2": [],
-                "libobs.hide_scene_item.2": []
+                "libobs.hide_scene_item.2": [],
+                "libobs.show_scene_item.6": [],
+                "libobs.hide_scene_item.6": [],
+                "libobs.show_scene_item.7": [],
+                "libobs.hide_scene_item.7": [],
+                "libobs.show_scene_item.8": [],
+                "libobs.hide_scene_item.8": []
             },
             "deinterlace_mode": 0,
             "deinterlace_field_order": 0,
             "monitoring_type": 0,
             "canvas_uuid": "6c69626f-6273-4c00-9d88-c5136d61696e",
             "private_settings": {
-                "show_in_multiview": false,
-                "transition_duration": 300
+                "transition_duration": 300,
+                "show_in_multiview": false
             }
         },
         {
             "prev_ver": 536936448,
-            "name": "INTRO_ROUND",
-            "uuid": "52d366b0-8081-455f-9843-3fce7e9be764",
-            "id": "scene",
-            "versioned_id": "scene",
-            "settings": {
-                "custom_size": false,
-                "id_counter": 11,
-                "items": [
-                    {
-                        "name": "_CAM_SHADER3",
-                        "source_uuid": "d0c78af3-0488-46c0-8035-2155d1ceccd8",
-                        "visible": true,
-                        "locked": false,
-                        "rot": 0.0,
-                        "scale_ref": {
-                            "x": 1920.0,
-                            "y": 1080.0
-                        },
-                        "align": 5,
-                        "bounds_type": 0,
-                        "bounds_align": 0,
-                        "bounds_crop": false,
-                        "crop_left": 751,
-                        "crop_top": 100,
-                        "crop_right": 725,
-                        "crop_bottom": 101,
-                        "id": 9,
-                        "group_item_backup": false,
-                        "pos": {
-                            "x": 1276.0,
-                            "y": 0.0
-                        },
-                        "scale": {
-                            "x": 1.0,
-                            "y": 1.0
-                        },
-                        "bounds": {
-                            "x": 0.0,
-                            "y": 0.0
-                        },
-                        "scale_filter": "disable",
-                        "blend_method": "default",
-                        "blend_type": "normal",
-                        "show_transition": {
-                            "duration": 300
-                        },
-                        "hide_transition": {
-                            "duration": 300
-                        },
-                        "private_settings": {}
-                    },
-                    {
-                        "name": "_CAM_SHADER2",
-                        "source_uuid": "fa187b2a-667b-4e46-9073-0105ccd4fe6b",
-                        "visible": true,
-                        "locked": false,
-                        "rot": 0.0,
-                        "scale_ref": {
-                            "x": 1920.0,
-                            "y": 1080.0
-                        },
-                        "align": 5,
-                        "bounds_type": 0,
-                        "bounds_align": 0,
-                        "bounds_crop": false,
-                        "crop_left": 751,
-                        "crop_top": 100,
-                        "crop_right": 725,
-                        "crop_bottom": 101,
-                        "id": 10,
-                        "group_item_backup": false,
-                        "pos": {
-                            "x": 644.0,
-                            "y": 0.0
-                        },
-                        "scale": {
-                            "x": 1.0,
-                            "y": 1.0
-                        },
-                        "bounds": {
-                            "x": 0.0,
-                            "y": 0.0
-                        },
-                        "scale_filter": "disable",
-                        "blend_method": "default",
-                        "blend_type": "normal",
-                        "show_transition": {
-                            "duration": 300
-                        },
-                        "hide_transition": {
-                            "duration": 300
-                        },
-                        "private_settings": {}
-                    },
-                    {
-                        "name": "_CAM_SHADER1",
-                        "source_uuid": "d470d502-9d37-42f5-8b3a-d54a787d289a",
-                        "visible": true,
-                        "locked": false,
-                        "rot": 0.0,
-                        "scale_ref": {
-                            "x": 1920.0,
-                            "y": 1080.0
-                        },
-                        "align": 5,
-                        "bounds_type": 0,
-                        "bounds_align": 0,
-                        "bounds_crop": false,
-                        "crop_left": 751,
-                        "crop_top": 100,
-                        "crop_right": 725,
-                        "crop_bottom": 101,
-                        "id": 11,
-                        "group_item_backup": false,
-                        "pos": {
-                            "x": 0.0,
-                            "y": 1.0
-                        },
-                        "scale": {
-                            "x": 1.0,
-                            "y": 1.0
-                        },
-                        "bounds": {
-                            "x": 0.0,
-                            "y": 0.0
-                        },
-                        "scale_filter": "disable",
-                        "blend_method": "default",
-                        "blend_type": "normal",
-                        "show_transition": {
-                            "duration": 300
-                        },
-                        "hide_transition": {
-                            "duration": 300
-                        },
-                        "private_settings": {}
-                    },
-                    {
-                        "name": "B_Splash",
-                        "source_uuid": "7284728c-542d-459e-9efa-9e40d717d0e5",
-                        "visible": true,
-                        "locked": true,
-                        "rot": 0.0,
-                        "scale_ref": {
-                            "x": 1920.0,
-                            "y": 1080.0
-                        },
-                        "align": 5,
-                        "bounds_type": 0,
-                        "bounds_align": 0,
-                        "bounds_crop": false,
-                        "crop_left": 0,
-                        "crop_top": 0,
-                        "crop_right": 0,
-                        "crop_bottom": 0,
-                        "id": 2,
-                        "group_item_backup": false,
-                        "pos": {
-                            "x": 0.0,
-                            "y": 0.0
-                        },
-                        "scale": {
-                            "x": 1.0,
-                            "y": 1.0
-                        },
-                        "bounds": {
-                            "x": 0.0,
-                            "y": 0.0
-                        },
-                        "scale_filter": "disable",
-                        "blend_method": "default",
-                        "blend_type": "normal",
-                        "show_transition": {
-                            "duration": 0
-                        },
-                        "hide_transition": {
-                            "duration": 0
-                        },
-                        "private_settings": {}
-                    }
-                ]
-            },
-            "mixers": 0,
-            "sync": 0,
-            "flags": 0,
-            "volume": 1.0,
-            "balance": 0.5,
-            "enabled": true,
-            "muted": false,
-            "push-to-mute": false,
-            "push-to-mute-delay": 0,
-            "push-to-talk": false,
-            "push-to-talk-delay": 0,
-            "hotkeys": {
-                "OBSBasic.SelectScene": [],
-                "libobs.show_scene_item.9": [],
-                "libobs.hide_scene_item.9": [],
-                "libobs.show_scene_item.10": [],
-                "libobs.hide_scene_item.10": [],
-                "libobs.show_scene_item.11": [],
-                "libobs.hide_scene_item.11": [],
-                "libobs.show_scene_item.2": [],
-                "libobs.hide_scene_item.2": []
-            },
-            "deinterlace_mode": 0,
-            "deinterlace_field_order": 0,
-            "monitoring_type": 0,
-            "canvas_uuid": "6c69626f-6273-4c00-9d88-c5136d61696e",
-            "private_settings": {
-                "show_in_multiview": false,
-                "transition_duration": 300
-            }
-        },
-        {
-            "prev_ver": 536936448,
-            "name": "INTRO_USELESS",
+            "name": "INTRO_RESULTS",
             "uuid": "321c1639-4016-47fd-ae2d-6bc030d64e24",
             "id": "scene",
             "versioned_id": "scene",
             "settings": {
-                "id_counter": 7,
+                "id_counter": 12,
                 "custom_size": false,
                 "items": [
                     {
-                        "name": "NDI_CAM3",
+                        "name": "NDI_CAM1",
                         "source_uuid": "db4187e5-71cf-4281-9465-2127e9d87365",
                         "visible": false,
-                        "locked": false,
+                        "locked": true,
                         "rot": 0.0,
                         "scale_ref": {
                             "x": 1920.0,
@@ -3902,11 +4878,23 @@
                             "x": 1280.0,
                             "y": 0.0
                         },
+                        "pos_rel": {
+                            "x": 0.5925925970077515,
+                            "y": -1.0
+                        },
                         "scale": {
                             "x": 1.0,
                             "y": 1.0
                         },
+                        "scale_rel": {
+                            "x": 1.0,
+                            "y": 1.0
+                        },
                         "bounds": {
+                            "x": 0.0,
+                            "y": 0.0
+                        },
+                        "bounds_rel": {
                             "x": 0.0,
                             "y": 0.0
                         },
@@ -3925,7 +4913,7 @@
                         "name": "NDI_CAM2",
                         "source_uuid": "cac1115e-3a2f-4bca-8e0d-aed2e69a8726",
                         "visible": false,
-                        "locked": false,
+                        "locked": true,
                         "rot": 0.0,
                         "scale_ref": {
                             "x": 1920.0,
@@ -3945,11 +4933,23 @@
                             "x": 640.0,
                             "y": 0.0
                         },
+                        "pos_rel": {
+                            "x": -0.5925925970077515,
+                            "y": -1.0
+                        },
                         "scale": {
                             "x": 1.0,
                             "y": 1.0
                         },
+                        "scale_rel": {
+                            "x": 1.0,
+                            "y": 1.0
+                        },
                         "bounds": {
+                            "x": 0.0,
+                            "y": 0.0
+                        },
+                        "bounds_rel": {
                             "x": 0.0,
                             "y": 0.0
                         },
@@ -3965,10 +4965,10 @@
                         "private_settings": {}
                     },
                     {
-                        "name": "NDI_CAM1",
+                        "name": "NDI_CAM3",
                         "source_uuid": "d299d27c-aba2-480e-b04b-e721f2e00c89",
                         "visible": false,
-                        "locked": false,
+                        "locked": true,
                         "rot": 0.0,
                         "scale_ref": {
                             "x": 1920.0,
@@ -3988,11 +4988,23 @@
                             "x": 0.0,
                             "y": 0.0
                         },
+                        "pos_rel": {
+                            "x": -1.7777777910232544,
+                            "y": -1.0
+                        },
                         "scale": {
                             "x": 1.0,
                             "y": 1.0
                         },
+                        "scale_rel": {
+                            "x": 1.0,
+                            "y": 1.0
+                        },
                         "bounds": {
+                            "x": 0.0,
+                            "y": 0.0
+                        },
+                        "bounds_rel": {
                             "x": 0.0,
                             "y": 0.0
                         },
@@ -4010,8 +5022,8 @@
                     {
                         "name": "_CAM_SHADER3",
                         "source_uuid": "d0c78af3-0488-46c0-8035-2155d1ceccd8",
-                        "visible": true,
-                        "locked": false,
+                        "visible": false,
+                        "locked": true,
                         "rot": 0.0,
                         "scale_ref": {
                             "x": 1920.0,
@@ -4031,11 +5043,23 @@
                             "x": 1276.0,
                             "y": 0.0
                         },
+                        "pos_rel": {
+                            "x": 0.585185170173645,
+                            "y": -1.0
+                        },
                         "scale": {
                             "x": 1.0,
                             "y": 1.0
                         },
+                        "scale_rel": {
+                            "x": 1.0,
+                            "y": 1.0
+                        },
                         "bounds": {
+                            "x": 0.0,
+                            "y": 0.0
+                        },
+                        "bounds_rel": {
                             "x": 0.0,
                             "y": 0.0
                         },
@@ -4053,8 +5077,8 @@
                     {
                         "name": "_CAM_SHADER2",
                         "source_uuid": "fa187b2a-667b-4e46-9073-0105ccd4fe6b",
-                        "visible": true,
-                        "locked": false,
+                        "visible": false,
+                        "locked": true,
                         "rot": 0.0,
                         "scale_ref": {
                             "x": 1920.0,
@@ -4074,11 +5098,23 @@
                             "x": 644.0,
                             "y": 0.0
                         },
+                        "pos_rel": {
+                            "x": -0.585185170173645,
+                            "y": -1.0
+                        },
                         "scale": {
                             "x": 1.0,
                             "y": 1.0
                         },
+                        "scale_rel": {
+                            "x": 1.0,
+                            "y": 1.0
+                        },
                         "bounds": {
+                            "x": 0.0,
+                            "y": 0.0
+                        },
+                        "bounds_rel": {
                             "x": 0.0,
                             "y": 0.0
                         },
@@ -4096,8 +5132,8 @@
                     {
                         "name": "_CAM_SHADER1",
                         "source_uuid": "d470d502-9d37-42f5-8b3a-d54a787d289a",
-                        "visible": true,
-                        "locked": false,
+                        "visible": false,
+                        "locked": true,
                         "rot": 0.0,
                         "scale_ref": {
                             "x": 1920.0,
@@ -4117,11 +5153,306 @@
                             "x": 0.0,
                             "y": 0.0
                         },
+                        "pos_rel": {
+                            "x": -1.7777777910232544,
+                            "y": -1.0
+                        },
                         "scale": {
                             "x": 1.0,
                             "y": 1.0
                         },
+                        "scale_rel": {
+                            "x": 1.0,
+                            "y": 1.0
+                        },
                         "bounds": {
+                            "x": 0.0,
+                            "y": 0.0
+                        },
+                        "bounds_rel": {
+                            "x": 0.0,
+                            "y": 0.0
+                        },
+                        "scale_filter": "disable",
+                        "blend_method": "default",
+                        "blend_type": "normal",
+                        "show_transition": {
+                            "duration": 300
+                        },
+                        "hide_transition": {
+                            "duration": 300
+                        },
+                        "private_settings": {}
+                    },
+                    {
+                        "name": "_CAM_SHADER3_INTRO",
+                        "source_uuid": "e09cf711-c36e-41fa-b338-a457641d9a2f",
+                        "visible": true,
+                        "locked": true,
+                        "rot": 0.0,
+                        "scale_ref": {
+                            "x": 1920.0,
+                            "y": 1080.0
+                        },
+                        "align": 5,
+                        "bounds_type": 0,
+                        "bounds_align": 0,
+                        "bounds_crop": false,
+                        "crop_left": 640,
+                        "crop_top": 0,
+                        "crop_right": 640,
+                        "crop_bottom": 0,
+                        "id": 11,
+                        "group_item_backup": false,
+                        "pos": {
+                            "x": 1280.0,
+                            "y": 0.0
+                        },
+                        "pos_rel": {
+                            "x": 0.5925925970077515,
+                            "y": -1.0
+                        },
+                        "scale": {
+                            "x": 1.0,
+                            "y": 1.0
+                        },
+                        "scale_rel": {
+                            "x": 1.0,
+                            "y": 1.0
+                        },
+                        "bounds": {
+                            "x": 0.0,
+                            "y": 0.0
+                        },
+                        "bounds_rel": {
+                            "x": 0.0,
+                            "y": 0.0
+                        },
+                        "scale_filter": "disable",
+                        "blend_method": "default",
+                        "blend_type": "normal",
+                        "show_transition": {
+                            "duration": 300
+                        },
+                        "hide_transition": {
+                            "duration": 300
+                        },
+                        "private_settings": {}
+                    },
+                    {
+                        "name": "_CAM_SHADER2_INTRO",
+                        "source_uuid": "c6d67c7d-9ade-4869-8935-73cb70f150b2",
+                        "visible": true,
+                        "locked": true,
+                        "rot": 0.0,
+                        "scale_ref": {
+                            "x": 1920.0,
+                            "y": 1080.0
+                        },
+                        "align": 5,
+                        "bounds_type": 0,
+                        "bounds_align": 0,
+                        "bounds_crop": false,
+                        "crop_left": 640,
+                        "crop_top": 0,
+                        "crop_right": 640,
+                        "crop_bottom": 0,
+                        "id": 9,
+                        "group_item_backup": false,
+                        "pos": {
+                            "x": 644.0,
+                            "y": 0.0
+                        },
+                        "pos_rel": {
+                            "x": -0.585185170173645,
+                            "y": -1.0
+                        },
+                        "scale": {
+                            "x": 1.0,
+                            "y": 1.0
+                        },
+                        "scale_rel": {
+                            "x": 1.0,
+                            "y": 1.0
+                        },
+                        "bounds": {
+                            "x": 0.0,
+                            "y": 0.0
+                        },
+                        "bounds_rel": {
+                            "x": 0.0,
+                            "y": 0.0
+                        },
+                        "scale_filter": "disable",
+                        "blend_method": "default",
+                        "blend_type": "normal",
+                        "show_transition": {
+                            "duration": 300
+                        },
+                        "hide_transition": {
+                            "duration": 300
+                        },
+                        "private_settings": {}
+                    },
+                    {
+                        "name": "_CAM_SHADER1_INTRO",
+                        "source_uuid": "4bc66abd-45bf-4b1a-8a5c-3bbc6dad8539",
+                        "visible": true,
+                        "locked": true,
+                        "rot": 0.0,
+                        "scale_ref": {
+                            "x": 1920.0,
+                            "y": 1080.0
+                        },
+                        "align": 5,
+                        "bounds_type": 0,
+                        "bounds_align": 0,
+                        "bounds_crop": false,
+                        "crop_left": 640,
+                        "crop_top": 0,
+                        "crop_right": 640,
+                        "crop_bottom": 0,
+                        "id": 10,
+                        "group_item_backup": false,
+                        "pos": {
+                            "x": 0.0,
+                            "y": 0.0
+                        },
+                        "pos_rel": {
+                            "x": -1.7777777910232544,
+                            "y": -1.0
+                        },
+                        "scale": {
+                            "x": 1.0,
+                            "y": 1.0
+                        },
+                        "scale_rel": {
+                            "x": 1.0,
+                            "y": 1.0
+                        },
+                        "bounds": {
+                            "x": 0.0,
+                            "y": 0.0
+                        },
+                        "bounds_rel": {
+                            "x": 0.0,
+                            "y": 0.0
+                        },
+                        "scale_filter": "disable",
+                        "blend_method": "default",
+                        "blend_type": "normal",
+                        "show_transition": {
+                            "duration": 300
+                        },
+                        "hide_transition": {
+                            "duration": 300
+                        },
+                        "private_settings": {}
+                    },
+                    {
+                        "name": "Colour",
+                        "source_uuid": "2f1753f3-80fc-445c-a8a8-017632d0ed8f",
+                        "visible": true,
+                        "locked": false,
+                        "rot": 0.0,
+                        "scale_ref": {
+                            "x": 1920.0,
+                            "y": 1080.0
+                        },
+                        "align": 5,
+                        "bounds_type": 0,
+                        "bounds_align": 0,
+                        "bounds_crop": false,
+                        "crop_left": 0,
+                        "crop_top": 0,
+                        "crop_right": 0,
+                        "crop_bottom": 0,
+                        "id": 12,
+                        "group_item_backup": false,
+                        "pos": {
+                            "x": 0.0,
+                            "y": 0.0
+                        },
+                        "pos_rel": {
+                            "x": -1.7777777910232544,
+                            "y": -1.0
+                        },
+                        "scale": {
+                            "x": 1.0,
+                            "y": 1.0
+                        },
+                        "scale_rel": {
+                            "x": 1.0,
+                            "y": 1.0
+                        },
+                        "bounds": {
+                            "x": 0.0,
+                            "y": 0.0
+                        },
+                        "bounds_rel": {
+                            "x": 0.0,
+                            "y": 0.0
+                        },
+                        "scale_filter": "disable",
+                        "blend_method": "default",
+                        "blend_type": "normal",
+                        "show_transition": {
+                            "id": "fade_transition",
+                            "versioned_id": "fade_transition",
+                            "name": "Colour Show Transition",
+                            "transition": {},
+                            "duration": 300
+                        },
+                        "hide_transition": {
+                            "id": "fade_transition",
+                            "versioned_id": "fade_transition",
+                            "name": "Colour Hide Transition",
+                            "transition": {},
+                            "duration": 300
+                        },
+                        "private_settings": {}
+                    },
+                    {
+                        "name": "B_Results",
+                        "source_uuid": "a654ec99-4c5c-4cce-a30a-5ab9b9c42865",
+                        "visible": true,
+                        "locked": false,
+                        "rot": -5.705434799194336,
+                        "scale_ref": {
+                            "x": 1920.0,
+                            "y": 1080.0
+                        },
+                        "align": 5,
+                        "bounds_type": 0,
+                        "bounds_align": 0,
+                        "bounds_crop": false,
+                        "crop_left": 0,
+                        "crop_top": 0,
+                        "crop_right": 365,
+                        "crop_bottom": 387,
+                        "id": 8,
+                        "group_item_backup": false,
+                        "pos": {
+                            "x": 306.0,
+                            "y": 240.0
+                        },
+                        "pos_rel": {
+                            "x": -1.211111068725586,
+                            "y": -0.5555555820465088
+                        },
+                        "scale": {
+                            "x": 1.0,
+                            "y": 1.0
+                        },
+                        "scale_rel": {
+                            "x": 1.0,
+                            "y": 1.0
+                        },
+                        "bounds": {
+                            "x": 0.0,
+                            "y": 0.0
+                        },
+                        "bounds_rel": {
                             "x": 0.0,
                             "y": 0.0
                         },
@@ -4160,11 +5491,23 @@
                             "x": 0.0,
                             "y": 0.0
                         },
+                        "pos_rel": {
+                            "x": -1.7777777910232544,
+                            "y": -1.0
+                        },
                         "scale": {
                             "x": 1.0,
                             "y": 1.0
                         },
+                        "scale_rel": {
+                            "x": 1.0,
+                            "y": 1.0
+                        },
                         "bounds": {
+                            "x": 0.0,
+                            "y": 0.0
+                        },
+                        "bounds_rel": {
                             "x": 0.0,
                             "y": 0.0
                         },
@@ -4207,7 +5550,451 @@
                 "libobs.show_scene_item.5": [],
                 "libobs.hide_scene_item.5": [],
                 "libobs.show_scene_item.4": [],
-                "libobs.hide_scene_item.4": []
+                "libobs.hide_scene_item.4": [],
+                "libobs.show_scene_item.8": [],
+                "libobs.hide_scene_item.8": [],
+                "libobs.show_scene_item.9": [],
+                "libobs.hide_scene_item.9": [],
+                "libobs.show_scene_item.10": [],
+                "libobs.hide_scene_item.10": [],
+                "libobs.show_scene_item.11": [],
+                "libobs.hide_scene_item.11": [],
+                "libobs.show_scene_item.12": [],
+                "libobs.hide_scene_item.12": []
+            },
+            "deinterlace_mode": 0,
+            "deinterlace_field_order": 0,
+            "monitoring_type": 0,
+            "canvas_uuid": "6c69626f-6273-4c00-9d88-c5136d61696e",
+            "private_settings": {
+                "transition_duration": 300,
+                "show_in_multiview": false
+            }
+        },
+        {
+            "prev_ver": 536936448,
+            "name": "INTRO_ROUND",
+            "uuid": "52d366b0-8081-455f-9843-3fce7e9be764",
+            "id": "scene",
+            "versioned_id": "scene",
+            "settings": {
+                "custom_size": false,
+                "id_counter": 15,
+                "items": [
+                    {
+                        "name": "_CAM_SHADER3",
+                        "source_uuid": "d0c78af3-0488-46c0-8035-2155d1ceccd8",
+                        "visible": false,
+                        "locked": true,
+                        "rot": 0.0,
+                        "scale_ref": {
+                            "x": 1920.0,
+                            "y": 1080.0
+                        },
+                        "align": 5,
+                        "bounds_type": 0,
+                        "bounds_align": 0,
+                        "bounds_crop": false,
+                        "crop_left": 751,
+                        "crop_top": 100,
+                        "crop_right": 725,
+                        "crop_bottom": 101,
+                        "id": 9,
+                        "group_item_backup": false,
+                        "pos": {
+                            "x": 1276.0,
+                            "y": 0.0
+                        },
+                        "pos_rel": {
+                            "x": 0.585185170173645,
+                            "y": -1.0
+                        },
+                        "scale": {
+                            "x": 1.0,
+                            "y": 1.0
+                        },
+                        "scale_rel": {
+                            "x": 1.0,
+                            "y": 1.0
+                        },
+                        "bounds": {
+                            "x": 0.0,
+                            "y": 0.0
+                        },
+                        "bounds_rel": {
+                            "x": 0.0,
+                            "y": 0.0
+                        },
+                        "scale_filter": "disable",
+                        "blend_method": "default",
+                        "blend_type": "normal",
+                        "show_transition": {
+                            "duration": 300
+                        },
+                        "hide_transition": {
+                            "duration": 300
+                        },
+                        "private_settings": {}
+                    },
+                    {
+                        "name": "_CAM_SHADER2",
+                        "source_uuid": "fa187b2a-667b-4e46-9073-0105ccd4fe6b",
+                        "visible": false,
+                        "locked": true,
+                        "rot": 0.0,
+                        "scale_ref": {
+                            "x": 1920.0,
+                            "y": 1080.0
+                        },
+                        "align": 5,
+                        "bounds_type": 0,
+                        "bounds_align": 0,
+                        "bounds_crop": false,
+                        "crop_left": 751,
+                        "crop_top": 100,
+                        "crop_right": 725,
+                        "crop_bottom": 101,
+                        "id": 10,
+                        "group_item_backup": false,
+                        "pos": {
+                            "x": 644.0,
+                            "y": 0.0
+                        },
+                        "pos_rel": {
+                            "x": -0.585185170173645,
+                            "y": -1.0
+                        },
+                        "scale": {
+                            "x": 1.0,
+                            "y": 1.0
+                        },
+                        "scale_rel": {
+                            "x": 1.0,
+                            "y": 1.0
+                        },
+                        "bounds": {
+                            "x": 0.0,
+                            "y": 0.0
+                        },
+                        "bounds_rel": {
+                            "x": 0.0,
+                            "y": 0.0
+                        },
+                        "scale_filter": "disable",
+                        "blend_method": "default",
+                        "blend_type": "normal",
+                        "show_transition": {
+                            "duration": 300
+                        },
+                        "hide_transition": {
+                            "duration": 300
+                        },
+                        "private_settings": {}
+                    },
+                    {
+                        "name": "_CAM_SHADER1",
+                        "source_uuid": "d470d502-9d37-42f5-8b3a-d54a787d289a",
+                        "visible": false,
+                        "locked": true,
+                        "rot": 0.0,
+                        "scale_ref": {
+                            "x": 1920.0,
+                            "y": 1080.0
+                        },
+                        "align": 5,
+                        "bounds_type": 0,
+                        "bounds_align": 0,
+                        "bounds_crop": false,
+                        "crop_left": 751,
+                        "crop_top": 100,
+                        "crop_right": 725,
+                        "crop_bottom": 101,
+                        "id": 11,
+                        "group_item_backup": false,
+                        "pos": {
+                            "x": 0.0,
+                            "y": 1.0
+                        },
+                        "pos_rel": {
+                            "x": -1.7777777910232544,
+                            "y": -0.9981481432914734
+                        },
+                        "scale": {
+                            "x": 1.0,
+                            "y": 1.0
+                        },
+                        "scale_rel": {
+                            "x": 1.0,
+                            "y": 1.0
+                        },
+                        "bounds": {
+                            "x": 0.0,
+                            "y": 0.0
+                        },
+                        "bounds_rel": {
+                            "x": 0.0,
+                            "y": 0.0
+                        },
+                        "scale_filter": "disable",
+                        "blend_method": "default",
+                        "blend_type": "normal",
+                        "show_transition": {
+                            "duration": 300
+                        },
+                        "hide_transition": {
+                            "duration": 300
+                        },
+                        "private_settings": {}
+                    },
+                    {
+                        "name": "_CAM_SHADER3_INTRO",
+                        "source_uuid": "e09cf711-c36e-41fa-b338-a457641d9a2f",
+                        "visible": true,
+                        "locked": true,
+                        "rot": 0.0,
+                        "scale_ref": {
+                            "x": 1920.0,
+                            "y": 1080.0
+                        },
+                        "align": 5,
+                        "bounds_type": 0,
+                        "bounds_align": 0,
+                        "bounds_crop": false,
+                        "crop_left": 640,
+                        "crop_top": 0,
+                        "crop_right": 640,
+                        "crop_bottom": 0,
+                        "id": 15,
+                        "group_item_backup": false,
+                        "pos": {
+                            "x": 1280.0,
+                            "y": 0.0
+                        },
+                        "pos_rel": {
+                            "x": 0.5925925970077515,
+                            "y": -1.0
+                        },
+                        "scale": {
+                            "x": 1.0,
+                            "y": 1.0
+                        },
+                        "scale_rel": {
+                            "x": 1.0,
+                            "y": 1.0
+                        },
+                        "bounds": {
+                            "x": 0.0,
+                            "y": 0.0
+                        },
+                        "bounds_rel": {
+                            "x": 0.0,
+                            "y": 0.0
+                        },
+                        "scale_filter": "disable",
+                        "blend_method": "default",
+                        "blend_type": "normal",
+                        "show_transition": {
+                            "duration": 300
+                        },
+                        "hide_transition": {
+                            "duration": 300
+                        },
+                        "private_settings": {}
+                    },
+                    {
+                        "name": "_CAM_SHADER2_INTRO",
+                        "source_uuid": "c6d67c7d-9ade-4869-8935-73cb70f150b2",
+                        "visible": true,
+                        "locked": true,
+                        "rot": 0.0,
+                        "scale_ref": {
+                            "x": 1920.0,
+                            "y": 1080.0
+                        },
+                        "align": 5,
+                        "bounds_type": 0,
+                        "bounds_align": 0,
+                        "bounds_crop": false,
+                        "crop_left": 640,
+                        "crop_top": 0,
+                        "crop_right": 640,
+                        "crop_bottom": 0,
+                        "id": 14,
+                        "group_item_backup": false,
+                        "pos": {
+                            "x": 644.0,
+                            "y": 0.0
+                        },
+                        "pos_rel": {
+                            "x": -0.585185170173645,
+                            "y": -1.0
+                        },
+                        "scale": {
+                            "x": 1.0,
+                            "y": 1.0
+                        },
+                        "scale_rel": {
+                            "x": 1.0,
+                            "y": 1.0
+                        },
+                        "bounds": {
+                            "x": 0.0,
+                            "y": 0.0
+                        },
+                        "bounds_rel": {
+                            "x": 0.0,
+                            "y": 0.0
+                        },
+                        "scale_filter": "disable",
+                        "blend_method": "default",
+                        "blend_type": "normal",
+                        "show_transition": {
+                            "duration": 300
+                        },
+                        "hide_transition": {
+                            "duration": 300
+                        },
+                        "private_settings": {}
+                    },
+                    {
+                        "name": "_CAM_SHADER1_INTRO",
+                        "source_uuid": "4bc66abd-45bf-4b1a-8a5c-3bbc6dad8539",
+                        "visible": true,
+                        "locked": true,
+                        "rot": 0.0,
+                        "scale_ref": {
+                            "x": 1920.0,
+                            "y": 1080.0
+                        },
+                        "align": 5,
+                        "bounds_type": 0,
+                        "bounds_align": 0,
+                        "bounds_crop": false,
+                        "crop_left": 640,
+                        "crop_top": 0,
+                        "crop_right": 640,
+                        "crop_bottom": 0,
+                        "id": 13,
+                        "group_item_backup": false,
+                        "pos": {
+                            "x": 0.0,
+                            "y": 0.0
+                        },
+                        "pos_rel": {
+                            "x": -1.7777777910232544,
+                            "y": -1.0
+                        },
+                        "scale": {
+                            "x": 1.0,
+                            "y": 1.0
+                        },
+                        "scale_rel": {
+                            "x": 1.0,
+                            "y": 1.0
+                        },
+                        "bounds": {
+                            "x": 0.0,
+                            "y": 0.0
+                        },
+                        "bounds_rel": {
+                            "x": 0.0,
+                            "y": 0.0
+                        },
+                        "scale_filter": "disable",
+                        "blend_method": "default",
+                        "blend_type": "normal",
+                        "show_transition": {
+                            "duration": 300
+                        },
+                        "hide_transition": {
+                            "duration": 300
+                        },
+                        "private_settings": {}
+                    },
+                    {
+                        "name": "B_Splash",
+                        "source_uuid": "7284728c-542d-459e-9efa-9e40d717d0e5",
+                        "visible": true,
+                        "locked": true,
+                        "rot": 0.0,
+                        "scale_ref": {
+                            "x": 1920.0,
+                            "y": 1080.0
+                        },
+                        "align": 5,
+                        "bounds_type": 0,
+                        "bounds_align": 0,
+                        "bounds_crop": false,
+                        "crop_left": 0,
+                        "crop_top": 0,
+                        "crop_right": 0,
+                        "crop_bottom": 0,
+                        "id": 2,
+                        "group_item_backup": false,
+                        "pos": {
+                            "x": 0.0,
+                            "y": 0.0
+                        },
+                        "pos_rel": {
+                            "x": -1.7777777910232544,
+                            "y": -1.0
+                        },
+                        "scale": {
+                            "x": 1.0,
+                            "y": 1.0
+                        },
+                        "scale_rel": {
+                            "x": 1.0,
+                            "y": 1.0
+                        },
+                        "bounds": {
+                            "x": 0.0,
+                            "y": 0.0
+                        },
+                        "bounds_rel": {
+                            "x": 0.0,
+                            "y": 0.0
+                        },
+                        "scale_filter": "disable",
+                        "blend_method": "default",
+                        "blend_type": "normal",
+                        "show_transition": {
+                            "duration": 0
+                        },
+                        "hide_transition": {
+                            "duration": 0
+                        },
+                        "private_settings": {}
+                    }
+                ]
+            },
+            "mixers": 0,
+            "sync": 0,
+            "flags": 0,
+            "volume": 1.0,
+            "balance": 0.5,
+            "enabled": true,
+            "muted": false,
+            "push-to-mute": false,
+            "push-to-mute-delay": 0,
+            "push-to-talk": false,
+            "push-to-talk-delay": 0,
+            "hotkeys": {
+                "OBSBasic.SelectScene": [],
+                "libobs.show_scene_item.9": [],
+                "libobs.hide_scene_item.9": [],
+                "libobs.show_scene_item.10": [],
+                "libobs.hide_scene_item.10": [],
+                "libobs.show_scene_item.11": [],
+                "libobs.hide_scene_item.11": [],
+                "libobs.show_scene_item.2": [],
+                "libobs.hide_scene_item.2": [],
+                "libobs.show_scene_item.13": [],
+                "libobs.hide_scene_item.13": [],
+                "libobs.show_scene_item.14": [],
+                "libobs.hide_scene_item.14": [],
+                "libobs.show_scene_item.15": [],
+                "libobs.hide_scene_item.15": []
             },
             "deinterlace_mode": 0,
             "deinterlace_field_order": 0,
@@ -4252,9 +6039,9 @@
                     "versioned_id": "obs_shadow_filter",
                     "settings": {
                         "glow_padding": 1,
-                        "glow_offset_distance": 0.0,
                         "glow_size": 10.0,
-                        "glow_intensity": 80.0
+                        "glow_intensity": 80.0,
+                        "glow_offset_distance": 0.0
                     },
                     "mixers": 0,
                     "sync": 0,
@@ -4283,7 +6070,7 @@
             "versioned_id": "scene",
             "settings": {
                 "custom_size": false,
-                "id_counter": 43,
+                "id_counter": 44,
                 "items": [
                     {
                         "name": "_BG",
@@ -4309,11 +6096,23 @@
                             "x": 0.0,
                             "y": 0.0
                         },
+                        "pos_rel": {
+                            "x": -1.7777777910232544,
+                            "y": -1.0
+                        },
                         "scale": {
                             "x": 1.0,
                             "y": 1.0
                         },
+                        "scale_rel": {
+                            "x": 1.0,
+                            "y": 1.0
+                        },
                         "bounds": {
+                            "x": 0.0,
+                            "y": 0.0
+                        },
+                        "bounds_rel": {
                             "x": 0.0,
                             "y": 0.0
                         },
@@ -4349,16 +6148,28 @@
                         "id": 30,
                         "group_item_backup": false,
                         "pos": {
-                            "x": 1253.416748046875,
-                            "y": 495.370361328125
+                            "x": 1938.0,
+                            "y": 495.5
+                        },
+                        "pos_rel": {
+                            "x": 1.811265230178833,
+                            "y": -0.08240741491317749
                         },
                         "scale": {
-                            "x": 0.3229166567325592,
+                            "x": -0.3229166567325592,
+                            "y": 0.3231481611728668
+                        },
+                        "scale_rel": {
+                            "x": -0.3229166567325592,
                             "y": 0.3231481611728668
                         },
                         "bounds": {
                             "x": 1.0,
                             "y": 1.0
+                        },
+                        "bounds_rel": {
+                            "x": 0.0018518518190830946,
+                            "y": 0.0018518518190830946
                         },
                         "scale_filter": "disable",
                         "blend_method": "default",
@@ -4392,16 +6203,28 @@
                         "id": 25,
                         "group_item_backup": false,
                         "pos": {
-                            "x": 1253.416748046875,
-                            "y": 146.370361328125
+                            "x": 1253.5,
+                            "y": 146.5
+                        },
+                        "pos_rel": {
+                            "x": 0.5433643460273743,
+                            "y": -0.7289437651634216
                         },
                         "scale": {
+                            "x": 0.3229166567325592,
+                            "y": 0.3231481611728668
+                        },
+                        "scale_rel": {
                             "x": 0.3229166567325592,
                             "y": 0.3231481611728668
                         },
                         "bounds": {
                             "x": 1.0,
                             "y": 1.0
+                        },
+                        "bounds_rel": {
+                            "x": 0.0018518518190830946,
+                            "y": 0.0018518518190830946
                         },
                         "scale_filter": "disable",
                         "blend_method": "default",
@@ -4435,16 +6258,28 @@
                         "id": 29,
                         "group_item_backup": false,
                         "pos": {
-                            "x": 617.7083740234375,
+                            "x": 617.5,
                             "y": 579.0
                         },
+                        "pos_rel": {
+                            "x": -0.6338734030723572,
+                            "y": 0.07222223281860352
+                        },
                         "scale": {
+                            "x": 0.3229166567325592,
+                            "y": 0.3231481611728668
+                        },
+                        "scale_rel": {
                             "x": 0.3229166567325592,
                             "y": 0.3231481611728668
                         },
                         "bounds": {
                             "x": 1.0,
                             "y": 1.0
+                        },
+                        "bounds_rel": {
+                            "x": 0.0018518518190830946,
+                            "y": 0.0018518518190830946
                         },
                         "scale_filter": "disable",
                         "blend_method": "default",
@@ -4478,16 +6313,28 @@
                         "id": 24,
                         "group_item_backup": false,
                         "pos": {
-                            "x": 617.7083740234375,
+                            "x": 617.5,
                             "y": 229.0
                         },
+                        "pos_rel": {
+                            "x": -0.6338734030723572,
+                            "y": -0.5759259462356567
+                        },
                         "scale": {
+                            "x": 0.3229166567325592,
+                            "y": 0.3231481611728668
+                        },
+                        "scale_rel": {
                             "x": 0.3229166567325592,
                             "y": 0.3231481611728668
                         },
                         "bounds": {
                             "x": 1.0,
                             "y": 1.0
+                        },
+                        "bounds_rel": {
+                            "x": 0.0018518518190830946,
+                            "y": 0.0018518518190830946
                         },
                         "scale_filter": "disable",
                         "blend_method": "default",
@@ -4522,15 +6369,27 @@
                         "group_item_backup": false,
                         "pos": {
                             "x": -18.0,
-                            "y": 497.370361328125
+                            "y": 497.5
+                        },
+                        "pos_rel": {
+                            "x": -1.8111110925674438,
+                            "y": -0.07894378900527954
                         },
                         "scale": {
+                            "x": 0.3229166567325592,
+                            "y": 0.3231481611728668
+                        },
+                        "scale_rel": {
                             "x": 0.3229166567325592,
                             "y": 0.3231481611728668
                         },
                         "bounds": {
                             "x": 1.0,
                             "y": 1.0
+                        },
+                        "bounds_rel": {
+                            "x": 0.0018518518190830946,
+                            "y": 0.0018518518190830946
                         },
                         "scale_filter": "disable",
                         "blend_method": "default",
@@ -4565,15 +6424,27 @@
                         "group_item_backup": false,
                         "pos": {
                             "x": -18.0,
-                            "y": 147.370361328125
+                            "y": 147.5
+                        },
+                        "pos_rel": {
+                            "x": -1.8111110925674438,
+                            "y": -0.727091908454895
                         },
                         "scale": {
+                            "x": 0.3229166567325592,
+                            "y": 0.3231481611728668
+                        },
+                        "scale_rel": {
                             "x": 0.3229166567325592,
                             "y": 0.3231481611728668
                         },
                         "bounds": {
                             "x": 1.0,
                             "y": 1.0
+                        },
+                        "bounds_rel": {
+                            "x": 0.0018518518190830946,
+                            "y": 0.0018518518190830946
                         },
                         "scale_filter": "disable",
                         "blend_method": "default",
@@ -4605,16 +6476,28 @@
                         "crop_right": 0,
                         "crop_bottom": 0,
                         "id": 40,
-                        "group_item_backup": false,
+                        "group_item_backup": true,
                         "pos": {
                             "x": 0.0,
-                            "y": 989.629638671875
+                            "y": 989.5
+                        },
+                        "pos_rel": {
+                            "x": -1.7777777910232544,
+                            "y": 0.8324073553085327
                         },
                         "scale": {
                             "x": 1.0,
                             "y": 1.0
                         },
+                        "scale_rel": {
+                            "x": 1.0,
+                            "y": 1.0
+                        },
                         "bounds": {
+                            "x": 0.0,
+                            "y": 0.0
+                        },
+                        "bounds_rel": {
                             "x": 0.0,
                             "y": 0.0
                         },
@@ -4648,18 +6531,30 @@
                         "crop_right": 0,
                         "crop_bottom": 0,
                         "id": 42,
-                        "group_item_backup": false,
+                        "group_item_backup": true,
                         "pos": {
                             "x": -2.0,
-                            "y": 878.0999755859375
+                            "y": 878.0
+                        },
+                        "pos_rel": {
+                            "x": -1.7814815044403076,
+                            "y": 0.6259258985519409
                         },
                         "scale": {
-                            "x": 0.7699999809265137,
-                            "y": 0.7699999809265137
+                            "x": 0.770370364189148,
+                            "y": 0.770370364189148
+                        },
+                        "scale_rel": {
+                            "x": 0.770370364189148,
+                            "y": 0.770370364189148
                         },
                         "bounds": {
                             "x": 1.0,
                             "y": 1.0
+                        },
+                        "bounds_rel": {
+                            "x": 0.0018518518190830946,
+                            "y": 0.0018518518190830946
                         },
                         "scale_filter": "bilinear",
                         "blend_method": "default",
@@ -4691,20 +6586,87 @@
                         "crop_right": 0,
                         "crop_bottom": 0,
                         "id": 43,
-                        "group_item_backup": false,
+                        "group_item_backup": true,
                         "pos": {
-                            "x": 1714.0999755859375,
-                            "y": 878.0999755859375
+                            "x": 1714.0,
+                            "y": 878.0
+                        },
+                        "pos_rel": {
+                            "x": 1.3962962627410889,
+                            "y": 0.6259258985519409
                         },
                         "scale": {
-                            "x": 0.7699999809265137,
-                            "y": 0.7699999809265137
+                            "x": 0.770370364189148,
+                            "y": 0.770370364189148
+                        },
+                        "scale_rel": {
+                            "x": 0.770370364189148,
+                            "y": 0.770370364189148
                         },
                         "bounds": {
                             "x": 1.0,
                             "y": 1.0
                         },
+                        "bounds_rel": {
+                            "x": 0.0018518518190830946,
+                            "y": 0.0018518518190830946
+                        },
                         "scale_filter": "bilinear",
+                        "blend_method": "default",
+                        "blend_type": "normal",
+                        "show_transition": {
+                            "duration": 0
+                        },
+                        "hide_transition": {
+                            "duration": 0
+                        },
+                        "private_settings": {}
+                    },
+                    {
+                        "name": "Group 4",
+                        "source_uuid": "3725d5ee-9928-4618-95ee-c70d19688d4d",
+                        "visible": true,
+                        "locked": false,
+                        "rot": 0.0,
+                        "scale_ref": {
+                            "x": 1920.0,
+                            "y": 1080.0
+                        },
+                        "align": 5,
+                        "bounds_type": 0,
+                        "bounds_align": 0,
+                        "bounds_crop": false,
+                        "crop_left": 0,
+                        "crop_top": 0,
+                        "crop_right": 0,
+                        "crop_bottom": 0,
+                        "id": 44,
+                        "group_item_backup": false,
+                        "pos": {
+                            "x": -2.0,
+                            "y": 878.0
+                        },
+                        "pos_rel": {
+                            "x": -1.7814815044403076,
+                            "y": 0.6259258985519409
+                        },
+                        "scale": {
+                            "x": 1.0,
+                            "y": 1.0
+                        },
+                        "scale_rel": {
+                            "x": 1.0,
+                            "y": 1.0
+                        },
+                        "bounds": {
+                            "x": 0.0,
+                            "y": 0.0
+                        },
+                        "bounds_rel": {
+                            "x": 0.0,
+                            "y": 0.0
+                        },
+                        "scale_filter": "disable",
                         "blend_method": "default",
                         "blend_type": "normal",
                         "show_transition": {
@@ -4739,11 +6701,23 @@
                             "x": 0.0,
                             "y": 0.0
                         },
+                        "pos_rel": {
+                            "x": -1.7777777910232544,
+                            "y": -1.0
+                        },
                         "scale": {
                             "x": 1.0,
                             "y": 1.0
                         },
+                        "scale_rel": {
+                            "x": 1.0,
+                            "y": 1.0
+                        },
                         "bounds": {
+                            "x": 0.0,
+                            "y": 0.0
+                        },
+                        "bounds_rel": {
                             "x": 0.0,
                             "y": 0.0
                         },
@@ -4782,11 +6756,23 @@
                             "x": 59.0,
                             "y": 468.0
                         },
+                        "pos_rel": {
+                            "x": -1.6685185432434082,
+                            "y": -0.13333332538604736
+                        },
                         "scale": {
                             "x": 1.0,
                             "y": 1.0
                         },
+                        "scale_rel": {
+                            "x": 1.0,
+                            "y": 1.0
+                        },
                         "bounds": {
+                            "x": 0.0,
+                            "y": 0.0
+                        },
+                        "bounds_rel": {
                             "x": 0.0,
                             "y": 0.0
                         },
@@ -4825,11 +6811,23 @@
                             "x": 59.0,
                             "y": 468.0
                         },
+                        "pos_rel": {
+                            "x": -1.6685185432434082,
+                            "y": -0.13333332538604736
+                        },
                         "scale": {
                             "x": 1.0,
                             "y": 1.0
                         },
+                        "scale_rel": {
+                            "x": 1.0,
+                            "y": 1.0
+                        },
                         "bounds": {
+                            "x": 0.0,
+                            "y": 0.0
+                        },
+                        "bounds_rel": {
                             "x": 0.0,
                             "y": 0.0
                         },
@@ -4868,11 +6866,23 @@
                             "x": 695.0,
                             "y": 550.0
                         },
+                        "pos_rel": {
+                            "x": -0.49074074625968933,
+                            "y": 0.018518567085266113
+                        },
                         "scale": {
                             "x": 1.0,
                             "y": 1.0
                         },
+                        "scale_rel": {
+                            "x": 1.0,
+                            "y": 1.0
+                        },
                         "bounds": {
+                            "x": 0.0,
+                            "y": 0.0
+                        },
+                        "bounds_rel": {
                             "x": 0.0,
                             "y": 0.0
                         },
@@ -4911,11 +6921,23 @@
                             "x": 695.0,
                             "y": 550.0
                         },
+                        "pos_rel": {
+                            "x": -0.49074074625968933,
+                            "y": 0.018518567085266113
+                        },
                         "scale": {
                             "x": 1.0,
                             "y": 1.0
                         },
+                        "scale_rel": {
+                            "x": 1.0,
+                            "y": 1.0
+                        },
                         "bounds": {
+                            "x": 0.0,
+                            "y": 0.0
+                        },
+                        "bounds_rel": {
                             "x": 0.0,
                             "y": 0.0
                         },
@@ -4954,11 +6976,23 @@
                             "x": 1327.0,
                             "y": 465.0
                         },
+                        "pos_rel": {
+                            "x": 0.6796296238899231,
+                            "y": -0.1388888955116272
+                        },
                         "scale": {
                             "x": 1.0,
                             "y": 1.0
                         },
+                        "scale_rel": {
+                            "x": 1.0,
+                            "y": 1.0
+                        },
                         "bounds": {
+                            "x": 0.0,
+                            "y": 0.0
+                        },
+                        "bounds_rel": {
                             "x": 0.0,
                             "y": 0.0
                         },
@@ -4997,11 +7031,23 @@
                             "x": 1327.0,
                             "y": 465.0
                         },
+                        "pos_rel": {
+                            "x": 0.6796296238899231,
+                            "y": -0.1388888955116272
+                        },
                         "scale": {
                             "x": 1.0,
                             "y": 1.0
                         },
+                        "scale_rel": {
+                            "x": 1.0,
+                            "y": 1.0
+                        },
                         "bounds": {
+                            "x": 0.0,
+                            "y": 0.0
+                        },
+                        "bounds_rel": {
                             "x": 0.0,
                             "y": 0.0
                         },
@@ -5040,11 +7086,23 @@
                             "x": -1248.0,
                             "y": -547.0
                         },
+                        "pos_rel": {
+                            "x": -4.088889122009277,
+                            "y": -2.012962818145752
+                        },
                         "scale": {
                             "x": 2.401562452316284,
                             "y": 2.4018518924713135
                         },
+                        "scale_rel": {
+                            "x": 2.401562452316284,
+                            "y": 2.4018518924713135
+                        },
                         "bounds": {
+                            "x": 0.0,
+                            "y": 0.0
+                        },
+                        "bounds_rel": {
                             "x": 0.0,
                             "y": 0.0
                         },
@@ -5088,6 +7146,12 @@
                 "libobs.hide_scene_item.28": [],
                 "libobs.show_scene_item.23": [],
                 "libobs.hide_scene_item.23": [],
+                "libobs.show_scene_item.40": [],
+                "libobs.hide_scene_item.40": [],
+                "libobs.show_scene_item.42": [],
+                "libobs.hide_scene_item.42": [],
+                "libobs.show_scene_item.43": [],
+                "libobs.hide_scene_item.43": [],
                 "libobs.show_scene_item.22": [],
                 "libobs.hide_scene_item.22": [],
                 "libobs.show_scene_item.34": [],
@@ -5098,12 +7162,8 @@
                 "libobs.hide_scene_item.36": [],
                 "libobs.show_scene_item.39": [],
                 "libobs.hide_scene_item.39": [],
-                "libobs.show_scene_item.40": [],
-                "libobs.hide_scene_item.40": [],
-                "libobs.show_scene_item.42": [],
-                "libobs.hide_scene_item.42": [],
-                "libobs.show_scene_item.43": [],
-                "libobs.hide_scene_item.43": []
+                "libobs.show_scene_item.44": [],
+                "libobs.hide_scene_item.44": []
             },
             "deinterlace_mode": 0,
             "deinterlace_field_order": 0,
@@ -5117,12 +7177,77 @@
         {
             "prev_ver": 536936448,
             "name": "NDI_CAM1",
+            "uuid": "db4187e5-71cf-4281-9465-2127e9d87365",
+            "id": "ndi_source",
+            "versioned_id": "ndi_source",
+            "settings": {
+                "ndi_fix_alpha_blending": false,
+                "ndi_audio": false,
+                "ndi_source_name": "DESKTOP-MSDTEN2 (DeckLink Quad (2) 2)"
+            },
+            "mixers": 255,
+            "sync": 0,
+            "flags": 0,
+            "volume": 1.0,
+            "balance": 0.5,
+            "enabled": true,
+            "muted": false,
+            "push-to-mute": false,
+            "push-to-mute-delay": 0,
+            "push-to-talk": false,
+            "push-to-talk-delay": 0,
+            "hotkeys": {
+                "libobs.mute": [],
+                "libobs.unmute": [],
+                "libobs.push-to-mute": [],
+                "libobs.push-to-talk": []
+            },
+            "deinterlace_mode": 0,
+            "deinterlace_field_order": 0,
+            "monitoring_type": 0,
+            "private_settings": {}
+        },
+        {
+            "prev_ver": 536936448,
+            "name": "NDI_CAM2",
+            "uuid": "cac1115e-3a2f-4bca-8e0d-aed2e69a8726",
+            "id": "ndi_source",
+            "versioned_id": "ndi_source",
+            "settings": {
+                "ndi_fix_alpha_blending": false,
+                "ndi_source_name": "DESKTOP-MSDTEN2 (DeckLink Quad (5) 5)"
+            },
+            "mixers": 255,
+            "sync": 0,
+            "flags": 0,
+            "volume": 1.0,
+            "balance": 0.5,
+            "enabled": true,
+            "muted": false,
+            "push-to-mute": false,
+            "push-to-mute-delay": 0,
+            "push-to-talk": false,
+            "push-to-talk-delay": 0,
+            "hotkeys": {
+                "libobs.mute": [],
+                "libobs.unmute": [],
+                "libobs.push-to-mute": [],
+                "libobs.push-to-talk": []
+            },
+            "deinterlace_mode": 0,
+            "deinterlace_field_order": 0,
+            "monitoring_type": 0,
+            "private_settings": {}
+        },
+        {
+            "prev_ver": 536936448,
+            "name": "NDI_CAM3",
             "uuid": "d299d27c-aba2-480e-b04b-e721f2e00c89",
             "id": "ndi_source",
             "versioned_id": "ndi_source",
             "settings": {
                 "ndi_fix_alpha_blending": false,
-                "ndi_source_name": "AW-UE100 (NDI_Device-L4TRA0023)"
+                "ndi_source_name": "DESKTOP-MSDTEN2 (DeckLink Quad (1) 1)"
             },
             "mixers": 255,
             "sync": 0,
@@ -5180,76 +7305,13 @@
         },
         {
             "prev_ver": 536936448,
-            "name": "NDI_CAM2",
-            "uuid": "cac1115e-3a2f-4bca-8e0d-aed2e69a8726",
-            "id": "ndi_source",
-            "versioned_id": "ndi_source",
-            "settings": {
-                "ndi_fix_alpha_blending": false,
-                "ndi_source_name": "AW-UE160 (NDI_Device-F3TRA0060)"
-            },
-            "mixers": 255,
-            "sync": 0,
-            "flags": 0,
-            "volume": 1.0,
-            "balance": 0.5,
-            "enabled": true,
-            "muted": false,
-            "push-to-mute": false,
-            "push-to-mute-delay": 0,
-            "push-to-talk": false,
-            "push-to-talk-delay": 0,
-            "hotkeys": {
-                "libobs.mute": [],
-                "libobs.unmute": [],
-                "libobs.push-to-mute": [],
-                "libobs.push-to-talk": []
-            },
-            "deinterlace_mode": 0,
-            "deinterlace_field_order": 0,
-            "monitoring_type": 0,
-            "private_settings": {}
-        },
-        {
-            "prev_ver": 536936448,
-            "name": "NDI_CAM3",
-            "uuid": "db4187e5-71cf-4281-9465-2127e9d87365",
-            "id": "ndi_source",
-            "versioned_id": "ndi_source",
-            "settings": {
-                "ndi_fix_alpha_blending": false,
-                "ndi_source_name": "AW-UE160 (NDI_Device-F3TRA0067)",
-                "ndi_audio": false
-            },
-            "mixers": 255,
-            "sync": 0,
-            "flags": 0,
-            "volume": 1.0,
-            "balance": 0.5,
-            "enabled": true,
-            "muted": false,
-            "push-to-mute": false,
-            "push-to-mute-delay": 0,
-            "push-to-talk": false,
-            "push-to-talk-delay": 0,
-            "hotkeys": {
-                "libobs.mute": [],
-                "libobs.unmute": [],
-                "libobs.push-to-mute": [],
-                "libobs.push-to-talk": []
-            },
-            "deinterlace_mode": 0,
-            "deinterlace_field_order": 0,
-            "monitoring_type": 0,
-            "private_settings": {}
-        },
-        {
-            "prev_ver": 536936448,
             "name": "T_Vote",
             "uuid": "d3636680-4756-4806-b310-bd520dc7bdd2",
             "id": "text_gdiplus",
             "versioned_id": "text_gdiplus_v3",
             "settings": {
+                "text": "Vote on https://pm.revision-party.net/voting!",
+                "extents": true,
                 "font": {
                     "face": "Tungsten",
                     "style": "Semibold",
@@ -5257,10 +7319,8 @@
                     "flags": 1
                 },
                 "align": "center",
-                "text": "Vote on https://pm.revision-party.net/voting!",
-                "extents": true,
-                "extents_cx": 1920,
                 "valign": "center",
+                "extents_cx": 1920,
                 "extents_cy": 70
             },
             "mixers": 0,
@@ -5343,13 +7403,25 @@
                             "x": 0.0,
                             "y": -78.0
                         },
+                        "pos_rel": {
+                            "x": -1.7777777910232544,
+                            "y": -1.144444465637207
+                        },
                         "scale": {
+                            "x": 1.0,
+                            "y": 1.0
+                        },
+                        "scale_rel": {
                             "x": 1.0,
                             "y": 1.0
                         },
                         "bounds": {
                             "x": 640.0,
                             "y": 1236.0
+                        },
+                        "bounds_rel": {
+                            "x": 1.185185194015503,
+                            "y": 2.288888931274414
                         },
                         "scale_filter": "disable",
                         "blend_method": "default",
@@ -5386,13 +7458,25 @@
                             "x": 640.0,
                             "y": -75.0
                         },
+                        "pos_rel": {
+                            "x": -0.5925925970077515,
+                            "y": -1.1388888359069824
+                        },
                         "scale": {
+                            "x": 1.0,
+                            "y": 1.0
+                        },
+                        "scale_rel": {
                             "x": 1.0,
                             "y": 1.0
                         },
                         "bounds": {
                             "x": 640.0,
                             "y": 1233.0
+                        },
+                        "bounds_rel": {
+                            "x": 1.185185194015503,
+                            "y": 2.2833333015441895
                         },
                         "scale_filter": "disable",
                         "blend_method": "default",
@@ -5429,13 +7513,25 @@
                             "x": 1280.0,
                             "y": -75.0
                         },
+                        "pos_rel": {
+                            "x": 0.5925925970077515,
+                            "y": -1.1388888359069824
+                        },
                         "scale": {
+                            "x": 1.0,
+                            "y": 1.0
+                        },
+                        "scale_rel": {
                             "x": 1.0,
                             "y": 1.0
                         },
                         "bounds": {
                             "x": 640.0,
                             "y": 1238.0
+                        },
+                        "bounds_rel": {
+                            "x": 1.185185194015503,
+                            "y": 2.2925925254821777
                         },
                         "scale_filter": "disable",
                         "blend_method": "default",
@@ -5523,12 +7619,12 @@
             "versioned_id": "scene",
             "settings": {
                 "custom_size": false,
-                "id_counter": 5,
+                "id_counter": 6,
                 "items": [
                     {
-                        "name": "NDI_CAM1",
+                        "name": "NDI_CAM3",
                         "source_uuid": "d299d27c-aba2-480e-b04b-e721f2e00c89",
-                        "visible": true,
+                        "visible": false,
                         "locked": false,
                         "rot": 0.0,
                         "scale_ref": {
@@ -5549,13 +7645,25 @@
                             "x": 0.0,
                             "y": 0.0
                         },
+                        "pos_rel": {
+                            "x": -1.7777777910232544,
+                            "y": -1.0
+                        },
                         "scale": {
+                            "x": -1.0,
+                            "y": 1.0
+                        },
+                        "scale_rel": {
                             "x": -1.0,
                             "y": 1.0
                         },
                         "bounds": {
                             "x": 1920.0,
                             "y": 1080.0
+                        },
+                        "bounds_rel": {
+                            "x": 3.555555582046509,
+                            "y": 2.0
                         },
                         "scale_filter": "disable",
                         "blend_method": "default",
@@ -5565,6 +7673,61 @@
                         },
                         "hide_transition": {
                             "duration": 0
+                        },
+                        "private_settings": {}
+                    },
+                    {
+                        "name": "NDI_CAM1",
+                        "source_uuid": "db4187e5-71cf-4281-9465-2127e9d87365",
+                        "visible": true,
+                        "locked": false,
+                        "rot": 0.0,
+                        "scale_ref": {
+                            "x": 1920.0,
+                            "y": 1080.0
+                        },
+                        "align": 5,
+                        "bounds_type": 0,
+                        "bounds_align": 0,
+                        "bounds_crop": false,
+                        "crop_left": 0,
+                        "crop_top": 0,
+                        "crop_right": 0,
+                        "crop_bottom": 0,
+                        "id": 6,
+                        "group_item_backup": false,
+                        "pos": {
+                            "x": 0.0,
+                            "y": 0.0
+                        },
+                        "pos_rel": {
+                            "x": -1.7777777910232544,
+                            "y": -1.0
+                        },
+                        "scale": {
+                            "x": 1.0,
+                            "y": 1.0
+                        },
+                        "scale_rel": {
+                            "x": 1.0,
+                            "y": 1.0
+                        },
+                        "bounds": {
+                            "x": 0.0,
+                            "y": 0.0
+                        },
+                        "bounds_rel": {
+                            "x": 0.0,
+                            "y": 0.0
+                        },
+                        "scale_filter": "disable",
+                        "blend_method": "default",
+                        "blend_type": "normal",
+                        "show_transition": {
+                            "duration": 300
+                        },
+                        "hide_transition": {
+                            "duration": 300
                         },
                         "private_settings": {}
                     }
@@ -5584,7 +7747,9 @@
             "hotkeys": {
                 "OBSBasic.SelectScene": [],
                 "libobs.show_scene_item.5": [],
-                "libobs.hide_scene_item.5": []
+                "libobs.hide_scene_item.5": [],
+                "libobs.show_scene_item.6": [],
+                "libobs.hide_scene_item.6": []
             },
             "deinterlace_mode": 0,
             "deinterlace_field_order": 0,
@@ -5690,6 +7855,248 @@
         },
         {
             "prev_ver": 536936448,
+            "name": "_CAM_SHADER1_INTRO",
+            "uuid": "4bc66abd-45bf-4b1a-8a5c-3bbc6dad8539",
+            "id": "scene",
+            "versioned_id": "scene",
+            "settings": {
+                "id_counter": 2,
+                "custom_size": false,
+                "items": [
+                    {
+                        "name": "NDI_CAM3",
+                        "source_uuid": "d299d27c-aba2-480e-b04b-e721f2e00c89",
+                        "visible": false,
+                        "locked": true,
+                        "rot": 0.0,
+                        "scale_ref": {
+                            "x": 1920.0,
+                            "y": 1080.0
+                        },
+                        "align": 5,
+                        "bounds_type": 2,
+                        "bounds_align": 0,
+                        "bounds_crop": false,
+                        "crop_left": 0,
+                        "crop_top": 0,
+                        "crop_right": 0,
+                        "crop_bottom": 0,
+                        "id": 1,
+                        "group_item_backup": false,
+                        "pos": {
+                            "x": 0.0,
+                            "y": 0.0
+                        },
+                        "pos_rel": {
+                            "x": -1.7777777910232544,
+                            "y": -1.0
+                        },
+                        "scale": {
+                            "x": -1.0,
+                            "y": 1.0
+                        },
+                        "scale_rel": {
+                            "x": -1.0,
+                            "y": 1.0
+                        },
+                        "bounds": {
+                            "x": 1920.0,
+                            "y": 1080.0
+                        },
+                        "bounds_rel": {
+                            "x": 3.555555582046509,
+                            "y": 2.0
+                        },
+                        "scale_filter": "disable",
+                        "blend_method": "default",
+                        "blend_type": "normal",
+                        "show_transition": {
+                            "duration": 0
+                        },
+                        "hide_transition": {
+                            "duration": 0
+                        },
+                        "private_settings": {}
+                    },
+                    {
+                        "name": "NDI_CAM1",
+                        "source_uuid": "db4187e5-71cf-4281-9465-2127e9d87365",
+                        "visible": true,
+                        "locked": false,
+                        "rot": 0.0,
+                        "scale_ref": {
+                            "x": 1920.0,
+                            "y": 1080.0
+                        },
+                        "align": 5,
+                        "bounds_type": 0,
+                        "bounds_align": 0,
+                        "bounds_crop": false,
+                        "crop_left": 0,
+                        "crop_top": 0,
+                        "crop_right": 0,
+                        "crop_bottom": 0,
+                        "id": 2,
+                        "group_item_backup": false,
+                        "pos": {
+                            "x": -261.0,
+                            "y": 0.0
+                        },
+                        "pos_rel": {
+                            "x": -2.26111102104187,
+                            "y": -1.0
+                        },
+                        "scale": {
+                            "x": 1.0,
+                            "y": 1.0
+                        },
+                        "scale_rel": {
+                            "x": 1.0,
+                            "y": 1.0
+                        },
+                        "bounds": {
+                            "x": 0.0,
+                            "y": 0.0
+                        },
+                        "bounds_rel": {
+                            "x": 0.0,
+                            "y": 0.0
+                        },
+                        "scale_filter": "disable",
+                        "blend_method": "default",
+                        "blend_type": "normal",
+                        "show_transition": {
+                            "duration": 300
+                        },
+                        "hide_transition": {
+                            "duration": 300
+                        },
+                        "private_settings": {}
+                    }
+                ]
+            },
+            "mixers": 0,
+            "sync": 0,
+            "flags": 0,
+            "volume": 1.0,
+            "balance": 0.5,
+            "enabled": true,
+            "muted": false,
+            "push-to-mute": false,
+            "push-to-mute-delay": 0,
+            "push-to-talk": false,
+            "push-to-talk-delay": 0,
+            "hotkeys": {
+                "OBSBasic.SelectScene": [],
+                "libobs.show_scene_item.1": [],
+                "libobs.hide_scene_item.1": [],
+                "libobs.show_scene_item.2": [],
+                "libobs.hide_scene_item.2": []
+            },
+            "deinterlace_mode": 0,
+            "deinterlace_field_order": 0,
+            "monitoring_type": 0,
+            "canvas_uuid": "6c69626f-6273-4c00-9d88-c5136d61696e",
+            "private_settings": {
+                "transition_duration": 300,
+                "show_in_multiview": false
+            },
+            "filters": [
+                {
+                    "prev_ver": 536936448,
+                    "name": "Move transition override",
+                    "uuid": "43a6754a-6a75-4fc1-9d2f-4fb72fa23f71",
+                    "id": "move_transition_override_filter",
+                    "versioned_id": "move_transition_override_filter",
+                    "settings": {
+                        "source": "",
+                        "position_in": 38,
+                        "zoom_in": 0,
+                        "position_out": 38,
+                        "zoom_out": 0
+                    },
+                    "mixers": 0,
+                    "sync": 0,
+                    "flags": 0,
+                    "volume": 1.0,
+                    "balance": 0.5,
+                    "enabled": true,
+                    "muted": false,
+                    "push-to-mute": false,
+                    "push-to-mute-delay": 0,
+                    "push-to-talk": false,
+                    "push-to-talk-delay": 0,
+                    "hotkeys": {},
+                    "deinterlace_mode": 0,
+                    "deinterlace_field_order": 0,
+                    "monitoring_type": 0,
+                    "private_settings": {}
+                },
+                {
+                    "prev_ver": 536936448,
+                    "name": "Crop/Pad",
+                    "uuid": "7e98bd18-dd5a-478b-92ba-ade6f1728f0f",
+                    "id": "crop_filter",
+                    "versioned_id": "crop_filter",
+                    "settings": {
+                        "bottom": -100,
+                        "left": -100,
+                        "right": -100,
+                        "top": -100
+                    },
+                    "mixers": 0,
+                    "sync": 0,
+                    "flags": 0,
+                    "volume": 1.0,
+                    "balance": 0.5,
+                    "enabled": false,
+                    "muted": false,
+                    "push-to-mute": false,
+                    "push-to-mute-delay": 0,
+                    "push-to-talk": false,
+                    "push-to-talk-delay": 0,
+                    "hotkeys": {},
+                    "deinterlace_mode": 0,
+                    "deinterlace_field_order": 0,
+                    "monitoring_type": 0,
+                    "private_settings": {}
+                },
+                {
+                    "prev_ver": 536936448,
+                    "name": "Glow",
+                    "uuid": "099915ba-5832-4dfe-a2ad-30b3722ceb39",
+                    "id": "obs_glow_filter",
+                    "versioned_id": "obs_glow_filter",
+                    "settings": {
+                        "blur_type": 2,
+                        "fill": false,
+                        "glow_fill_source": "_CAPTURE_SHADER1",
+                        "glow_size": 30,
+                        "glow_intensity": 40,
+                        "glow_fill_type": 1,
+                        "glow_fill_color": 3355443200
+                    },
+                    "mixers": 0,
+                    "sync": 0,
+                    "flags": 0,
+                    "volume": 1.0,
+                    "balance": 0.5,
+                    "enabled": false,
+                    "muted": false,
+                    "push-to-mute": false,
+                    "push-to-mute-delay": 0,
+                    "push-to-talk": false,
+                    "push-to-talk-delay": 0,
+                    "hotkeys": {},
+                    "deinterlace_mode": 0,
+                    "deinterlace_field_order": 0,
+                    "monitoring_type": 0,
+                    "private_settings": {}
+                }
+            ]
+        },
+        {
+            "prev_ver": 536936448,
             "name": "_CAM_SHADER2",
             "uuid": "fa187b2a-667b-4e46-9073-0105ccd4fe6b",
             "id": "scene",
@@ -5722,13 +8129,25 @@
                             "x": 0.0,
                             "y": 0.0
                         },
+                        "pos_rel": {
+                            "x": -1.7777777910232544,
+                            "y": -1.0
+                        },
                         "scale": {
+                            "x": 1.0,
+                            "y": 1.0
+                        },
+                        "scale_rel": {
                             "x": 1.0,
                             "y": 1.0
                         },
                         "bounds": {
                             "x": 1920.0,
                             "y": 1080.0
+                        },
+                        "bounds_rel": {
+                            "x": 3.555555582046509,
+                            "y": 2.0
                         },
                         "scale_filter": "disable",
                         "blend_method": "default",
@@ -5863,17 +8282,17 @@
         },
         {
             "prev_ver": 536936448,
-            "name": "_CAM_SHADER3",
-            "uuid": "d0c78af3-0488-46c0-8035-2155d1ceccd8",
+            "name": "_CAM_SHADER2_INTRO",
+            "uuid": "c6d67c7d-9ade-4869-8935-73cb70f150b2",
             "id": "scene",
             "versioned_id": "scene",
             "settings": {
+                "id_counter": 1,
                 "custom_size": false,
-                "id_counter": 3,
                 "items": [
                     {
-                        "name": "NDI_CAM3",
-                        "source_uuid": "db4187e5-71cf-4281-9465-2127e9d87365",
+                        "name": "NDI_CAM2",
+                        "source_uuid": "cac1115e-3a2f-4bca-8e0d-aed2e69a8726",
                         "visible": true,
                         "locked": false,
                         "rot": 0.0,
@@ -5889,19 +8308,271 @@
                         "crop_top": 0,
                         "crop_right": 0,
                         "crop_bottom": 0,
-                        "id": 3,
+                        "id": 1,
                         "group_item_backup": false,
                         "pos": {
                             "x": 0.0,
                             "y": 0.0
                         },
+                        "pos_rel": {
+                            "x": -1.7777777910232544,
+                            "y": -1.0
+                        },
                         "scale": {
+                            "x": 1.0,
+                            "y": 1.0
+                        },
+                        "scale_rel": {
+                            "x": 1.0,
+                            "y": 1.0
+                        },
+                        "bounds": {
+                            "x": 1920.0,
+                            "y": 1080.0
+                        },
+                        "bounds_rel": {
+                            "x": 3.555555582046509,
+                            "y": 2.0
+                        },
+                        "scale_filter": "disable",
+                        "blend_method": "default",
+                        "blend_type": "normal",
+                        "show_transition": {
+                            "duration": 0
+                        },
+                        "hide_transition": {
+                            "duration": 0
+                        },
+                        "private_settings": {}
+                    }
+                ]
+            },
+            "mixers": 0,
+            "sync": 0,
+            "flags": 0,
+            "volume": 1.0,
+            "balance": 0.5,
+            "enabled": true,
+            "muted": false,
+            "push-to-mute": false,
+            "push-to-mute-delay": 0,
+            "push-to-talk": false,
+            "push-to-talk-delay": 0,
+            "hotkeys": {
+                "OBSBasic.SelectScene": [],
+                "libobs.show_scene_item.1": [],
+                "libobs.hide_scene_item.1": []
+            },
+            "deinterlace_mode": 0,
+            "deinterlace_field_order": 0,
+            "monitoring_type": 0,
+            "canvas_uuid": "6c69626f-6273-4c00-9d88-c5136d61696e",
+            "private_settings": {
+                "transition_duration": 300,
+                "show_in_multiview": false
+            },
+            "filters": [
+                {
+                    "prev_ver": 536936448,
+                    "name": "Move transition override",
+                    "uuid": "7dd0944f-5364-4d54-9498-0685f426254a",
+                    "id": "move_transition_override_filter",
+                    "versioned_id": "move_transition_override_filter",
+                    "settings": {
+                        "source": "NDI_CAM2",
+                        "position_in": 96,
+                        "zoom_in": 0,
+                        "position_out": 96,
+                        "zoom_out": 0
+                    },
+                    "mixers": 0,
+                    "sync": 0,
+                    "flags": 0,
+                    "volume": 1.0,
+                    "balance": 0.5,
+                    "enabled": true,
+                    "muted": false,
+                    "push-to-mute": false,
+                    "push-to-mute-delay": 0,
+                    "push-to-talk": false,
+                    "push-to-talk-delay": 0,
+                    "hotkeys": {},
+                    "deinterlace_mode": 0,
+                    "deinterlace_field_order": 0,
+                    "monitoring_type": 0,
+                    "private_settings": {}
+                },
+                {
+                    "prev_ver": 536936448,
+                    "name": "Crop/Pad",
+                    "uuid": "da63b137-1253-49ba-904b-03fe4dbaf689",
+                    "id": "crop_filter",
+                    "versioned_id": "crop_filter",
+                    "settings": {
+                        "bottom": -100,
+                        "left": -100,
+                        "right": -100,
+                        "top": -100
+                    },
+                    "mixers": 0,
+                    "sync": 0,
+                    "flags": 0,
+                    "volume": 1.0,
+                    "balance": 0.5,
+                    "enabled": false,
+                    "muted": false,
+                    "push-to-mute": false,
+                    "push-to-mute-delay": 0,
+                    "push-to-talk": false,
+                    "push-to-talk-delay": 0,
+                    "hotkeys": {},
+                    "deinterlace_mode": 0,
+                    "deinterlace_field_order": 0,
+                    "monitoring_type": 0,
+                    "private_settings": {}
+                },
+                {
+                    "prev_ver": 536936448,
+                    "name": "Glow",
+                    "uuid": "53a2987f-4e44-4a6f-97a5-aefacb5438f4",
+                    "id": "obs_glow_filter",
+                    "versioned_id": "obs_glow_filter",
+                    "settings": {
+                        "blur_type": 2,
+                        "fill": false,
+                        "glow_fill_source": "_CAPTURE_SHADER1",
+                        "glow_size": 30,
+                        "glow_intensity": 40,
+                        "glow_fill_type": 1,
+                        "glow_fill_color": 3355443200
+                    },
+                    "mixers": 0,
+                    "sync": 0,
+                    "flags": 0,
+                    "volume": 1.0,
+                    "balance": 0.5,
+                    "enabled": false,
+                    "muted": false,
+                    "push-to-mute": false,
+                    "push-to-mute-delay": 0,
+                    "push-to-talk": false,
+                    "push-to-talk-delay": 0,
+                    "hotkeys": {},
+                    "deinterlace_mode": 0,
+                    "deinterlace_field_order": 0,
+                    "monitoring_type": 0,
+                    "private_settings": {}
+                }
+            ]
+        },
+        {
+            "prev_ver": 536936448,
+            "name": "_CAM_SHADER3",
+            "uuid": "d0c78af3-0488-46c0-8035-2155d1ceccd8",
+            "id": "scene",
+            "versioned_id": "scene",
+            "settings": {
+                "custom_size": false,
+                "id_counter": 6,
+                "items": [
+                    {
+                        "name": "NDI_CAM1",
+                        "source_uuid": "db4187e5-71cf-4281-9465-2127e9d87365",
+                        "visible": false,
+                        "locked": false,
+                        "rot": 0.0,
+                        "scale_ref": {
+                            "x": 1920.0,
+                            "y": 1080.0
+                        },
+                        "align": 5,
+                        "bounds_type": 0,
+                        "bounds_align": 0,
+                        "bounds_crop": false,
+                        "crop_left": 0,
+                        "crop_top": 0,
+                        "crop_right": 0,
+                        "crop_bottom": 0,
+                        "id": 5,
+                        "group_item_backup": false,
+                        "pos": {
+                            "x": 0.0,
+                            "y": 0.0
+                        },
+                        "pos_rel": {
+                            "x": -1.7777777910232544,
+                            "y": -1.0
+                        },
+                        "scale": {
+                            "x": 1.0,
+                            "y": 1.0
+                        },
+                        "scale_rel": {
+                            "x": 1.0,
+                            "y": 1.0
+                        },
+                        "bounds": {
+                            "x": 0.0,
+                            "y": 0.0
+                        },
+                        "bounds_rel": {
+                            "x": 0.0,
+                            "y": 0.0
+                        },
+                        "scale_filter": "disable",
+                        "blend_method": "default",
+                        "blend_type": "normal",
+                        "show_transition": {
+                            "duration": 300
+                        },
+                        "hide_transition": {
+                            "duration": 300
+                        },
+                        "private_settings": {}
+                    },
+                    {
+                        "name": "NDI_CAM3",
+                        "source_uuid": "d299d27c-aba2-480e-b04b-e721f2e00c89",
+                        "visible": true,
+                        "locked": false,
+                        "rot": 0.0,
+                        "scale_ref": {
+                            "x": 1920.0,
+                            "y": 1080.0
+                        },
+                        "align": 5,
+                        "bounds_type": 2,
+                        "bounds_align": 0,
+                        "bounds_crop": false,
+                        "crop_left": 0,
+                        "crop_top": 0,
+                        "crop_right": 0,
+                        "crop_bottom": 0,
+                        "id": 6,
+                        "group_item_backup": false,
+                        "pos": {
+                            "x": 0.0,
+                            "y": 0.0
+                        },
+                        "pos_rel": {
+                            "x": -1.7777777910232544,
+                            "y": -1.0
+                        },
+                        "scale": {
+                            "x": -1.0,
+                            "y": 1.0
+                        },
+                        "scale_rel": {
                             "x": -1.0,
                             "y": 1.0
                         },
                         "bounds": {
                             "x": 1920.0,
                             "y": 1080.0
+                        },
+                        "bounds_rel": {
+                            "x": 3.555555582046509,
+                            "y": 2.0
                         },
                         "scale_filter": "disable",
                         "blend_method": "default",
@@ -5930,7 +8601,11 @@
             "hotkeys": {
                 "OBSBasic.SelectScene": [],
                 "libobs.show_scene_item.3": [],
-                "libobs.hide_scene_item.3": []
+                "libobs.hide_scene_item.3": [],
+                "libobs.show_scene_item.5": [],
+                "libobs.hide_scene_item.5": [],
+                "libobs.show_scene_item.6": [],
+                "libobs.hide_scene_item.6": []
             },
             "deinterlace_mode": 0,
             "deinterlace_field_order": 0,
@@ -5948,11 +8623,11 @@
                     "id": "move_transition_override_filter",
                     "versioned_id": "move_transition_override_filter",
                     "settings": {
-                        "source": "NDI_CAM1",
                         "position_in": 72,
                         "zoom_in": 0,
                         "position_out": 72,
-                        "zoom_out": 0
+                        "zoom_out": 0,
+                        "source": "NDI_CAM3"
                     },
                     "mixers": 0,
                     "sync": 0,
@@ -6036,6 +8711,248 @@
         },
         {
             "prev_ver": 536936448,
+            "name": "_CAM_SHADER3_INTRO",
+            "uuid": "e09cf711-c36e-41fa-b338-a457641d9a2f",
+            "id": "scene",
+            "versioned_id": "scene",
+            "settings": {
+                "id_counter": 2,
+                "custom_size": false,
+                "items": [
+                    {
+                        "name": "NDI_CAM1",
+                        "source_uuid": "db4187e5-71cf-4281-9465-2127e9d87365",
+                        "visible": false,
+                        "locked": true,
+                        "rot": 0.0,
+                        "scale_ref": {
+                            "x": 1920.0,
+                            "y": 1080.0
+                        },
+                        "align": 5,
+                        "bounds_type": 0,
+                        "bounds_align": 0,
+                        "bounds_crop": false,
+                        "crop_left": 0,
+                        "crop_top": 0,
+                        "crop_right": 0,
+                        "crop_bottom": 0,
+                        "id": 1,
+                        "group_item_backup": false,
+                        "pos": {
+                            "x": 0.0,
+                            "y": 0.0
+                        },
+                        "pos_rel": {
+                            "x": -1.7777777910232544,
+                            "y": -1.0
+                        },
+                        "scale": {
+                            "x": 1.0,
+                            "y": 1.0
+                        },
+                        "scale_rel": {
+                            "x": 1.0,
+                            "y": 1.0
+                        },
+                        "bounds": {
+                            "x": 0.0,
+                            "y": 0.0
+                        },
+                        "bounds_rel": {
+                            "x": 0.0,
+                            "y": 0.0
+                        },
+                        "scale_filter": "disable",
+                        "blend_method": "default",
+                        "blend_type": "normal",
+                        "show_transition": {
+                            "duration": 300
+                        },
+                        "hide_transition": {
+                            "duration": 300
+                        },
+                        "private_settings": {}
+                    },
+                    {
+                        "name": "NDI_CAM3",
+                        "source_uuid": "d299d27c-aba2-480e-b04b-e721f2e00c89",
+                        "visible": true,
+                        "locked": false,
+                        "rot": 0.0,
+                        "scale_ref": {
+                            "x": 1920.0,
+                            "y": 1080.0
+                        },
+                        "align": 5,
+                        "bounds_type": 2,
+                        "bounds_align": 0,
+                        "bounds_crop": false,
+                        "crop_left": 0,
+                        "crop_top": 0,
+                        "crop_right": 0,
+                        "crop_bottom": 0,
+                        "id": 2,
+                        "group_item_backup": false,
+                        "pos": {
+                            "x": -407.0,
+                            "y": 0.0
+                        },
+                        "pos_rel": {
+                            "x": -2.5314815044403076,
+                            "y": -1.0
+                        },
+                        "scale": {
+                            "x": -1.0,
+                            "y": 1.0
+                        },
+                        "scale_rel": {
+                            "x": -1.0,
+                            "y": 1.0
+                        },
+                        "bounds": {
+                            "x": 1920.0,
+                            "y": 1080.0
+                        },
+                        "bounds_rel": {
+                            "x": 3.555555582046509,
+                            "y": 2.0
+                        },
+                        "scale_filter": "disable",
+                        "blend_method": "default",
+                        "blend_type": "normal",
+                        "show_transition": {
+                            "duration": 0
+                        },
+                        "hide_transition": {
+                            "duration": 0
+                        },
+                        "private_settings": {}
+                    }
+                ]
+            },
+            "mixers": 0,
+            "sync": 0,
+            "flags": 0,
+            "volume": 1.0,
+            "balance": 0.5,
+            "enabled": true,
+            "muted": false,
+            "push-to-mute": false,
+            "push-to-mute-delay": 0,
+            "push-to-talk": false,
+            "push-to-talk-delay": 0,
+            "hotkeys": {
+                "OBSBasic.SelectScene": [],
+                "libobs.show_scene_item.1": [],
+                "libobs.hide_scene_item.1": [],
+                "libobs.show_scene_item.2": [],
+                "libobs.hide_scene_item.2": []
+            },
+            "deinterlace_mode": 0,
+            "deinterlace_field_order": 0,
+            "monitoring_type": 0,
+            "canvas_uuid": "6c69626f-6273-4c00-9d88-c5136d61696e",
+            "private_settings": {
+                "transition_duration": 300,
+                "show_in_multiview": false
+            },
+            "filters": [
+                {
+                    "prev_ver": 536936448,
+                    "name": "Move transition override",
+                    "uuid": "218753fc-2185-4df7-8ab4-ac8efb61411f",
+                    "id": "move_transition_override_filter",
+                    "versioned_id": "move_transition_override_filter",
+                    "settings": {
+                        "source": "NDI_CAM3",
+                        "position_in": 72,
+                        "zoom_in": 0,
+                        "position_out": 72,
+                        "zoom_out": 0
+                    },
+                    "mixers": 0,
+                    "sync": 0,
+                    "flags": 0,
+                    "volume": 1.0,
+                    "balance": 0.5,
+                    "enabled": true,
+                    "muted": false,
+                    "push-to-mute": false,
+                    "push-to-mute-delay": 0,
+                    "push-to-talk": false,
+                    "push-to-talk-delay": 0,
+                    "hotkeys": {},
+                    "deinterlace_mode": 0,
+                    "deinterlace_field_order": 0,
+                    "monitoring_type": 0,
+                    "private_settings": {}
+                },
+                {
+                    "prev_ver": 536936448,
+                    "name": "Crop/Pad",
+                    "uuid": "3bf30d8e-ecdf-4e3f-a963-f9e8adc5d4f1",
+                    "id": "crop_filter",
+                    "versioned_id": "crop_filter",
+                    "settings": {
+                        "bottom": -100,
+                        "left": -100,
+                        "right": -100,
+                        "top": -100
+                    },
+                    "mixers": 0,
+                    "sync": 0,
+                    "flags": 0,
+                    "volume": 1.0,
+                    "balance": 0.5,
+                    "enabled": false,
+                    "muted": false,
+                    "push-to-mute": false,
+                    "push-to-mute-delay": 0,
+                    "push-to-talk": false,
+                    "push-to-talk-delay": 0,
+                    "hotkeys": {},
+                    "deinterlace_mode": 0,
+                    "deinterlace_field_order": 0,
+                    "monitoring_type": 0,
+                    "private_settings": {}
+                },
+                {
+                    "prev_ver": 536936448,
+                    "name": "Glow",
+                    "uuid": "6a4496cc-ae78-466a-8b64-a8fab84dcddd",
+                    "id": "obs_glow_filter",
+                    "versioned_id": "obs_glow_filter",
+                    "settings": {
+                        "blur_type": 2,
+                        "fill": false,
+                        "glow_fill_source": "_CAPTURE_SHADER1",
+                        "glow_size": 30,
+                        "glow_intensity": 40,
+                        "glow_fill_type": 1,
+                        "glow_fill_color": 3355443200
+                    },
+                    "mixers": 0,
+                    "sync": 0,
+                    "flags": 0,
+                    "volume": 1.0,
+                    "balance": 0.5,
+                    "enabled": false,
+                    "muted": false,
+                    "push-to-mute": false,
+                    "push-to-mute-delay": 0,
+                    "push-to-talk": false,
+                    "push-to-talk-delay": 0,
+                    "hotkeys": {},
+                    "deinterlace_mode": 0,
+                    "deinterlace_field_order": 0,
+                    "monitoring_type": 0,
+                    "private_settings": {}
+                }
+            ]
+        },
+        {
+            "prev_ver": 536936448,
             "name": "_CAPTURE_SHADER1",
             "uuid": "f63dc773-1ac7-4d66-87b1-e0a05396a599",
             "id": "scene",
@@ -6068,13 +8985,25 @@
                             "x": 0.0,
                             "y": 0.0
                         },
+                        "pos_rel": {
+                            "x": -1.7777777910232544,
+                            "y": -1.0
+                        },
                         "scale": {
+                            "x": 1.0,
+                            "y": 1.0
+                        },
+                        "scale_rel": {
                             "x": 1.0,
                             "y": 1.0
                         },
                         "bounds": {
                             "x": 1920.0,
                             "y": 1080.0
+                        },
+                        "bounds_rel": {
+                            "x": 3.555555582046509,
+                            "y": 2.0
                         },
                         "scale_filter": "disable",
                         "blend_method": "default",
@@ -6241,13 +9170,25 @@
                             "x": 0.0,
                             "y": 0.0
                         },
+                        "pos_rel": {
+                            "x": -1.7777777910232544,
+                            "y": -1.0
+                        },
                         "scale": {
+                            "x": 1.0,
+                            "y": 1.0
+                        },
+                        "scale_rel": {
                             "x": 1.0,
                             "y": 1.0
                         },
                         "bounds": {
                             "x": 1920.0,
                             "y": 1080.0
+                        },
+                        "bounds_rel": {
+                            "x": 3.555555582046509,
+                            "y": 2.0
                         },
                         "scale_filter": "disable",
                         "blend_method": "default",
@@ -6414,13 +9355,25 @@
                             "x": 0.0,
                             "y": 0.0
                         },
+                        "pos_rel": {
+                            "x": -1.7777777910232544,
+                            "y": -1.0
+                        },
                         "scale": {
+                            "x": 1.0,
+                            "y": 1.0
+                        },
+                        "scale_rel": {
                             "x": 1.0,
                             "y": 1.0
                         },
                         "bounds": {
                             "x": 1920.0,
                             "y": 1080.0
+                        },
+                        "bounds_rel": {
+                            "x": 3.555555582046509,
+                            "y": 2.0
                         },
                         "scale_filter": "disable",
                         "blend_method": "default",
