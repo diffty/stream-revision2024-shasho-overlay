@@ -18,6 +18,7 @@ export default defineConfig({
         mainV2: resolve(__dirname, 'frontend', 'indexV2.html'),
         intro: resolve(__dirname, 'frontend', 'intro.html'),
         background: resolve(__dirname, 'frontend', 'background.html'),
+        results: resolve(__dirname, 'frontend', 'results.html'),
       },
       output: {
         dir: "dist/",

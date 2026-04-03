@@ -50,6 +50,18 @@ class ConfigEvent(Event):
     doUpdate: bool = False
 
 
+@dataclass(kw_only=True)
+class UpdateResultsEvent(Event):
+    coderRank1Name: str = ""
+    coderRank2Name: str = ""
+    coderRank3Name: str = ""
+    coderRank1Votes: int = 0
+    coderRank2Votes: int = 0
+    coderRank3Votes: int = 0
+    totalVotes: int = 0
+
+
+
 @dataclass
 class Round:
     coders: list[str]
@@ -88,10 +100,13 @@ def broadcast_event(e: Event):
         if e.time is not None:
             SERVER_TIMER_STATE.time = e.time
         
-    websockets.broadcast(CONNECTIONS, json.dumps({
-                                        "type": e.__class__.__name__,
-                                        "payload": asdict(e)
-                                    }))
+    websockets.broadcast(
+        CONNECTIONS,
+        json.dumps({
+            "type": e.__class__.__name__,
+            "payload": asdict(e)
+        })
+    )
 
 def get_config_path():
     return pathlib.Path(__file__).parent.joinpath(pathlib.Path("../config/server.cfg"))
@@ -243,6 +258,31 @@ def on_refresh_overlay_config_click():
     broadcast_event(ConfigEvent(doUpdate=True))
 
 
+def send_round_results_to_overlay(entries_data):
+    coders_list = list(
+        map(
+            lambda e: (e["title"], e["votes"]),
+            sorted(
+                entries_data,
+                key=lambda e: e["votes"],
+                reverse=True
+            )
+        )
+    )
+
+    broadcast_event(
+        UpdateResultsEvent(
+            coderRank1Name=coders_list[0][0],
+            coderRank2Name=coders_list[1][0],
+            coderRank3Name=coders_list[2][0],
+            coderRank1Votes=coders_list[0][1],
+            coderRank2Votes=coders_list[1][1],
+            coderRank3Votes=coders_list[2][1],
+            totalVotes=0,
+        )
+    )
+
+
 def refresh_single_competition_results(id: int):
     comp_detail = get_pm_competition_detail(id)
 
@@ -279,6 +319,9 @@ def refresh_single_competition_results(id: int):
 
             state_to_str = lambda state: "enabled" if state is True else "disabled"
             state_css_class = lambda state: "text-green-500" if state is True else "text-red-500"
+
+            ui.button("Send round results to overlay", on_click=lambda: send_round_results_to_overlay(entries_data))
+            
             ui.label(f"Voting is {state_to_str(comp_data['voting_enabled'])}").classes(state_css_class(comp_data['voting_enabled']))
             ui.label(f"Live voting is {state_to_str(comp_data['live_voting_enabled'])}").classes(state_css_class(comp_data['live_voting_enabled']))
 
@@ -339,7 +382,7 @@ def root_page():
     ui.label('Results')
 
     with ui.row():
-        ui.button('Refresh All', on_click=on_refresh_results_click)
+        ui.button('Refetch All', on_click=on_refresh_results_click)
         ui.button('Refresh Opened', on_click=on_refresh_opened_competitions)
 
     results_div = ui.column().classes('ml-4')
