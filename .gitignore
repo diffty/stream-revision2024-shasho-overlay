@@ -32,3 +32,6 @@ frontend/assets/fonts
 
 # Built frontend static html 
 dist/
+
+# Environment vars
+.env
