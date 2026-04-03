@@ -2,3 +2,5 @@ websockets
 nicegui
 dotenv
 requests
+python-osc
+obs-websocket-py
