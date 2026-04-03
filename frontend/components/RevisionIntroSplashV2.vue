@@ -39,12 +39,14 @@
     const hostName = ref("");
 
     const isOpened = ref(false)
+    const isRoundScene = ref(false)
 
     var config: Config;
 
     function updateValuesUsingSceneName(sceneName: string) {
         currObsSceneName.value = sceneName;
         isOpened.value = !(sceneName === 'INTRO');
+        isRoundScene.value = sceneName === 'INTRO_ROUND';
     }
 
     async function updateConfig() {
@@ -135,14 +137,14 @@
 
 <template>
     <div id="whole-title">
-        <div id="bottom-line">
+        <div id="bottom-line" :class="{ do_appear: isRoundScene, do_disappear: !isRoundScene }">
             <div id="round" class="medium-text"><span class="cell-title">{{ roundName }}</span></div>
             <div id="dj-text" class="medium-text"><span class="cell-title">DJ</span><span class="cell-content">{{ djName }}</span></div>
             <div id="comments-text" class="medium-text"><span class="cell-title">COMMENTS</span><span class="cell-content">{{ commentsName }}</span></div>
             <!-- <div id="host-text" class="tiny-text">and tech from {{ hostName }}</div> -->
         </div>
 
-        <div id="middle-line">
+        <div id="middle-line" :class="{ do_appear: isRoundScene, do_disappear: !isRoundScene }">
             <div id="coder1" class="coder">{{ coderName1 }}</div>
             <span class="vs">VS</span>
             <div id="coder2" class="coder">{{ coderName2 }}</div>
@@ -292,6 +294,16 @@
         transition: height 0.5s, font-size 0.5s;
         height: 50%;
         font-size: 15em;
+    }
+    
+    .do_appear {
+        transition: opacity 0.5s;
+        opacity: 100%;
+    }
+
+    .do_disappear {
+        transition: opacity 0.5s;
+        opacity: 0%;
     }
 
     .top-part {
