@@ -599,10 +599,10 @@
                     "id": "move_transition_override_filter",
                     "versioned_id": "move_transition_override_filter",
                     "settings": {
-                        "zoom_in": 0,
                         "position_in": 96,
-                        "zoom_out": 0,
-                        "position_out": 96
+                        "zoom_in": 0,
+                        "position_out": 96,
+                        "zoom_out": 0
                     },
                     "mixers": 0,
                     "sync": 0,
@@ -691,7 +691,10 @@
             "push-to-mute-delay": 0,
             "push-to-talk": false,
             "push-to-talk-delay": 0,
-            "hotkeys": {},
+            "hotkeys": {
+                "libobs.show_scene_item.3": [],
+                "libobs.hide_scene_item.3": []
+            },
             "deinterlace_mode": 0,
             "deinterlace_field_order": 0,
             "monitoring_type": 0,
@@ -797,7 +800,10 @@
             "push-to-mute-delay": 0,
             "push-to-talk": false,
             "push-to-talk-delay": 0,
-            "hotkeys": {},
+            "hotkeys": {
+                "libobs.show_scene_item.3": [],
+                "libobs.hide_scene_item.3": []
+            },
             "deinterlace_mode": 0,
             "deinterlace_field_order": 0,
             "monitoring_type": 0,
@@ -898,8 +904,8 @@
             "name": "_CAM_SHADER3"
         }
     ],
-    "current_scene": "CODER1_ONLY_WITHCAM",
-    "current_program_scene": "CODER1_ONLY_WITHCAM",
+    "current_scene": "MAIN_COMPETITION",
+    "current_program_scene": "MAIN_COMPETITION",
     "canvases": [],
     "current_transition": "Move",
     "transition_duration": 300,
@@ -975,7 +981,7 @@
             "disable_hotkey": []
         }
     },
-    "version": 1,
+    "version": 2,
     "sources": [
         {
             "prev_ver": 536936448,
@@ -1101,6 +1107,10 @@
                         "visible": true,
                         "locked": true,
                         "rot": 0.0,
+                        "scale_ref": {
+                            "x": 1920.0,
+                            "y": 1080.0
+                        },
                         "align": 5,
                         "bounds_type": 0,
                         "bounds_align": 0,
@@ -1140,6 +1150,10 @@
                         "visible": true,
                         "locked": false,
                         "rot": 0.0,
+                        "scale_ref": {
+                            "x": 1920.0,
+                            "y": 1080.0
+                        },
                         "align": 5,
                         "bounds_type": 0,
                         "bounds_align": 0,
@@ -1179,6 +1193,10 @@
                         "visible": true,
                         "locked": false,
                         "rot": 0.0,
+                        "scale_ref": {
+                            "x": 1920.0,
+                            "y": 1080.0
+                        },
                         "align": 5,
                         "bounds_type": 0,
                         "bounds_align": 0,
@@ -1218,6 +1236,10 @@
                         "visible": true,
                         "locked": false,
                         "rot": 0.0,
+                        "scale_ref": {
+                            "x": 1920.0,
+                            "y": 1080.0
+                        },
                         "align": 5,
                         "bounds_type": 0,
                         "bounds_align": 0,
@@ -1300,6 +1322,10 @@
                         "visible": true,
                         "locked": false,
                         "rot": 0.0,
+                        "scale_ref": {
+                            "x": 1920.0,
+                            "y": 1080.0
+                        },
                         "align": 5,
                         "bounds_type": 0,
                         "bounds_align": 0,
@@ -1339,6 +1365,10 @@
                         "visible": true,
                         "locked": false,
                         "rot": 0.0,
+                        "scale_ref": {
+                            "x": 1920.0,
+                            "y": 1080.0
+                        },
                         "align": 5,
                         "bounds_type": 0,
                         "bounds_align": 0,
@@ -1378,6 +1408,10 @@
                         "visible": true,
                         "locked": false,
                         "rot": 0.0,
+                        "scale_ref": {
+                            "x": 1920.0,
+                            "y": 1080.0
+                        },
                         "align": 5,
                         "bounds_type": 0,
                         "bounds_align": 0,
@@ -1417,6 +1451,10 @@
                         "visible": true,
                         "locked": false,
                         "rot": 0.0,
+                        "scale_ref": {
+                            "x": 1920.0,
+                            "y": 1080.0
+                        },
                         "align": 5,
                         "bounds_type": 0,
                         "bounds_align": 0,
@@ -1499,6 +1537,10 @@
                         "visible": true,
                         "locked": true,
                         "rot": 0.0,
+                        "scale_ref": {
+                            "x": 1920.0,
+                            "y": 1080.0
+                        },
                         "align": 5,
                         "bounds_type": 0,
                         "bounds_align": 0,
@@ -1538,6 +1580,10 @@
                         "visible": true,
                         "locked": false,
                         "rot": 0.0,
+                        "scale_ref": {
+                            "x": 1920.0,
+                            "y": 1080.0
+                        },
                         "align": 5,
                         "bounds_type": 0,
                         "bounds_align": 0,
@@ -1577,6 +1623,10 @@
                         "visible": true,
                         "locked": false,
                         "rot": 0.0,
+                        "scale_ref": {
+                            "x": 1920.0,
+                            "y": 1080.0
+                        },
                         "align": 5,
                         "bounds_type": 0,
                         "bounds_align": 0,
@@ -1616,6 +1666,10 @@
                         "visible": true,
                         "locked": false,
                         "rot": 0.0,
+                        "scale_ref": {
+                            "x": 1920.0,
+                            "y": 1080.0
+                        },
                         "align": 5,
                         "bounds_type": 0,
                         "bounds_align": 0,
@@ -1655,6 +1709,10 @@
                         "visible": true,
                         "locked": false,
                         "rot": 0.0,
+                        "scale_ref": {
+                            "x": 1920.0,
+                            "y": 1080.0
+                        },
                         "align": 5,
                         "bounds_type": 0,
                         "bounds_align": 0,
@@ -1694,6 +1752,10 @@
                         "visible": true,
                         "locked": false,
                         "rot": 0.0,
+                        "scale_ref": {
+                            "x": 1920.0,
+                            "y": 1080.0
+                        },
                         "align": 5,
                         "bounds_type": 0,
                         "bounds_align": 0,
@@ -1746,12 +1808,12 @@
                 "libobs.hide_scene_item.1": [],
                 "libobs.show_scene_item.2": [],
                 "libobs.hide_scene_item.2": [],
+                "libobs.show_scene_item.6": [],
+                "libobs.hide_scene_item.6": [],
                 "libobs.show_scene_item.4": [],
                 "libobs.hide_scene_item.4": [],
                 "libobs.show_scene_item.5": [],
-                "libobs.hide_scene_item.5": [],
-                "libobs.show_scene_item.6": [],
-                "libobs.hide_scene_item.6": []
+                "libobs.hide_scene_item.5": []
             },
             "deinterlace_mode": 0,
             "deinterlace_field_order": 0,
@@ -1778,6 +1840,10 @@
                         "visible": true,
                         "locked": true,
                         "rot": 0.0,
+                        "scale_ref": {
+                            "x": 1920.0,
+                            "y": 1080.0
+                        },
                         "align": 5,
                         "bounds_type": 0,
                         "bounds_align": 0,
@@ -1817,6 +1883,10 @@
                         "visible": true,
                         "locked": false,
                         "rot": 0.0,
+                        "scale_ref": {
+                            "x": 1920.0,
+                            "y": 1080.0
+                        },
                         "align": 5,
                         "bounds_type": 0,
                         "bounds_align": 0,
@@ -1856,6 +1926,10 @@
                         "visible": true,
                         "locked": false,
                         "rot": 0.0,
+                        "scale_ref": {
+                            "x": 1920.0,
+                            "y": 1080.0
+                        },
                         "align": 5,
                         "bounds_type": 0,
                         "bounds_align": 0,
@@ -1895,6 +1969,10 @@
                         "visible": true,
                         "locked": false,
                         "rot": 0.0,
+                        "scale_ref": {
+                            "x": 1920.0,
+                            "y": 1080.0
+                        },
                         "align": 5,
                         "bounds_type": 0,
                         "bounds_align": 0,
@@ -1977,6 +2055,10 @@
                         "visible": true,
                         "locked": true,
                         "rot": 0.0,
+                        "scale_ref": {
+                            "x": 1920.0,
+                            "y": 1080.0
+                        },
                         "align": 5,
                         "bounds_type": 0,
                         "bounds_align": 0,
@@ -2016,6 +2098,10 @@
                         "visible": true,
                         "locked": false,
                         "rot": 0.0,
+                        "scale_ref": {
+                            "x": 1920.0,
+                            "y": 1080.0
+                        },
                         "align": 5,
                         "bounds_type": 0,
                         "bounds_align": 0,
@@ -2055,6 +2141,10 @@
                         "visible": true,
                         "locked": false,
                         "rot": 0.0,
+                        "scale_ref": {
+                            "x": 1920.0,
+                            "y": 1080.0
+                        },
                         "align": 5,
                         "bounds_type": 0,
                         "bounds_align": 0,
@@ -2094,6 +2184,10 @@
                         "visible": true,
                         "locked": false,
                         "rot": 0.0,
+                        "scale_ref": {
+                            "x": 1920.0,
+                            "y": 1080.0
+                        },
                         "align": 5,
                         "bounds_type": 0,
                         "bounds_align": 0,
@@ -2176,6 +2270,10 @@
                         "visible": true,
                         "locked": true,
                         "rot": 0.0,
+                        "scale_ref": {
+                            "x": 1920.0,
+                            "y": 1080.0
+                        },
                         "align": 5,
                         "bounds_type": 0,
                         "bounds_align": 0,
@@ -2215,6 +2313,10 @@
                         "visible": true,
                         "locked": false,
                         "rot": 0.0,
+                        "scale_ref": {
+                            "x": 1920.0,
+                            "y": 1080.0
+                        },
                         "align": 5,
                         "bounds_type": 0,
                         "bounds_align": 0,
@@ -2254,6 +2356,10 @@
                         "visible": true,
                         "locked": false,
                         "rot": 0.0,
+                        "scale_ref": {
+                            "x": 1920.0,
+                            "y": 1080.0
+                        },
                         "align": 5,
                         "bounds_type": 0,
                         "bounds_align": 0,
@@ -2293,6 +2399,10 @@
                         "visible": true,
                         "locked": false,
                         "rot": 0.0,
+                        "scale_ref": {
+                            "x": 1920.0,
+                            "y": 1080.0
+                        },
                         "align": 5,
                         "bounds_type": 0,
                         "bounds_align": 0,
@@ -2332,6 +2442,10 @@
                         "visible": true,
                         "locked": false,
                         "rot": 0.0,
+                        "scale_ref": {
+                            "x": 1920.0,
+                            "y": 1080.0
+                        },
                         "align": 5,
                         "bounds_type": 0,
                         "bounds_align": 0,
@@ -2371,6 +2485,10 @@
                         "visible": true,
                         "locked": false,
                         "rot": 0.0,
+                        "scale_ref": {
+                            "x": 1920.0,
+                            "y": 1080.0
+                        },
                         "align": 5,
                         "bounds_type": 0,
                         "bounds_align": 0,
@@ -2423,14 +2541,12 @@
                 "libobs.hide_scene_item.1": [],
                 "libobs.show_scene_item.2": [],
                 "libobs.hide_scene_item.2": [],
-                "libobs.show_scene_item.3": [],
-                "libobs.hide_scene_item.3": [],
+                "libobs.show_scene_item.6": [],
+                "libobs.hide_scene_item.6": [],
                 "libobs.show_scene_item.4": [],
                 "libobs.hide_scene_item.4": [],
                 "libobs.show_scene_item.5": [],
-                "libobs.hide_scene_item.5": [],
-                "libobs.show_scene_item.6": [],
-                "libobs.hide_scene_item.6": []
+                "libobs.hide_scene_item.5": []
             },
             "deinterlace_mode": 0,
             "deinterlace_field_order": 0,
@@ -2457,6 +2573,10 @@
                         "visible": true,
                         "locked": true,
                         "rot": 0.0,
+                        "scale_ref": {
+                            "x": 1920.0,
+                            "y": 1080.0
+                        },
                         "align": 5,
                         "bounds_type": 0,
                         "bounds_align": 0,
@@ -2496,6 +2616,10 @@
                         "visible": true,
                         "locked": false,
                         "rot": 0.0,
+                        "scale_ref": {
+                            "x": 1920.0,
+                            "y": 1080.0
+                        },
                         "align": 5,
                         "bounds_type": 0,
                         "bounds_align": 0,
@@ -2535,6 +2659,10 @@
                         "visible": true,
                         "locked": false,
                         "rot": 0.0,
+                        "scale_ref": {
+                            "x": 1920.0,
+                            "y": 1080.0
+                        },
                         "align": 5,
                         "bounds_type": 0,
                         "bounds_align": 0,
@@ -2574,6 +2702,10 @@
                         "visible": true,
                         "locked": false,
                         "rot": 0.0,
+                        "scale_ref": {
+                            "x": 1920.0,
+                            "y": 1080.0
+                        },
                         "align": 5,
                         "bounds_type": 0,
                         "bounds_align": 0,
@@ -2613,6 +2745,10 @@
                         "visible": true,
                         "locked": false,
                         "rot": 0.0,
+                        "scale_ref": {
+                            "x": 1920.0,
+                            "y": 1080.0
+                        },
                         "align": 5,
                         "bounds_type": 0,
                         "bounds_align": 0,
@@ -2697,6 +2833,10 @@
                         "visible": true,
                         "locked": true,
                         "rot": 0.0,
+                        "scale_ref": {
+                            "x": 1920.0,
+                            "y": 1080.0
+                        },
                         "align": 5,
                         "bounds_type": 0,
                         "bounds_align": 0,
@@ -2736,6 +2876,10 @@
                         "visible": true,
                         "locked": false,
                         "rot": 0.0,
+                        "scale_ref": {
+                            "x": 1920.0,
+                            "y": 1080.0
+                        },
                         "align": 5,
                         "bounds_type": 0,
                         "bounds_align": 0,
@@ -2775,6 +2919,10 @@
                         "visible": true,
                         "locked": false,
                         "rot": 0.0,
+                        "scale_ref": {
+                            "x": 1920.0,
+                            "y": 1080.0
+                        },
                         "align": 5,
                         "bounds_type": 0,
                         "bounds_align": 0,
@@ -2814,6 +2962,10 @@
                         "visible": true,
                         "locked": false,
                         "rot": 0.0,
+                        "scale_ref": {
+                            "x": 1920.0,
+                            "y": 1080.0
+                        },
                         "align": 5,
                         "bounds_type": 0,
                         "bounds_align": 0,
@@ -2896,6 +3048,10 @@
                         "visible": true,
                         "locked": true,
                         "rot": 0.0,
+                        "scale_ref": {
+                            "x": 1920.0,
+                            "y": 1080.0
+                        },
                         "align": 5,
                         "bounds_type": 0,
                         "bounds_align": 0,
@@ -2935,6 +3091,10 @@
                         "visible": true,
                         "locked": false,
                         "rot": 0.0,
+                        "scale_ref": {
+                            "x": 1920.0,
+                            "y": 1080.0
+                        },
                         "align": 5,
                         "bounds_type": 0,
                         "bounds_align": 0,
@@ -2974,6 +3134,10 @@
                         "visible": true,
                         "locked": false,
                         "rot": 0.0,
+                        "scale_ref": {
+                            "x": 1920.0,
+                            "y": 1080.0
+                        },
                         "align": 5,
                         "bounds_type": 0,
                         "bounds_align": 0,
@@ -3013,6 +3177,10 @@
                         "visible": true,
                         "locked": false,
                         "rot": 0.0,
+                        "scale_ref": {
+                            "x": 1920.0,
+                            "y": 1080.0
+                        },
                         "align": 5,
                         "bounds_type": 0,
                         "bounds_align": 0,
@@ -3052,6 +3220,10 @@
                         "visible": true,
                         "locked": false,
                         "rot": 0.0,
+                        "scale_ref": {
+                            "x": 1920.0,
+                            "y": 1080.0
+                        },
                         "align": 5,
                         "bounds_type": 0,
                         "bounds_align": 0,
@@ -3091,6 +3263,10 @@
                         "visible": true,
                         "locked": false,
                         "rot": 0.0,
+                        "scale_ref": {
+                            "x": 1920.0,
+                            "y": 1080.0
+                        },
                         "align": 5,
                         "bounds_type": 0,
                         "bounds_align": 0,
@@ -3143,14 +3319,12 @@
                 "libobs.hide_scene_item.1": [],
                 "libobs.show_scene_item.2": [],
                 "libobs.hide_scene_item.2": [],
-                "libobs.show_scene_item.3": [],
-                "libobs.hide_scene_item.3": [],
+                "libobs.show_scene_item.6": [],
+                "libobs.hide_scene_item.6": [],
                 "libobs.show_scene_item.4": [],
                 "libobs.hide_scene_item.4": [],
                 "libobs.show_scene_item.5": [],
-                "libobs.hide_scene_item.5": [],
-                "libobs.show_scene_item.6": [],
-                "libobs.hide_scene_item.6": []
+                "libobs.hide_scene_item.5": []
             },
             "deinterlace_mode": 0,
             "deinterlace_field_order": 0,
@@ -3280,6 +3454,10 @@
                         "visible": true,
                         "locked": false,
                         "rot": 0.0,
+                        "scale_ref": {
+                            "x": 1920.0,
+                            "y": 1080.0
+                        },
                         "align": 5,
                         "bounds_type": 0,
                         "bounds_align": 0,
@@ -3319,6 +3497,10 @@
                         "visible": true,
                         "locked": false,
                         "rot": 0.0,
+                        "scale_ref": {
+                            "x": 1920.0,
+                            "y": 1080.0
+                        },
                         "align": 5,
                         "bounds_type": 0,
                         "bounds_align": 0,
@@ -3358,6 +3540,10 @@
                         "visible": true,
                         "locked": false,
                         "rot": 0.0,
+                        "scale_ref": {
+                            "x": 1920.0,
+                            "y": 1080.0
+                        },
                         "align": 5,
                         "bounds_type": 0,
                         "bounds_align": 0,
@@ -3397,6 +3583,10 @@
                         "visible": true,
                         "locked": false,
                         "rot": 0.0,
+                        "scale_ref": {
+                            "x": 1920.0,
+                            "y": 1080.0
+                        },
                         "align": 5,
                         "bounds_type": 0,
                         "bounds_align": 0,
@@ -3479,6 +3669,10 @@
                         "visible": true,
                         "locked": false,
                         "rot": 0.0,
+                        "scale_ref": {
+                            "x": 1920.0,
+                            "y": 1080.0
+                        },
                         "align": 5,
                         "bounds_type": 0,
                         "bounds_align": 0,
@@ -3518,6 +3712,10 @@
                         "visible": true,
                         "locked": false,
                         "rot": 0.0,
+                        "scale_ref": {
+                            "x": 1920.0,
+                            "y": 1080.0
+                        },
                         "align": 5,
                         "bounds_type": 0,
                         "bounds_align": 0,
@@ -3557,6 +3755,10 @@
                         "visible": true,
                         "locked": false,
                         "rot": 0.0,
+                        "scale_ref": {
+                            "x": 1920.0,
+                            "y": 1080.0
+                        },
                         "align": 5,
                         "bounds_type": 0,
                         "bounds_align": 0,
@@ -3596,6 +3798,10 @@
                         "visible": true,
                         "locked": true,
                         "rot": 0.0,
+                        "scale_ref": {
+                            "x": 1920.0,
+                            "y": 1080.0
+                        },
                         "align": 5,
                         "bounds_type": 0,
                         "bounds_align": 0,
@@ -3678,6 +3884,10 @@
                         "visible": false,
                         "locked": false,
                         "rot": 0.0,
+                        "scale_ref": {
+                            "x": 1920.0,
+                            "y": 1080.0
+                        },
                         "align": 5,
                         "bounds_type": 0,
                         "bounds_align": 0,
@@ -3717,6 +3927,10 @@
                         "visible": false,
                         "locked": false,
                         "rot": 0.0,
+                        "scale_ref": {
+                            "x": 1920.0,
+                            "y": 1080.0
+                        },
                         "align": 5,
                         "bounds_type": 0,
                         "bounds_align": 0,
@@ -3756,6 +3970,10 @@
                         "visible": false,
                         "locked": false,
                         "rot": 0.0,
+                        "scale_ref": {
+                            "x": 1920.0,
+                            "y": 1080.0
+                        },
                         "align": 5,
                         "bounds_type": 0,
                         "bounds_align": 0,
@@ -3795,6 +4013,10 @@
                         "visible": true,
                         "locked": false,
                         "rot": 0.0,
+                        "scale_ref": {
+                            "x": 1920.0,
+                            "y": 1080.0
+                        },
                         "align": 5,
                         "bounds_type": 0,
                         "bounds_align": 0,
@@ -3834,6 +4056,10 @@
                         "visible": true,
                         "locked": false,
                         "rot": 0.0,
+                        "scale_ref": {
+                            "x": 1920.0,
+                            "y": 1080.0
+                        },
                         "align": 5,
                         "bounds_type": 0,
                         "bounds_align": 0,
@@ -3873,6 +4099,10 @@
                         "visible": true,
                         "locked": false,
                         "rot": 0.0,
+                        "scale_ref": {
+                            "x": 1920.0,
+                            "y": 1080.0
+                        },
                         "align": 5,
                         "bounds_type": 0,
                         "bounds_align": 0,
@@ -3912,6 +4142,10 @@
                         "visible": true,
                         "locked": true,
                         "rot": 0.0,
+                        "scale_ref": {
+                            "x": 1920.0,
+                            "y": 1080.0
+                        },
                         "align": 5,
                         "bounds_type": 0,
                         "bounds_align": 0,
@@ -3986,13 +4220,70 @@
         },
         {
             "prev_ver": 536936448,
+            "name": "I_VoteQRCode",
+            "uuid": "0d83ccef-c517-4347-a541-114a911f569b",
+            "id": "image_source",
+            "versioned_id": "image_source",
+            "settings": {
+                "file": "C:/Compo/REVISION/2026/Livecoding/ShaderShowdown/OVERLAY/obs/qr-code.png"
+            },
+            "mixers": 0,
+            "sync": 0,
+            "flags": 0,
+            "volume": 1.0,
+            "balance": 0.5,
+            "enabled": true,
+            "muted": false,
+            "push-to-mute": false,
+            "push-to-mute-delay": 0,
+            "push-to-talk": false,
+            "push-to-talk-delay": 0,
+            "hotkeys": {},
+            "deinterlace_mode": 0,
+            "deinterlace_field_order": 0,
+            "monitoring_type": 0,
+            "private_settings": {},
+            "filters": [
+                {
+                    "prev_ver": 536936448,
+                    "name": "Shadow",
+                    "uuid": "5282ec13-5e02-444c-8e01-bbf0c62f80cd",
+                    "id": "obs_shadow_filter",
+                    "versioned_id": "obs_shadow_filter",
+                    "settings": {
+                        "glow_padding": 1,
+                        "glow_offset_distance": 0.0,
+                        "glow_size": 10.0,
+                        "glow_intensity": 80.0
+                    },
+                    "mixers": 0,
+                    "sync": 0,
+                    "flags": 0,
+                    "volume": 1.0,
+                    "balance": 0.5,
+                    "enabled": true,
+                    "muted": false,
+                    "push-to-mute": false,
+                    "push-to-mute-delay": 0,
+                    "push-to-talk": false,
+                    "push-to-talk-delay": 0,
+                    "hotkeys": {},
+                    "deinterlace_mode": 0,
+                    "deinterlace_field_order": 0,
+                    "monitoring_type": 0,
+                    "private_settings": {}
+                }
+            ]
+        },
+        {
+            "prev_ver": 536936448,
             "name": "MAIN_COMPETITION",
             "uuid": "cfd6c103-ebdc-4f90-bf1b-40a81dc808c8",
             "id": "scene",
             "versioned_id": "scene",
             "settings": {
                 "custom_size": false,
-                "id_counter": 39,
+                "id_counter": 43,
                 "items": [
                     {
                         "name": "_BG",
@@ -4000,6 +4291,10 @@
                         "visible": true,
                         "locked": true,
                         "rot": 0.0,
+                        "scale_ref": {
+                            "x": 1920.0,
+                            "y": 1080.0
+                        },
                         "align": 5,
                         "bounds_type": 0,
                         "bounds_align": 0,
@@ -4039,6 +4334,10 @@
                         "visible": true,
                         "locked": false,
                         "rot": 0.0,
+                        "scale_ref": {
+                            "x": 1920.0,
+                            "y": 1080.0
+                        },
                         "align": 5,
                         "bounds_type": 0,
                         "bounds_align": 0,
@@ -4051,7 +4350,7 @@
                         "group_item_backup": false,
                         "pos": {
                             "x": 1253.416748046875,
-                            "y": 565.370361328125
+                            "y": 495.370361328125
                         },
                         "scale": {
                             "x": 0.3229166567325592,
@@ -4078,6 +4377,10 @@
                         "visible": true,
                         "locked": false,
                         "rot": 0.0,
+                        "scale_ref": {
+                            "x": 1920.0,
+                            "y": 1080.0
+                        },
                         "align": 5,
                         "bounds_type": 0,
                         "bounds_align": 0,
@@ -4090,7 +4393,7 @@
                         "group_item_backup": false,
                         "pos": {
                             "x": 1253.416748046875,
-                            "y": 216.370361328125
+                            "y": 146.370361328125
                         },
                         "scale": {
                             "x": 0.3229166567325592,
@@ -4117,6 +4420,10 @@
                         "visible": true,
                         "locked": false,
                         "rot": 0.0,
+                        "scale_ref": {
+                            "x": 1920.0,
+                            "y": 1080.0
+                        },
                         "align": 5,
                         "bounds_type": 0,
                         "bounds_align": 0,
@@ -4129,7 +4436,7 @@
                         "group_item_backup": false,
                         "pos": {
                             "x": 617.7083740234375,
-                            "y": 649.0
+                            "y": 579.0
                         },
                         "scale": {
                             "x": 0.3229166567325592,
@@ -4156,6 +4463,10 @@
                         "visible": true,
                         "locked": false,
                         "rot": 0.0,
+                        "scale_ref": {
+                            "x": 1920.0,
+                            "y": 1080.0
+                        },
                         "align": 5,
                         "bounds_type": 0,
                         "bounds_align": 0,
@@ -4168,7 +4479,7 @@
                         "group_item_backup": false,
                         "pos": {
                             "x": 617.7083740234375,
-                            "y": 299.0
+                            "y": 229.0
                         },
                         "scale": {
                             "x": 0.3229166567325592,
@@ -4195,6 +4506,10 @@
                         "visible": true,
                         "locked": false,
                         "rot": 0.0,
+                        "scale_ref": {
+                            "x": 1920.0,
+                            "y": 1080.0
+                        },
                         "align": 5,
                         "bounds_type": 0,
                         "bounds_align": 0,
@@ -4207,7 +4522,7 @@
                         "group_item_backup": false,
                         "pos": {
                             "x": -18.0,
-                            "y": 567.370361328125
+                            "y": 497.370361328125
                         },
                         "scale": {
                             "x": 0.3229166567325592,
@@ -4234,6 +4549,10 @@
                         "visible": true,
                         "locked": false,
                         "rot": 0.0,
+                        "scale_ref": {
+                            "x": 1920.0,
+                            "y": 1080.0
+                        },
                         "align": 5,
                         "bounds_type": 0,
                         "bounds_align": 0,
@@ -4246,7 +4565,7 @@
                         "group_item_backup": false,
                         "pos": {
                             "x": -18.0,
-                            "y": 217.370361328125
+                            "y": 147.370361328125
                         },
                         "scale": {
                             "x": 0.3229166567325592,
@@ -4268,11 +4587,144 @@
                         "private_settings": {}
                     },
                     {
+                        "name": "T_Vote",
+                        "source_uuid": "d3636680-4756-4806-b310-bd520dc7bdd2",
+                        "visible": true,
+                        "locked": false,
+                        "rot": 0.0,
+                        "scale_ref": {
+                            "x": 1920.0,
+                            "y": 1080.0
+                        },
+                        "align": 5,
+                        "bounds_type": 0,
+                        "bounds_align": 0,
+                        "bounds_crop": false,
+                        "crop_left": 0,
+                        "crop_top": 0,
+                        "crop_right": 0,
+                        "crop_bottom": 0,
+                        "id": 40,
+                        "group_item_backup": false,
+                        "pos": {
+                            "x": 0.0,
+                            "y": 989.629638671875
+                        },
+                        "scale": {
+                            "x": 1.0,
+                            "y": 1.0
+                        },
+                        "bounds": {
+                            "x": 0.0,
+                            "y": 0.0
+                        },
+                        "scale_filter": "bilinear",
+                        "blend_method": "default",
+                        "blend_type": "normal",
+                        "show_transition": {
+                            "duration": 300
+                        },
+                        "hide_transition": {
+                            "duration": 300
+                        },
+                        "private_settings": {}
+                    },
+                    {
+                        "name": "I_VoteQRCode",
+                        "source_uuid": "0d83ccef-c517-4347-a541-114a911f569b",
+                        "visible": true,
+                        "locked": false,
+                        "rot": 0.0,
+                        "scale_ref": {
+                            "x": 1920.0,
+                            "y": 1080.0
+                        },
+                        "align": 5,
+                        "bounds_type": 0,
+                        "bounds_align": 0,
+                        "bounds_crop": false,
+                        "crop_left": 0,
+                        "crop_top": 0,
+                        "crop_right": 0,
+                        "crop_bottom": 0,
+                        "id": 42,
+                        "group_item_backup": false,
+                        "pos": {
+                            "x": -2.0,
+                            "y": 878.0999755859375
+                        },
+                        "scale": {
+                            "x": 0.7699999809265137,
+                            "y": 0.7699999809265137
+                        },
+                        "bounds": {
+                            "x": 1.0,
+                            "y": 1.0
+                        },
+                        "scale_filter": "bilinear",
+                        "blend_method": "default",
+                        "blend_type": "normal",
+                        "show_transition": {
+                            "duration": 0
+                        },
+                        "hide_transition": {
+                            "duration": 0
+                        },
+                        "private_settings": {}
+                    },
+                    {
+                        "name": "I_VoteQRCode",
+                        "source_uuid": "0d83ccef-c517-4347-a541-114a911f569b",
+                        "visible": true,
+                        "locked": false,
+                        "rot": 0.0,
+                        "scale_ref": {
+                            "x": 1920.0,
+                            "y": 1080.0
+                        },
+                        "align": 5,
+                        "bounds_type": 0,
+                        "bounds_align": 0,
+                        "bounds_crop": false,
+                        "crop_left": 0,
+                        "crop_top": 0,
+                        "crop_right": 0,
+                        "crop_bottom": 0,
+                        "id": 43,
+                        "group_item_backup": false,
+                        "pos": {
+                            "x": 1714.0999755859375,
+                            "y": 878.0999755859375
+                        },
+                        "scale": {
+                            "x": 0.7699999809265137,
+                            "y": 0.7699999809265137
+                        },
+                        "bounds": {
+                            "x": 1.0,
+                            "y": 1.0
+                        },
+                        "scale_filter": "bilinear",
+                        "blend_method": "default",
+                        "blend_type": "normal",
+                        "show_transition": {
+                            "duration": 0
+                        },
+                        "hide_transition": {
+                            "duration": 0
+                        },
+                        "private_settings": {}
+                    },
+                    {
                         "name": "B_Overlay",
                         "source_uuid": "3d4e0f91-df5c-408a-abf4-37bdf73f8984",
                         "visible": true,
                         "locked": true,
                         "rot": 0.0,
+                        "scale_ref": {
+                            "x": 1920.0,
+                            "y": 1080.0
+                        },
                         "align": 5,
                         "bounds_type": 0,
                         "bounds_align": 0,
@@ -4312,6 +4764,10 @@
                         "visible": true,
                         "locked": false,
                         "rot": 0.0,
+                        "scale_ref": {
+                            "x": 1920.0,
+                            "y": 1080.0
+                        },
                         "align": 5,
                         "bounds_type": 0,
                         "bounds_align": 0,
@@ -4324,7 +4780,7 @@
                         "group_item_backup": true,
                         "pos": {
                             "x": 59.0,
-                            "y": 538.0
+                            "y": 468.0
                         },
                         "scale": {
                             "x": 1.0,
@@ -4351,6 +4807,10 @@
                         "visible": true,
                         "locked": false,
                         "rot": 0.0,
+                        "scale_ref": {
+                            "x": 1920.0,
+                            "y": 1080.0
+                        },
                         "align": 5,
                         "bounds_type": 0,
                         "bounds_align": 0,
@@ -4363,7 +4823,7 @@
                         "group_item_backup": false,
                         "pos": {
                             "x": 59.0,
-                            "y": 538.0
+                            "y": 468.0
                         },
                         "scale": {
                             "x": 1.0,
@@ -4390,6 +4850,10 @@
                         "visible": true,
                         "locked": false,
                         "rot": 0.0,
+                        "scale_ref": {
+                            "x": 1920.0,
+                            "y": 1080.0
+                        },
                         "align": 5,
                         "bounds_type": 0,
                         "bounds_align": 0,
@@ -4402,7 +4866,7 @@
                         "group_item_backup": true,
                         "pos": {
                             "x": 695.0,
-                            "y": 620.0
+                            "y": 550.0
                         },
                         "scale": {
                             "x": 1.0,
@@ -4429,6 +4893,10 @@
                         "visible": true,
                         "locked": false,
                         "rot": 0.0,
+                        "scale_ref": {
+                            "x": 1920.0,
+                            "y": 1080.0
+                        },
                         "align": 5,
                         "bounds_type": 0,
                         "bounds_align": 0,
@@ -4441,7 +4909,7 @@
                         "group_item_backup": false,
                         "pos": {
                             "x": 695.0,
-                            "y": 620.0
+                            "y": 550.0
                         },
                         "scale": {
                             "x": 1.0,
@@ -4468,6 +4936,10 @@
                         "visible": true,
                         "locked": false,
                         "rot": 0.0,
+                        "scale_ref": {
+                            "x": 1920.0,
+                            "y": 1080.0
+                        },
                         "align": 5,
                         "bounds_type": 0,
                         "bounds_align": 0,
@@ -4480,7 +4952,7 @@
                         "group_item_backup": true,
                         "pos": {
                             "x": 1327.0,
-                            "y": 535.0
+                            "y": 465.0
                         },
                         "scale": {
                             "x": 1.0,
@@ -4507,6 +4979,10 @@
                         "visible": true,
                         "locked": false,
                         "rot": 0.0,
+                        "scale_ref": {
+                            "x": 1920.0,
+                            "y": 1080.0
+                        },
                         "align": 5,
                         "bounds_type": 0,
                         "bounds_align": 0,
@@ -4519,7 +4995,7 @@
                         "group_item_backup": false,
                         "pos": {
                             "x": 1327.0,
-                            "y": 535.0
+                            "y": 465.0
                         },
                         "scale": {
                             "x": 1.0,
@@ -4544,8 +5020,12 @@
                         "name": "B_Splash",
                         "source_uuid": "7284728c-542d-459e-9efa-9e40d717d0e5",
                         "visible": true,
-                        "locked": false,
+                        "locked": true,
                         "rot": 0.0,
+                        "scale_ref": {
+                            "x": 1920.0,
+                            "y": 1080.0
+                        },
                         "align": 5,
                         "bounds_type": 0,
                         "bounds_align": 0,
@@ -4617,7 +5097,13 @@
                 "libobs.show_scene_item.36": [],
                 "libobs.hide_scene_item.36": [],
                 "libobs.show_scene_item.39": [],
-                "libobs.hide_scene_item.39": []
+                "libobs.hide_scene_item.39": [],
+                "libobs.show_scene_item.40": [],
+                "libobs.hide_scene_item.40": [],
+                "libobs.show_scene_item.42": [],
+                "libobs.hide_scene_item.42": [],
+                "libobs.show_scene_item.43": [],
+                "libobs.hide_scene_item.43": []
             },
             "deinterlace_mode": 0,
             "deinterlace_field_order": 0,
@@ -4759,6 +5245,72 @@
         },
         {
             "prev_ver": 536936448,
+            "name": "T_Vote",
+            "uuid": "d3636680-4756-4806-b310-bd520dc7bdd2",
+            "id": "text_gdiplus",
+            "versioned_id": "text_gdiplus_v3",
+            "settings": {
+                "font": {
+                    "face": "Tungsten",
+                    "style": "Semibold",
+                    "size": 70,
+                    "flags": 1
+                },
+                "align": "center",
+                "text": "Vote on https://pm.revision-party.net/voting!",
+                "extents": true,
+                "extents_cx": 1920,
+                "valign": "center",
+                "extents_cy": 70
+            },
+            "mixers": 0,
+            "sync": 0,
+            "flags": 0,
+            "volume": 1.0,
+            "balance": 0.5,
+            "enabled": true,
+            "muted": false,
+            "push-to-mute": false,
+            "push-to-mute-delay": 0,
+            "push-to-talk": false,
+            "push-to-talk-delay": 0,
+            "hotkeys": {},
+            "deinterlace_mode": 0,
+            "deinterlace_field_order": 0,
+            "monitoring_type": 0,
+            "private_settings": {},
+            "filters": [
+                {
+                    "prev_ver": 536936448,
+                    "name": "Shadow",
+                    "uuid": "43ffdd90-fdf0-46ac-ab03-d5d6ada76817",
+                    "id": "obs_shadow_filter",
+                    "versioned_id": "obs_shadow_filter",
+                    "settings": {
+                        "glow_size": 11.0,
+                        "glow_offset_distance": 8.0
+                    },
+                    "mixers": 0,
+                    "sync": 0,
+                    "flags": 0,
+                    "volume": 1.0,
+                    "balance": 0.5,
+                    "enabled": true,
+                    "muted": false,
+                    "push-to-mute": false,
+                    "push-to-mute-delay": 0,
+                    "push-to-talk": false,
+                    "push-to-talk-delay": 0,
+                    "hotkeys": {},
+                    "deinterlace_mode": 0,
+                    "deinterlace_field_order": 0,
+                    "monitoring_type": 0,
+                    "private_settings": {}
+                }
+            ]
+        },
+        {
+            "prev_ver": 536936448,
             "name": "_BG",
             "uuid": "7543966a-672e-4784-8eb0-2bf322df1c39",
             "id": "scene",
@@ -4773,6 +5325,10 @@
                         "visible": true,
                         "locked": false,
                         "rot": 0.0,
+                        "scale_ref": {
+                            "x": 1920.0,
+                            "y": 1080.0
+                        },
                         "align": 5,
                         "bounds_type": 5,
                         "bounds_align": 0,
@@ -4812,6 +5368,10 @@
                         "visible": true,
                         "locked": false,
                         "rot": 0.0,
+                        "scale_ref": {
+                            "x": 1920.0,
+                            "y": 1080.0
+                        },
                         "align": 5,
                         "bounds_type": 5,
                         "bounds_align": 0,
@@ -4851,6 +5411,10 @@
                         "visible": true,
                         "locked": false,
                         "rot": 0.0,
+                        "scale_ref": {
+                            "x": 1920.0,
+                            "y": 1080.0
+                        },
                         "align": 5,
                         "bounds_type": 5,
                         "bounds_align": 0,
@@ -4967,6 +5531,10 @@
                         "visible": true,
                         "locked": false,
                         "rot": 0.0,
+                        "scale_ref": {
+                            "x": 1920.0,
+                            "y": 1080.0
+                        },
                         "align": 5,
                         "bounds_type": 2,
                         "bounds_align": 0,
@@ -5136,6 +5704,10 @@
                         "visible": true,
                         "locked": false,
                         "rot": 0.0,
+                        "scale_ref": {
+                            "x": 1920.0,
+                            "y": 1080.0
+                        },
                         "align": 5,
                         "bounds_type": 2,
                         "bounds_align": 0,
@@ -5305,6 +5877,10 @@
                         "visible": true,
                         "locked": false,
                         "rot": 0.0,
+                        "scale_ref": {
+                            "x": 1920.0,
+                            "y": 1080.0
+                        },
                         "align": 5,
                         "bounds_type": 2,
                         "bounds_align": 0,
@@ -5474,6 +6050,10 @@
                         "visible": true,
                         "locked": false,
                         "rot": 0.0,
+                        "scale_ref": {
+                            "x": 1920.0,
+                            "y": 1080.0
+                        },
                         "align": 5,
                         "bounds_type": 2,
                         "bounds_align": 0,
@@ -5643,6 +6223,10 @@
                         "visible": true,
                         "locked": false,
                         "rot": 0.0,
+                        "scale_ref": {
+                            "x": 1920.0,
+                            "y": 1080.0
+                        },
                         "align": 5,
                         "bounds_type": 2,
                         "bounds_align": 0,
@@ -5812,6 +6396,10 @@
                         "visible": true,
                         "locked": false,
                         "rot": 0.0,
+                        "scale_ref": {
+                            "x": 1920.0,
+                            "y": 1080.0
+                        },
                         "align": 5,
                         "bounds_type": 2,
                         "bounds_align": 0,
